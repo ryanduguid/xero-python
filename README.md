@@ -4,7 +4,7 @@
 [![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python.svg)](https://github.com/XeroAPI/xero-python/stargazers)
 [![Downloads](https://pepy.tech/badge/xero-python)](https://pepy.tech/project/xero-python)
 
-The xero-python SDK makes it easy for developers to access Xero's APIs in their python code, and build robust applications and software using small business & general ledger accounting data.
+The xero-python SDK provides Python clients for Xero's accounting, payroll, assets, files and projects APIs.
 # Table of Contents
 - [API Client documentation](#api-client-documentation)
 - [Sample Applications](#sample-applications)
