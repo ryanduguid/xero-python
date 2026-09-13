@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **is_calculating_on_qualifying_earnings** | **bool** | Identifier of calculating on qualifying earnings | [optional] 
 **is_pension** | **bool** | Identifier of applicable for pension or not | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

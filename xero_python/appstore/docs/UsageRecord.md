@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **price_per_unit** | **float** | The price per unit | 
 **product_id** | **str** | The unique identifier of the linked Product | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

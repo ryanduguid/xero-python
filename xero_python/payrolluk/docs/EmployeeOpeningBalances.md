@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **statutory_sick_pay** | **float** | The total accumulated statutory sick pay amount received by the employee for current fiscal year to date | [optional] 
 **prior_employee_number** | **float** | The unique employee number issued by the employee&#39;s former employer | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

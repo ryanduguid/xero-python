@@ -17,6 +17,7 @@ import os
 import re
 import tempfile
 from decimal import Decimal
+from email.message import Message
 from multiprocessing.pool import ThreadPool
 from urllib.parse import quote
 
@@ -599,18 +600,64 @@ class ApiClient(object):
         """
         fd, path = tempfile.mkstemp(dir=self.configuration.temp_folder_path)
         os.close(fd)
-        os.remove(path)
+        download_folder = os.path.dirname(path)
 
-        content_disposition = response.getheader("Content-Disposition")
-        if content_disposition:
-            filename = re.search(
-                r'filename=[\'"]?([^\'"\s]+)[\'"]?', content_disposition
-            ).group(1)
-            path = os.path.join(os.path.dirname(path), filename)
+        filename = self.parse_content_disposition_filename(
+            response.getheader("Content-Disposition")
+        )
+        if filename:
+            new_path = self.allocate_download_path(download_folder, filename)
+            os.remove(path)
+            path = new_path
 
         with open(path, "wb") as f:
             f.write(response.data)
 
+        return path
+
+    @staticmethod
+    def parse_content_disposition_filename(content_disposition):
+        """Read the filename parameter of a Content-Disposition header.
+
+        Supports quoted filenames containing spaces and the extended
+        `filename*` form, and returns None when the header is absent or
+        declares no filename, as RFC 6266 section 4.1 permits.
+
+        :param content_disposition: str header value or None.
+        :return: str filename or None.
+        """
+        if not content_disposition:
+            return None
+        header = Message()
+        header["Content-Disposition"] = content_disposition
+        filename = header.get_filename()
+        return filename or None
+
+    @staticmethod
+    def allocate_download_path(download_folder, filename):
+        """Allocate a new file for a download inside the download folder.
+
+        The response filename is advisory, so its directory components are
+        dropped, as RFC 6266 section 4.3 recommends. An existing file is never
+        overwritten: a unique name is allocated instead.
+
+        :param download_folder: str folder the file is created in.
+        :param filename: str filename taken from the response.
+        :return: str path of the newly created file.
+        """
+        name = os.path.basename(filename.replace("\\", "/")).strip()
+        if name not in ("", ".", ".."):
+            path = os.path.join(download_folder, name)
+            try:
+                fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            except FileExistsError:
+                stem, extension = os.path.splitext(name)
+                fd, path = tempfile.mkstemp(
+                    prefix=stem + "-", suffix=extension, dir=download_folder
+                )
+        else:
+            fd, path = tempfile.mkstemp(dir=download_folder)
+        os.close(fd)
         return path
 
     def __deserialize_primitive(self, data, klass, model_finder):

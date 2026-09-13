@@ -381,3 +381,76 @@ def test_deserialize_model_enum(data, expected):
     # then correct Shape enum expected
     assert isinstance(result, Shape)
     assert result == expected
+
+
+# generic object and documented null field tests
+def test_deserialize_generic_object():
+    # given a response declared as a generic object
+    data = {"3d5a4a3e-9f5b-4e4b-8f6d-2a1c0b7d8e9f": 3}
+    # when deserializing it
+    result = deserialize("object", data, model_finder=None)
+    # then the parsed json value is returned unchanged
+    assert result == data
+
+
+def test_deserialize_null_model_field():
+    # given a fabricated Items response clearing documented nullable fields
+    from xero_python.accounting import models
+    from xero_python.api_client import ModelFinder
+
+    data = {
+        "Items": [
+            {
+                "ItemID": "9f1a3f0e-4b5c-4d6e-8f70-1a2b3c4d5e6f",
+                "Code": "DEV-001",
+                "Description": None,
+                "PurchaseDescription": None,
+                "IsSold": False,
+                "IsPurchased": False,
+                "SalesDetails": None,
+                "PurchaseDetails": None,
+            }
+        ]
+    }
+    # when deserializing the response
+    items = deserialize("Items", data, ModelFinder(models))
+    # then the cleared fields stay empty rather than becoming "None" or a model
+    item = items.items[0]
+    assert item.description is None
+    assert item.purchase_description is None
+    assert item.sales_details is None
+    assert item.purchase_details is None
+    # and the populated fields are unchanged
+    assert item.code == "DEV-001"
+    assert item.is_sold is False
+    assert item.is_purchased is False
+
+
+def test_deserialize_null_integer_field():
+    # given a metered subscription item whose quantity is documented as null
+    from xero_python.appstore import models
+    from xero_python.api_client import ModelFinder
+
+    data = {
+        "id": "1f0b4a7c-9d2e-4c3b-8a15-6e7f8a9b0c1d",
+        "status": "ACTIVE",
+        "quantity": None,
+        "testMode": False,
+        "startDate": "2026-07-01T00:00:00Z",
+        "price": {
+            "id": "2c3d4e5f-6a7b-4c8d-9e0f-1a2b3c4d5e6f",
+            "amount": 12.5,
+            "currency": "AUD",
+        },
+        "product": {
+            "id": "3d4e5f6a-7b8c-4d9e-8f01-2a3b4c5d6e7f",
+            "name": "Metered product",
+            "type": "METERED",
+        },
+    }
+    # when deserializing it
+    item = deserialize("SubscriptionItem", data, ModelFinder(models))
+    # then the null quantity is preserved instead of raising
+    assert item.quantity is None
+    assert item.status == "ACTIVE"
+    assert item.test_mode is False

@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **depreciable_object_type** | **str** | The type of asset object | [optional] 
 **book_effective_date_of_change_id** | **str** | Unique Xero identifier for the effective date change | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

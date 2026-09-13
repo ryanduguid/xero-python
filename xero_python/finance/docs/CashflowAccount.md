@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **reporting_code** | **str** | Reporting code used for cash flow classification | [optional] 
 **total** | **float** | Total amount for the account | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

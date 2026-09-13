@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **sales_tax_code_id** | **float** | The ID of the sales tax code | [optional] 
 **tax_breakdown** | [**list[TaxBreakdownComponent]**](TaxBreakdownComponent.md) | An array of tax components defined for this line item | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

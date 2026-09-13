@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **payment_service_type** | **str** | This will always be CUSTOM for payment services created via the API. | [optional] 
 **validation_errors** | [**list[ValidationError]**](ValidationError.md) | Displays array of validation error messages from the API | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

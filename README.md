@@ -451,7 +451,7 @@ def store_xero_oauth2_token(token):
     session.modified = True
 
 # get existing token set
-token_set = get_token_set_from_database(user_id); // example function name
+token_set = get_token_set_from_database(user_id)  # example function name
 
 # set token set to the api client
 store_xero_oauth2_token(token_set)
@@ -499,13 +499,13 @@ where = "Type==\"SALES\"&&Status==\"ACTIVE\""
 read_accounts = accounting_api.get_accounts(
     xero_tenant_id, where=where
 )
-account_id = getvalue(read_accounts, "accounts.0.account_id", "")
+account_code = getvalue(read_accounts, "accounts.0.code", "")
 # build Invoices
 contact = Contact(
     contact_id=contact_id
 )
 line_item = LineItem(
-    account_code=account_id,
+    account_code=account_code,
     description= "Consulting",
     quantity=1.0,
     unit_amount=10.0,
@@ -519,7 +519,7 @@ invoice = Invoice(
 )
 invoices = Invoices(invoices=[invoice])
 created_invoices = accounting_api.create_invoices(xero_tenant_id, invoices=invoices)
-invoice_id = getvalue(read_invoices, "invoices.0.invoice_id", "")
+invoice_id = getvalue(created_invoices, "invoices.0.invoice_id", "")
 
 # Create Attachment
 include_online = True
@@ -561,7 +561,7 @@ Describe the support for query options and filtering
 # configure api_client for use with xero-python sdk client
 api_client = ApiClient(
     Configuration(
-        debug=false,
+        debug=False,
         oauth2_token=OAuth2Token(
             client_id="YOUR_CLIENT_ID", client_secret="YOUR_CLIENT_SECRET"
         ),
@@ -569,7 +569,27 @@ api_client = ApiClient(
     pool_threads=1,
 )
 
-api_client.set_oauth2_token("YOUR_ACCESS_TOKEN")
+# configure token persistence and exchange point between your app and xero-python
+xero_oauth2_token = {}
+
+@api_client.oauth2_token_getter
+def obtain_xero_oauth2_token():
+    return xero_oauth2_token
+
+@api_client.oauth2_token_saver
+def store_xero_oauth2_token(token):
+    xero_oauth2_token.update(token)
+
+# the client stores the whole token set, not the access token on its own
+api_client.set_oauth2_token(
+    {
+        "access_token": "YOUR_ACCESS_TOKEN",
+        "refresh_token": "YOUR_REFRESH_TOKEN",
+        "expires_in": 1800,
+        "token_type": "Bearer",
+        "scope": ["accounting.transactions.read"],
+    }
+)
 
 def accounting_get_invoices():
     api_instance = AccountingApi(api_client)
@@ -581,25 +601,27 @@ def accounting_get_invoices():
     invoice_numbers = ["INV-001", "INV-002"]
     contact_ids = ["00000000-0000-0000-0000-000000000000"]
     statuses = ["DRAFT", "SUBMITTED"]
-    include_archived = 'true'
-    created_by_my_app = 'false'
-    summary_only = 'true'
+    page = 1
+    include_archived = True
+    created_by_my_app = False
+    unitdp = 4
+    summary_only = True
 
-api_response = api_instance.get_invoices(
-    xero_tenant_id,
-    if_modified_since,
-    where,
-    order,
-    ids,
-    invoice_numbers,
-    contact_ids,
-    statuses,
-    page,
-    include_archived,
-    created_by_my_app,
-    unitdp,
-    summary_only
-)
+    return api_instance.get_invoices(
+        xero_tenant_id,
+        if_modified_since,
+        where,
+        order,
+        ids,
+        invoice_numbers,
+        contact_ids,
+        statuses,
+        page,
+        include_archived,
+        created_by_my_app,
+        unitdp,
+        summary_only
+    )
 ```
 
 ---

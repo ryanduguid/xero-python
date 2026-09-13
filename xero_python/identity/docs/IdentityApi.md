@@ -53,7 +53,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**str**](.md)| Unique identifier for retrieving single object | 
+ **id** | **str**| Unique identifier for retrieving single object | 
 
 ### Return type
 
@@ -61,14 +61,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_connections**
 > list[Connection] get_connections(auth_event_id=auth_event_id)
@@ -116,7 +116,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **auth_event_id** | [**str**](.md)| Filter by authEventId | [optional] 
+ **auth_event_id** | **str**| Filter by authEventId | [optional] 
 
 ### Return type
 
@@ -124,12 +124,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

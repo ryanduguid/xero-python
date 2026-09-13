@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **annual_leave_total_amount_paid** | **float** | Specific to Annual Leave. Annual leave balance in dollars | [optional] 
 **schedule_of_accrual_date** | **date** | The date when an employee becomes entitled to their accrual. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

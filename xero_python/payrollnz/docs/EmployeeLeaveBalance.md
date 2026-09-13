@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **balance** | **float** | The employees current balance for the corresponding leave type. | [optional] 
 **type_of_units** | **str** | The type of the units of the leave. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

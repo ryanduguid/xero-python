@@ -51,7 +51,7 @@ xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 bank_account_id = 'bank_account_id_example' # str | string, GUID    Bank account Id
 from_date = '2020-07-01' # str | date, yyyy-MM-dd     Specifies the start date of the query period.   The maximum range of the query period is 12 months. If the specified query period is more than 12 months the request will be rejected.
 to_date = '2021-06-30' # str | date, yyyy-MM-dd     Specifies the end date of the query period.   If the end date is a future date, the request will be rejected.
-summary_only = true # bool | boolean, true/false    The default value is true if no parameter is provided.    In summary mode, the response will exclude the computation-heavy LineItems fields from bank transaction, invoice, credit note, prepayment and overpayment data, making the API calls quicker and more efficient. (optional)
+summary_only = True # bool | boolean, true/false    The default value is true if no parameter is provided.    In summary mode, the response will exclude the computation-heavy LineItems fields from bank transaction, invoice, credit note, prepayment and overpayment data, making the API calls quicker and more efficient. (optional)
 try:
     # Get Bank Statement Accounting
     api_response = api_instance.get_bank_statement_accounting(xero_tenant_id, bank_account_id, from_date, to_date, summary_only=summary_only)
@@ -65,7 +65,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_account_id** | [**str**](.md)| string, GUID    Bank account Id | 
+ **bank_account_id** | **str**| string, GUID    Bank account Id | 
  **from_date** | **str**| date, yyyy-MM-dd     Specifies the start date of the query period.   The maximum range of the query period is 12 months. If the specified query period is more than 12 months the request will be rejected. | 
  **to_date** | **str**| date, yyyy-MM-dd     Specifies the end date of the query period.   If the end date is a future date, the request will be rejected. | 
  **summary_only** | **bool**| boolean, true/false    The default value is true if no parameter is provided.    In summary mode, the response will exclude the computation-heavy LineItems fields from bank transaction, invoice, credit note, prepayment and overpayment data, making the API calls quicker and more efficient. | [optional] 
@@ -76,14 +76,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_cash_validation**
 > list[CashValidationResponse] get_cash_validation(xero_tenant_id, balance_date=balance_date, as_at_system_date=as_at_system_date, begin_date=begin_date)
@@ -145,14 +145,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_financial_statement_balance_sheet**
 > BalanceSheetResponse get_financial_statement_balance_sheet(xero_tenant_id, balance_date=balance_date)
@@ -210,14 +210,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_financial_statement_cashflow**
 > CashflowResponse get_financial_statement_cashflow(xero_tenant_id, start_date=start_date, end_date=end_date)
@@ -277,14 +277,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_financial_statement_contacts_expense**
 > IncomeByContactResponse get_financial_statement_contacts_expense(xero_tenant_id, contact_ids=contact_ids, include_manual_journals=include_manual_journals, start_date=start_date, end_date=end_date)
@@ -321,7 +321,7 @@ api_instance = FinanceApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 contact_ids = ['[\"00000000-0000-0000-0000-000000000000\",\"00000000-0000-0000-0000-000000000000\"]'] # list[str] | Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included (optional)
-include_manual_journals = true # bool | Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. (optional)
+include_manual_journals = True # bool | Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. (optional)
 start_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the start date for the report.                If no parameter is provided, the date of 12 months before the end date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
 end_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the end date for the report.    If no parameter is provided, the current date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
 try:
@@ -337,7 +337,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_ids** | [**list[str]**](str.md)| Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included | [optional] 
+ **contact_ids** | **list[str]**| Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included | [optional] 
  **include_manual_journals** | **bool**| Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. | [optional] 
  **start_date** | **str**| Date yyyy-MM-dd    Specifies the start date for the report.                If no parameter is provided, the date of 12 months before the end date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. | [optional] 
  **end_date** | **str**| Date yyyy-MM-dd    Specifies the end date for the report.    If no parameter is provided, the current date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. | [optional] 
@@ -348,14 +348,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_financial_statement_contacts_revenue**
 > IncomeByContactResponse get_financial_statement_contacts_revenue(xero_tenant_id, contact_ids=contact_ids, include_manual_journals=include_manual_journals, start_date=start_date, end_date=end_date)
@@ -392,7 +392,7 @@ api_instance = FinanceApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 contact_ids = ['[\"00000000-0000-0000-0000-000000000000\",\"00000000-0000-0000-0000-000000000000\"]'] # list[str] | Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included (optional)
-include_manual_journals = true # bool | Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. (optional)
+include_manual_journals = True # bool | Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. (optional)
 start_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the start date for the report.                If no parameter is provided, the date of 12 months before the end date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
 end_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the end date for the report.    If no parameter is provided, the current date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
 try:
@@ -408,7 +408,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_ids** | [**list[str]**](str.md)| Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included | [optional] 
+ **contact_ids** | **list[str]**| Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included | [optional] 
  **include_manual_journals** | **bool**| Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. | [optional] 
  **start_date** | **str**| Date yyyy-MM-dd    Specifies the start date for the report.                If no parameter is provided, the date of 12 months before the end date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. | [optional] 
  **end_date** | **str**| Date yyyy-MM-dd    Specifies the end date for the report.    If no parameter is provided, the current date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. | [optional] 
@@ -419,14 +419,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_financial_statement_profit_and_loss**
 > ProfitAndLossResponse get_financial_statement_profit_and_loss(xero_tenant_id, start_date=start_date, end_date=end_date)
@@ -486,14 +486,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_financial_statement_trial_balance**
 > TrialBalanceResponse get_financial_statement_trial_balance(xero_tenant_id, end_date=end_date)
@@ -551,12 +551,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

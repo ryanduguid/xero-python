@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **cash_balance** | [**CashBalance**](CashBalance.md) |  | [optional] 
 **cashflow_activities** | [**list[CashflowActivity]**](CashflowActivity.md) | Break down of cash and cash equivalents for the period | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

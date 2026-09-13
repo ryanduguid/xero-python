@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **reporting_date** | **date** | The date the expense claim will be reported in Xero YYYY-MM-DD | [optional] 
 **receipt_id** | **str** | The Xero identifier for the Receipt e.g. e59a2c7f-1306-4078-a0f3-73537afcbba9 | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

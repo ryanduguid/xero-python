@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **percentage** | **float** | Superannuation rate percentage | [optional] 
 **manual_adjustment** | **bool** | manual adjustment made | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

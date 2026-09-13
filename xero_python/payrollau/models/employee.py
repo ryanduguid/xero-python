@@ -774,7 +774,7 @@ class Employee(BaseModel):
         :param termination_reason: The termination_reason of this Employee.  # noqa: E501
         :type: str
         """
-        allowed_values = ["V", "I", "D", "R", "F", "C", "T", "None"]  # noqa: E501
+        allowed_values = ["V", "I", "D", "R", "F", "C", "T"]  # noqa: E501
 
         if termination_reason:
             if termination_reason not in allowed_values:

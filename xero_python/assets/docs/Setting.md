@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **default_capital_gain_on_disposal_account_id** | **str** | Default account that capital gains are posted to | [optional] 
 **opt_in_for_tax** | **bool** | opt in for tax calculation | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

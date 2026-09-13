@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **private_use_current_gain_loss** | **float** | (New Zealand Orgs Only) Represents the gain or loss from the disposal of the private use portion of a fixed asset. This value records the financial result (profit or loss) related specifically to the asset’s private use. | [optional] 
 **initial_deduction_percentage** | **float** | (New Zealand Orgs Only) The Investment Boost deduction percentage. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

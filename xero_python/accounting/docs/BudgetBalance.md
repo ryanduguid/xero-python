@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **unit_amount** | **float** | Budgeted amount | [optional] 
 **notes** | **str** | Any footnotes associated with this balance | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

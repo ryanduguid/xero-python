@@ -11,7 +11,6 @@ from xero_python.api_client.configuration import Configuration
 from xero_python.api_client.oauth2 import TokenApi, OAuth2Token
 from xero_python.exceptions import AccessTokenExpiredError
 
-
 # from os.path import join, dirname
 
 
@@ -151,6 +150,7 @@ def test_auth2_refresh_access_token():
     assert oauth2_token.access_token == new_token["access_token"]
     assert oauth2_token.refresh_token == new_token["refresh_token"]
 
+
 def test_auth2_refresh_access_token_having_scope_as_string():
     # given OAuth2Token with expired access_token
     api_client = FakeClass()
@@ -194,6 +194,7 @@ def test_auth2_refresh_access_token_having_scope_as_string():
     assert oauth2_token.scope == new_token["scope"]
     assert oauth2_token.access_token == new_token["access_token"]
     assert oauth2_token.refresh_token == new_token["refresh_token"]
+
 
 def test_auth2_fetch_access_token():
     # Given OAuth2Token with valid refresh_token
@@ -290,3 +291,64 @@ def test_token_api_refresh_token(
     assert token.get("token_type")
     assert token.get("scope")
     assert token["scope"].split() == xero_scope
+
+
+class FakeTokenResponse:
+    def __init__(self, payload):
+        self.data = payload.encode("utf-8")
+
+
+class FakeTokenApiClient:
+    """Captures token API requests instead of calling Xero identity."""
+
+    def __init__(self, payload):
+        self.payload = payload
+        self.calls = []
+        self.set_oauth2_token = FakeMethod()
+
+    def call_api(self, *args, **kwargs):
+        self.calls.append((args, kwargs))
+        return FakeTokenResponse(self.payload), 200, {}
+
+
+@pytest.mark.parametrize(
+    "scope",
+    ["openid profile", "openid  profile", ["openid", "profile"], ("openid", "profile")],
+)
+def test_refresh_token_sends_space_separated_scope(scope):
+    # given a scope held as a string, list or tuple
+    payload = (
+        '{"access_token": "new-access-token-value", "expires_in": 1800,'
+        ' "token_type": "Bearer", "scope": "openid profile",'
+        ' "refresh_token": "new-refresh-token-value"}'
+    )
+    api_client = FakeTokenApiClient(payload)
+    token_api = TokenApi(api_client, "client-id", "client-secret")
+    # when refreshing the access token
+    token_api.refresh_token("refresh-token-value", scope)
+    # then the request carries the scope names separated by single spaces
+    call_args, call_kwargs = api_client.calls[0]
+    assert call_kwargs["post_params"]["scope"] == "openid profile"
+
+
+@pytest.mark.parametrize("app_store_billing", [False, True])
+def test_client_credentials_token_keeps_its_expiry(app_store_billing):
+    # given a client credentials response with a 1800 second lifetime
+    payload = (
+        '{"access_token": "new-access-token-value", "expires_in": 1800,'
+        ' "token_type": "Bearer", "scope": "marketplace.billing"}'
+    )
+    api_client = FakeTokenApiClient(payload)
+    oauth2_token = OAuth2Token(client_id="client_id", client_secret="client_secret")
+    token_valid_from = time.time()
+    # when obtaining the token
+    assert oauth2_token.get_client_credentials_access_token(
+        api_client, app_store_billing, token_valid_from=token_valid_from
+    )
+    # then its absolute expiry is derived and saved
+    assert oauth2_token.expires_at == token_valid_from + 1800
+    saved_token = api_client.set_oauth2_token.calls[0][0][0]
+    assert saved_token["expires_at"] == token_valid_from + 1800
+    # and the token stops being valid once that expiry passes
+    assert oauth2_token.is_access_token_valid(at_time=token_valid_from + 60)
+    assert not oauth2_token.is_access_token_valid(at_time=token_valid_from + 86400)

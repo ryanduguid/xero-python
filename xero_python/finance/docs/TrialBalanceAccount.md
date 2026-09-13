@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **signed_balance** | **float** | Value of balance. Expense and Asset accounts code debits as positive. Revenue, Liability, and Equity accounts code debits as negative | [optional] 
 **account_movement** | [**TrialBalanceMovement**](TrialBalanceMovement.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

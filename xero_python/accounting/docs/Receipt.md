@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **warnings** | [**list[ValidationError]**](ValidationError.md) | Displays array of warning messages from the API | [optional] 
 **attachments** | [**list[Attachment]**](Attachment.md) | Displays array of attachments from the API | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

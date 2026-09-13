@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **manual_tax_type** | [**ManualTaxType**](ManualTaxType.md) |  | [optional] 
 **liability_account** | **str** | The tax line liability account code. For posted pay run you should be able to see liability account code | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

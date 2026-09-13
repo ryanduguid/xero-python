@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **superannuation_lines** | [**list[SuperannuationLine]**](SuperannuationLine.md) |  | [optional] 
 **tax_lines** | [**list[TaxLine]**](TaxLine.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

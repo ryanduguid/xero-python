@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **present** | **bool** |  | [optional] 
 **new_or_updated** | **int** | The number of new or updated accounts | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

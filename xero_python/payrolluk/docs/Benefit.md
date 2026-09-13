@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **is_calculating_on_qualifying_earnings** | **bool** | Identifier of calculating on qualifying earnings | [optional] 
 **show_balance_to_employee** | **bool** | display the balance to employee | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

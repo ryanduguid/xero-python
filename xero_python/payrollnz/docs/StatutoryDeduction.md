@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **liability_account_id** | **str** | Xero identifier for Liability Account | [optional] 
 **current_record** | **bool** | Identifier of a record is active or not. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

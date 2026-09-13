@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **revenue** | [**PnlAccountClass**](PnlAccountClass.md) |  | [optional] 
 **expense** | [**PnlAccountClass**](PnlAccountClass.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

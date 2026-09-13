@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **state_assigned_no** | **str** | The state assigned number of the jurisdiction | [optional] 
 **jurisdiction_region** | **str** | Name identifying the region within the country | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

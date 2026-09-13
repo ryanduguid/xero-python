@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **accounts** | [**list[BalanceSheetAccountDetail]**](BalanceSheetAccountDetail.md) | A list of all accounts of this type. Refer to the Account section below for each account element detail. | [optional] 
 **total** | **float** | Total value of all the accounts in this type | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

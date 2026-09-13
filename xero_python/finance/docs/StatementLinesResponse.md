@@ -21,6 +21,6 @@ Name | Type | Description | Notes
 **total_amount_pos** | **float** | Sum of the amounts of all statement lines where the amount is positive | [optional] 
 **total_amount_neg** | **float** | Sum of the amounts of all statement lines where the amount is negative. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

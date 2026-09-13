@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **is_entitled** | **bool** | Whether the leave was entitled to receive payment | [optional] 
 **status** | **str** | The status of the leave | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

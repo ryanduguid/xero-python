@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **fixed_amount** | **float** | Fixed Amount | [optional] 
 **manual_adjustment** | **bool** | Identifies if the tax line is a manual adjustment | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **reference** | **str** | Statement Text/reference for a transaction that appear on the statement. | [optional] 
 **calculation_type** | **str** | Calculation type for the transaction can be &#39;Fixed Amount&#39; or &#39;Balance&#39; | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

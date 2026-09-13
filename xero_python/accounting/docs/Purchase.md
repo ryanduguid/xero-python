@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **cogs_account_code** | **str** | Cost of goods sold account. Only applicable to the purchase details of tracked items. | [optional] 
 **tax_type** | **str** | The tax type from TaxRates | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

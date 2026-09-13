@@ -52,6 +52,7 @@ class TaxDeclaration(BaseModel):
         "has_loan_or_student_debt": "bool",
         "updated_date_utc": "datetime[ms-format]",
         "include_leave_loading_in_qualifying_earnings": "bool",
+        "include_leave_loading_in_sgc": "bool",
     }
 
     attribute_map = {
@@ -77,6 +78,7 @@ class TaxDeclaration(BaseModel):
         "has_loan_or_student_debt": "HasLoanOrStudentDebt",
         "updated_date_utc": "UpdatedDateUTC",
         "include_leave_loading_in_qualifying_earnings": "IncludeLeaveLoadingInQualifyingEarnings",
+        "include_leave_loading_in_sgc": "IncludeLeaveLoadingInSGC",
     }
 
     def __init__(
@@ -103,6 +105,7 @@ class TaxDeclaration(BaseModel):
         has_loan_or_student_debt=None,
         updated_date_utc=None,
         include_leave_loading_in_qualifying_earnings=None,
+        include_leave_loading_in_sgc=None,
     ):  # noqa: E501
         """TaxDeclaration - a model defined in OpenAPI"""  # noqa: E501
 
@@ -128,6 +131,7 @@ class TaxDeclaration(BaseModel):
         self._has_loan_or_student_debt = None
         self._updated_date_utc = None
         self._include_leave_loading_in_qualifying_earnings = None
+        self._include_leave_loading_in_sgc = None
         self.discriminator = None
 
         if employee_id is not None:
@@ -182,6 +186,8 @@ class TaxDeclaration(BaseModel):
             self.include_leave_loading_in_qualifying_earnings = (
                 include_leave_loading_in_qualifying_earnings
             )
+        if include_leave_loading_in_sgc is not None:
+            self.include_leave_loading_in_sgc = include_leave_loading_in_sgc
 
     @property
     def employee_id(self):
@@ -670,7 +676,7 @@ class TaxDeclaration(BaseModel):
     def include_leave_loading_in_qualifying_earnings(self):
         """Gets the include_leave_loading_in_qualifying_earnings of this TaxDeclaration.  # noqa: E501
 
-        Boolean to determine if leave loading is considered as qualifying earnings for superannuation guarantee calculations. Required when IncludeLeaveLoadingInSGC is specified in the payload  # noqa: E501
+        If leave loading should be included when calculating qualifying earnings for superannuation purposes. Only applicable if EligibleToReceiveLeaveLoading is true. Optional: derived from IncludeLeaveLoadingInSGC when it is not provided  # noqa: E501
 
         :return: The include_leave_loading_in_qualifying_earnings of this TaxDeclaration.  # noqa: E501
         :rtype: bool
@@ -683,7 +689,7 @@ class TaxDeclaration(BaseModel):
     ):
         """Sets the include_leave_loading_in_qualifying_earnings of this TaxDeclaration.
 
-        Boolean to determine if leave loading is considered as qualifying earnings for superannuation guarantee calculations. Required when IncludeLeaveLoadingInSGC is specified in the payload  # noqa: E501
+        If leave loading should be included when calculating qualifying earnings for superannuation purposes. Only applicable if EligibleToReceiveLeaveLoading is true. Optional: derived from IncludeLeaveLoadingInSGC when it is not provided  # noqa: E501
 
         :param include_leave_loading_in_qualifying_earnings: The include_leave_loading_in_qualifying_earnings of this TaxDeclaration.  # noqa: E501
         :type: bool
@@ -692,3 +698,26 @@ class TaxDeclaration(BaseModel):
         self._include_leave_loading_in_qualifying_earnings = (
             include_leave_loading_in_qualifying_earnings
         )
+
+    @property
+    def include_leave_loading_in_sgc(self):
+        """Gets the include_leave_loading_in_sgc of this TaxDeclaration.  # noqa: E501
+
+        If leave loading should be included when calculating the superannuation guarantee contribution. Only applicable if EligibleToReceiveLeaveLoading is true  # noqa: E501
+
+        :return: The include_leave_loading_in_sgc of this TaxDeclaration.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_leave_loading_in_sgc
+
+    @include_leave_loading_in_sgc.setter
+    def include_leave_loading_in_sgc(self, include_leave_loading_in_sgc):
+        """Sets the include_leave_loading_in_sgc of this TaxDeclaration.
+
+        If leave loading should be included when calculating the superannuation guarantee contribution. Only applicable if EligibleToReceiveLeaveLoading is true  # noqa: E501
+
+        :param include_leave_loading_in_sgc: The include_leave_loading_in_sgc of this TaxDeclaration.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_leave_loading_in_sgc = include_leave_loading_in_sgc

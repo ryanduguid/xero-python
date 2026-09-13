@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **number_of_units** | **float** | The balance of the leave available | [optional] 
 **type_of_units** | **str** | The type of units as specified by the LeaveType (see PayItems) | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **country** | **str** | max length &#x3D; 50, [A-Z], [a-z] only | [optional] 
 **attention_to** | **str** | max length &#x3D; 255 | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

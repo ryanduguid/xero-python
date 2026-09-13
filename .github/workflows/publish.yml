@@ -20,7 +20,6 @@ jobs:
             - name: Checkout xero-python repo
               uses: actions/checkout@v4
               with:
-                repository: XeroAPI/xero-python
                 path: xero-python
 
             - name: Set up Python environment
@@ -69,7 +68,6 @@ jobs:
       - name: Checkout xero-pythonrepo
         uses: actions/checkout@v4
         with:
-            repository: XeroAPI/xero-python
             path: xero-python
 
       - name: Send slack notification on success
@@ -94,7 +92,6 @@ jobs:
       - name: Checkout xero-python repo
         uses: actions/checkout@v4
         with:
-            repository: XeroAPI/xero-python
             path: xero-python
 
       - name: Send slack notification on failure
@@ -121,7 +118,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-         repository: XeroAPI/xero-python
          path: xero-python
 
       - name: Install octokit dependencies

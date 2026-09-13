@@ -10,7 +10,7 @@ For more information, please visit [https://developer.xero.com](https://develope
 
 ## Requirements.
 
-Python 3.5+
+Python 3.8+
 
 ## Getting Started
 

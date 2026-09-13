@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **account_balance** | **float** | Current cash at bank accounting value from the journals. | [optional] 
 **balance_currency** | **str** | Currency which the cashAccount transactions relate to. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **display_tax_rate** | **float** | Tax Rate (decimal to 4dp) e.g 12.5000 | [optional] 
 **effective_rate** | **float** | Effective Tax Rate (decimal to 4dp) e.g 12.5000 | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

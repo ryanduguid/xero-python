@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **next_scheduled_date** | **date** | The calendar date of the next invoice in the schedule to be generated | [optional] 
 **end_date** | **date** | Invoice end date – only returned if the template has an end date set | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

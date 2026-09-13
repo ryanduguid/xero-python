@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **remainder** | **bool** | If this account is the Remaining bank account | [optional] 
 **amount** | **float** | Fixed amounts (for example, if an employee wants to have $100 of their salary transferred to one account, and the remaining amount to another) | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

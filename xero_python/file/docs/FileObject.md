@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **id** | **str** | File object&#39;s UUID | [optional] 
 **folder_id** | **str** | Folder relation object&#39;s UUID | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

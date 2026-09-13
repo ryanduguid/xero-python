@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **post_code** | **str** | PostCode for employee home address | 
 **country_name** | **str** | Country of HomeAddress | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

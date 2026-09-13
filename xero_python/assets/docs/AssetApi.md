@@ -70,14 +70,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_asset_type**
 > AssetType create_asset_type(xero_tenant_id, asset_type, idempotency_key=idempotency_key)
@@ -137,14 +137,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_asset_by_id**
 > Asset get_asset_by_id(xero_tenant_id, id)
@@ -194,7 +194,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **id** | [**str**](.md)| fixed asset id for single object | 
+ **id** | **str**| fixed asset id for single object | 
 
 ### Return type
 
@@ -202,14 +202,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_asset_settings**
 > Setting get_asset_settings(xero_tenant_id)
@@ -265,14 +265,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_asset_types**
 > list[AssetType] get_asset_types(xero_tenant_id)
@@ -328,14 +328,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_assets**
 > Assets get_assets(xero_tenant_id, status, page=page, page_size=page_size, order_by=order_by, sort_direction=sort_direction, filter_by=filter_by)
@@ -351,7 +351,7 @@ By passing in the appropriate options, you can search for available fixed asset 
 from xero_python.api_client import Configuration, ApiClient
 from xero_python.api_client.oauth2 import OAuth2Token
 from xero_python.exceptions import ApiException
-from xero_python.assets import AssetApi
+from xero_python.assets import AssetApi, AssetStatusQueryParam
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: OAuth2
@@ -371,7 +371,7 @@ api_client = ApiClient(
 api_instance = AssetApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-status = xero_python.assets.AssetStatusQueryParam() # AssetStatusQueryParam | Required when retrieving a collection of assets. See Asset Status Codes
+status = AssetStatusQueryParam.REGISTERED # AssetStatusQueryParam | Required when retrieving a collection of assets. See Asset Status Codes
 page = 1 # int | Results are paged. This specifies which page of the results to return. The default page is 1. (optional)
 page_size = 5 # int | The number of records returned per page. By default the number of records returned is 10. (optional)
 order_by = 'AssetName' # str | Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice. (optional)
@@ -390,7 +390,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **status** | [**AssetStatusQueryParam**](.md)| Required when retrieving a collection of assets. See Asset Status Codes | 
+ **status** | **AssetStatusQueryParam**| Required when retrieving a collection of assets. See Asset Status Codes | 
  **page** | **int**| Results are paged. This specifies which page of the results to return. The default page is 1. | [optional] 
  **page_size** | **int**| The number of records returned per page. By default the number of records returned is 10. | [optional] 
  **order_by** | **str**| Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice. | [optional] 
@@ -403,12 +403,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

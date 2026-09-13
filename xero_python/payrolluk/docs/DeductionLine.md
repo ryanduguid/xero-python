@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **subject_to_tax** | **bool** | Identifies if the deduction is subject to tax | [optional] 
 **percentage** | **float** | Deduction rate percentage | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

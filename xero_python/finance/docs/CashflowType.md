@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **total** | **float** | Total value of the activity | [optional] 
 **accounts** | [**list[CashflowAccount]**](CashflowAccount.md) | List of the accounts in this activity | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

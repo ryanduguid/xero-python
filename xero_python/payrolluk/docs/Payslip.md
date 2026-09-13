@@ -32,6 +32,6 @@ Name | Type | Description | Notes
 **employer_tax_lines** | [**list[TaxLine]**](TaxLine.md) |  | [optional] 
 **court_order_lines** | [**list[CourtOrderLine]**](CourtOrderLine.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

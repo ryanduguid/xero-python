@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **engagement_type** | **str** | Engagement type of the employee | 
 **fixed_term_end_date** | **date** | End date for an employee with a fixed-term engagement type | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

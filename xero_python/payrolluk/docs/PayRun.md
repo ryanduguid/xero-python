@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **posted_date_time** | **date** | Posted date time of the pay run | [optional] 
 **pay_slips** | [**list[Payslip]**](Payslip.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

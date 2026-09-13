@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **total_credited** | **float** | Total credited value for the contact. | [optional] 
 **transaction_count** | **int** | Number of transactions for the contact. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

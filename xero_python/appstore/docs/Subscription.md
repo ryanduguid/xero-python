@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **status** | **str** | Status of the subscription. Available statuses are ACTIVE, CANCELED, and PAST_DUE. | 
 **test_mode** | **bool** | Boolean used to indicate if the subscription is in test mode | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

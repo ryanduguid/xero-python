@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **title** | **str** | Title of the resource validation error | [optional] 
 **detail** | **str** | Detail of the resource validation error | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

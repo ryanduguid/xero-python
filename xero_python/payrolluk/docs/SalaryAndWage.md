@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **status** | **str** | The current status of the corresponding salary and wages | 
 **payment_type** | **str** | The type of the payment of the corresponding salary and wages | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

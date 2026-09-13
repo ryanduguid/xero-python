@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **directorship_start_date** | **date** | The directorship start date | [optional] 
 **nic_calculation_method** | **str** | NICs calculation method | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

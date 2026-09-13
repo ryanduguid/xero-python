@@ -4,77 +4,77 @@ All URIs are relative to *https://api.xero.com/payroll.xro/2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**approve_timesheet**](PayrollNzApi.md#approve_timesheet) | **POST** /Timesheets/{TimesheetID}/Approve | Approves a timesheet
-[**create_deduction**](PayrollNzApi.md#create_deduction) | **POST** /Deductions | Creates a new deduction for a specific employee
-[**create_earnings_rate**](PayrollNzApi.md#create_earnings_rate) | **POST** /EarningsRates | Creates a new earnings rate
-[**create_employee**](PayrollNzApi.md#create_employee) | **POST** /Employees | Creates an employees
-[**create_employee_earnings_template**](PayrollNzApi.md#create_employee_earnings_template) | **POST** /Employees/{EmployeeID}/PayTemplates/Earnings | Creates earnings template records for an employee
-[**create_employee_leave**](PayrollNzApi.md#create_employee_leave) | **POST** /Employees/{EmployeeID}/Leave | Creates leave records for a specific employee
-[**create_employee_leave_setup**](PayrollNzApi.md#create_employee_leave_setup) | **POST** /Employees/{EmployeeID}/LeaveSetup | Creates a leave set-up for a specific employee. This is required before viewing, configuring and requesting leave for an employee
-[**create_employee_leave_type**](PayrollNzApi.md#create_employee_leave_type) | **POST** /Employees/{EmployeeID}/LeaveTypes | Creates leave type records for a specific employee
-[**create_employee_opening_balances**](PayrollNzApi.md#create_employee_opening_balances) | **POST** /Employees/{EmployeeID}/OpeningBalances | Creates opening balances for a specific employee
-[**create_employee_payment_method**](PayrollNzApi.md#create_employee_payment_method) | **POST** /Employees/{EmployeeID}/PaymentMethods | Creates a payment method for an employee
-[**create_employee_salary_and_wage**](PayrollNzApi.md#create_employee_salary_and_wage) | **POST** /Employees/{EmployeeID}/SalaryAndWages | Creates an employee salary and wage record
-[**create_employee_working_pattern**](PayrollNzApi.md#create_employee_working_pattern) | **POST** /Employees/{EmployeeID}/Working-Patterns | Creates an employee working pattern
-[**create_employment**](PayrollNzApi.md#create_employment) | **POST** /Employees/{EmployeeID}/Employment | Creates an employment detail for a specific employee
-[**create_leave_type**](PayrollNzApi.md#create_leave_type) | **POST** /LeaveTypes | Creates a new leave type
-[**create_multiple_employee_earnings_template**](PayrollNzApi.md#create_multiple_employee_earnings_template) | **POST** /Employees/{EmployeeID}/PayTemplateEarnings | Creates multiple employee earnings template records for a specific employee
-[**create_pay_run**](PayrollNzApi.md#create_pay_run) | **POST** /PayRuns | Creates a pay run
-[**create_pay_run_calendar**](PayrollNzApi.md#create_pay_run_calendar) | **POST** /PayRunCalendars | Creates a new payrun calendar
-[**create_reimbursement**](PayrollNzApi.md#create_reimbursement) | **POST** /Reimbursements | Creates a new reimbursement
-[**create_superannuation**](PayrollNzApi.md#create_superannuation) | **POST** /Superannuations | Creates a new superannuation
-[**create_timesheet**](PayrollNzApi.md#create_timesheet) | **POST** /Timesheets | Creates a new timesheet
-[**create_timesheet_line**](PayrollNzApi.md#create_timesheet_line) | **POST** /Timesheets/{TimesheetID}/Lines | Create a new timesheet line for a specific time sheet
-[**delete_employee_earnings_template**](PayrollNzApi.md#delete_employee_earnings_template) | **DELETE** /Employees/{EmployeeID}/PayTemplates/Earnings/{PayTemplateEarningID} | Deletes an employee&#39;s earnings template record
-[**delete_employee_leave**](PayrollNzApi.md#delete_employee_leave) | **DELETE** /Employees/{EmployeeID}/Leave/{LeaveID} | Deletes a leave record for a specific employee
-[**delete_employee_salary_and_wage**](PayrollNzApi.md#delete_employee_salary_and_wage) | **DELETE** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Deletes an employee&#39;s salary and wages record
-[**delete_employee_working_pattern**](PayrollNzApi.md#delete_employee_working_pattern) | **DELETE** /Employees/{EmployeeID}/Working-Patterns/{EmployeeWorkingPatternID} | deletes employee&#39;s working patterns
-[**delete_timesheet**](PayrollNzApi.md#delete_timesheet) | **DELETE** /Timesheets/{TimesheetID} | Deletes a timesheet
-[**delete_timesheet_line**](PayrollNzApi.md#delete_timesheet_line) | **DELETE** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | Deletes a timesheet line for a specific timesheet
-[**get_deduction**](PayrollNzApi.md#get_deduction) | **GET** /Deductions/{deductionId} | Retrieves a single deduction by using a unique deduction ID
-[**get_deductions**](PayrollNzApi.md#get_deductions) | **GET** /Deductions | Retrieves deductions for a specific employee
-[**get_earnings_rate**](PayrollNzApi.md#get_earnings_rate) | **GET** /EarningsRates/{EarningsRateID} | Retrieves a specific earnings rates by using a unique earnings rate id
-[**get_earnings_rates**](PayrollNzApi.md#get_earnings_rates) | **GET** /EarningsRates | Retrieves earnings rates
-[**get_employee**](PayrollNzApi.md#get_employee) | **GET** /Employees/{EmployeeID} | Retrieves an employees using a unique employee ID
-[**get_employee_leave_balances**](PayrollNzApi.md#get_employee_leave_balances) | **GET** /Employees/{EmployeeID}/LeaveBalances | Retrieves leave balances for a specific employee
-[**get_employee_leave_periods**](PayrollNzApi.md#get_employee_leave_periods) | **GET** /Employees/{EmployeeID}/LeavePeriods | Retrieves leave periods for a specific employee
-[**get_employee_leave_types**](PayrollNzApi.md#get_employee_leave_types) | **GET** /Employees/{EmployeeID}/LeaveTypes | Retrieves leave types for a specific employee
-[**get_employee_leaves**](PayrollNzApi.md#get_employee_leaves) | **GET** /Employees/{EmployeeID}/Leave | Retrieves leave records for a specific employee
-[**get_employee_opening_balances**](PayrollNzApi.md#get_employee_opening_balances) | **GET** /Employees/{EmployeeID}/OpeningBalances | Retrieves the opening balance for a specific employee
-[**get_employee_pay_templates**](PayrollNzApi.md#get_employee_pay_templates) | **GET** /Employees/{EmployeeID}/PayTemplates | Retrieves pay templates for a specific employee
-[**get_employee_payment_method**](PayrollNzApi.md#get_employee_payment_method) | **GET** /Employees/{EmployeeID}/PaymentMethods | Retrieves available payment methods for a specific employee
-[**get_employee_salary_and_wage**](PayrollNzApi.md#get_employee_salary_and_wage) | **GET** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Retrieves an employee&#39;s salary and wages record by using a unique salary and wage ID
-[**get_employee_salary_and_wages**](PayrollNzApi.md#get_employee_salary_and_wages) | **GET** /Employees/{EmployeeID}/SalaryAndWages | Retrieves an employee&#39;s salary and wages
-[**get_employee_tax**](PayrollNzApi.md#get_employee_tax) | **GET** /Employees/{EmployeeID}/Tax | Retrieves tax records for a specific employee
-[**get_employee_working_pattern**](PayrollNzApi.md#get_employee_working_pattern) | **GET** /Employees/{EmployeeID}/Working-Patterns/{EmployeeWorkingPatternID} | Retrieves employee&#39;s working patterns
-[**get_employee_working_patterns**](PayrollNzApi.md#get_employee_working_patterns) | **GET** /Employees/{EmployeeID}/Working-Patterns | Retrieves employee&#39;s working patterns
-[**get_employees**](PayrollNzApi.md#get_employees) | **GET** /Employees | Retrieves employees
-[**get_leave_type**](PayrollNzApi.md#get_leave_type) | **GET** /LeaveTypes/{LeaveTypeID} | Retrieves a specific leave type by using a unique leave type ID
-[**get_leave_types**](PayrollNzApi.md#get_leave_types) | **GET** /LeaveTypes | Retrieves leave types
-[**get_pay_run**](PayrollNzApi.md#get_pay_run) | **GET** /PayRuns/{PayRunID} | Retrieves a specific pay run by using a unique pay run ID
-[**get_pay_run_calendar**](PayrollNzApi.md#get_pay_run_calendar) | **GET** /PayRunCalendars/{PayrollCalendarID} | Retrieves a specific payrun calendar by using a unique payroll calendar ID
-[**get_pay_run_calendars**](PayrollNzApi.md#get_pay_run_calendars) | **GET** /PayRunCalendars | Retrieves payrun calendars
-[**get_pay_runs**](PayrollNzApi.md#get_pay_runs) | **GET** /PayRuns | Retrieves pay runs
-[**get_pay_slip**](PayrollNzApi.md#get_pay_slip) | **GET** /PaySlips/{PaySlipID} | Retrieves a specific payslip by a unique pay slip ID
-[**get_pay_slips**](PayrollNzApi.md#get_pay_slips) | **GET** /PaySlips | Retrieves payslips
-[**get_reimbursement**](PayrollNzApi.md#get_reimbursement) | **GET** /Reimbursements/{ReimbursementID} | Retrieves a specific reimbursement by using a unique reimbursement ID
-[**get_reimbursements**](PayrollNzApi.md#get_reimbursements) | **GET** /Reimbursements | Retrieves reimbursements
-[**get_settings**](PayrollNzApi.md#get_settings) | **GET** /Settings | Retrieves settings
-[**get_statutory_deduction**](PayrollNzApi.md#get_statutory_deduction) | **GET** /StatutoryDeductions/{id} | Retrieves a specific statutory deduction by using a unique statutory deductions id
-[**get_statutory_deductions**](PayrollNzApi.md#get_statutory_deductions) | **GET** /StatutoryDeductions | Retrieves statutory deductions
-[**get_superannuation**](PayrollNzApi.md#get_superannuation) | **GET** /Superannuations/{SuperannuationID} | Retrieves a specific superannuation using a unique superannuation ID
-[**get_superannuations**](PayrollNzApi.md#get_superannuations) | **GET** /Superannuations | Retrieves superannuations
-[**get_timesheet**](PayrollNzApi.md#get_timesheet) | **GET** /Timesheets/{TimesheetID} | Retrieves a specific timesheet by using a unique timesheet ID
-[**get_timesheets**](PayrollNzApi.md#get_timesheets) | **GET** /Timesheets | Retrieves timesheets
-[**get_tracking_categories**](PayrollNzApi.md#get_tracking_categories) | **GET** /Settings/TrackingCategories | Retrieves tracking categories
-[**revert_timesheet**](PayrollNzApi.md#revert_timesheet) | **POST** /Timesheets/{TimesheetID}/RevertToDraft | Reverts a timesheet to draft
-[**update_employee**](PayrollNzApi.md#update_employee) | **PUT** /Employees/{EmployeeID} | Updates an existing employee
-[**update_employee_earnings_template**](PayrollNzApi.md#update_employee_earnings_template) | **PUT** /Employees/{EmployeeID}/PayTemplates/Earnings/{PayTemplateEarningID} | Updates an earnings template records for an employee
-[**update_employee_leave**](PayrollNzApi.md#update_employee_leave) | **PUT** /Employees/{EmployeeID}/Leave/{LeaveID} | Updates leave records for a specific employee
-[**update_employee_salary_and_wage**](PayrollNzApi.md#update_employee_salary_and_wage) | **PUT** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Updates an employee&#39;s salary and wages record
-[**update_employee_tax**](PayrollNzApi.md#update_employee_tax) | **POST** /Employees/{EmployeeID}/Tax | Updates the tax records for a specific employee
-[**update_pay_slip_line_items**](PayrollNzApi.md#update_pay_slip_line_items) | **PUT** /PaySlips/{PaySlipID} | Creates an employee pay slip
-[**update_timesheet_line**](PayrollNzApi.md#update_timesheet_line) | **PUT** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | Updates a timesheet line for a specific timesheet
+[**approve_timesheet**](PayrollNZApi.md#approve_timesheet) | **POST** /Timesheets/{TimesheetID}/Approve | Approves a timesheet
+[**create_deduction**](PayrollNZApi.md#create_deduction) | **POST** /Deductions | Creates a new deduction for a specific employee
+[**create_earnings_rate**](PayrollNZApi.md#create_earnings_rate) | **POST** /EarningsRates | Creates a new earnings rate
+[**create_employee**](PayrollNZApi.md#create_employee) | **POST** /Employees | Creates an employees
+[**create_employee_earnings_template**](PayrollNZApi.md#create_employee_earnings_template) | **POST** /Employees/{EmployeeID}/PayTemplates/Earnings | Creates earnings template records for an employee
+[**create_employee_leave**](PayrollNZApi.md#create_employee_leave) | **POST** /Employees/{EmployeeID}/Leave | Creates leave records for a specific employee
+[**create_employee_leave_setup**](PayrollNZApi.md#create_employee_leave_setup) | **POST** /Employees/{EmployeeID}/LeaveSetup | Creates a leave set-up for a specific employee. This is required before viewing, configuring and requesting leave for an employee
+[**create_employee_leave_type**](PayrollNZApi.md#create_employee_leave_type) | **POST** /Employees/{EmployeeID}/LeaveTypes | Creates leave type records for a specific employee
+[**create_employee_opening_balances**](PayrollNZApi.md#create_employee_opening_balances) | **POST** /Employees/{EmployeeID}/OpeningBalances | Creates opening balances for a specific employee
+[**create_employee_payment_method**](PayrollNZApi.md#create_employee_payment_method) | **POST** /Employees/{EmployeeID}/PaymentMethods | Creates a payment method for an employee
+[**create_employee_salary_and_wage**](PayrollNZApi.md#create_employee_salary_and_wage) | **POST** /Employees/{EmployeeID}/SalaryAndWages | Creates an employee salary and wage record
+[**create_employee_working_pattern**](PayrollNZApi.md#create_employee_working_pattern) | **POST** /Employees/{EmployeeID}/Working-Patterns | Creates an employee working pattern
+[**create_employment**](PayrollNZApi.md#create_employment) | **POST** /Employees/{EmployeeID}/Employment | Creates an employment detail for a specific employee
+[**create_leave_type**](PayrollNZApi.md#create_leave_type) | **POST** /LeaveTypes | Creates a new leave type
+[**create_multiple_employee_earnings_template**](PayrollNZApi.md#create_multiple_employee_earnings_template) | **POST** /Employees/{EmployeeID}/PayTemplateEarnings | Creates multiple employee earnings template records for a specific employee
+[**create_pay_run**](PayrollNZApi.md#create_pay_run) | **POST** /PayRuns | Creates a pay run
+[**create_pay_run_calendar**](PayrollNZApi.md#create_pay_run_calendar) | **POST** /PayRunCalendars | Creates a new payrun calendar
+[**create_reimbursement**](PayrollNZApi.md#create_reimbursement) | **POST** /Reimbursements | Creates a new reimbursement
+[**create_superannuation**](PayrollNZApi.md#create_superannuation) | **POST** /Superannuations | Creates a new superannuation
+[**create_timesheet**](PayrollNZApi.md#create_timesheet) | **POST** /Timesheets | Creates a new timesheet
+[**create_timesheet_line**](PayrollNZApi.md#create_timesheet_line) | **POST** /Timesheets/{TimesheetID}/Lines | Create a new timesheet line for a specific time sheet
+[**delete_employee_earnings_template**](PayrollNZApi.md#delete_employee_earnings_template) | **DELETE** /Employees/{EmployeeID}/PayTemplates/Earnings/{PayTemplateEarningID} | Deletes an employee&#39;s earnings template record
+[**delete_employee_leave**](PayrollNZApi.md#delete_employee_leave) | **DELETE** /Employees/{EmployeeID}/Leave/{LeaveID} | Deletes a leave record for a specific employee
+[**delete_employee_salary_and_wage**](PayrollNZApi.md#delete_employee_salary_and_wage) | **DELETE** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Deletes an employee&#39;s salary and wages record
+[**delete_employee_working_pattern**](PayrollNZApi.md#delete_employee_working_pattern) | **DELETE** /Employees/{EmployeeID}/Working-Patterns/{EmployeeWorkingPatternID} | deletes employee&#39;s working patterns
+[**delete_timesheet**](PayrollNZApi.md#delete_timesheet) | **DELETE** /Timesheets/{TimesheetID} | Deletes a timesheet
+[**delete_timesheet_line**](PayrollNZApi.md#delete_timesheet_line) | **DELETE** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | Deletes a timesheet line for a specific timesheet
+[**get_deduction**](PayrollNZApi.md#get_deduction) | **GET** /Deductions/{deductionId} | Retrieves a single deduction by using a unique deduction ID
+[**get_deductions**](PayrollNZApi.md#get_deductions) | **GET** /Deductions | Retrieves deductions for a specific employee
+[**get_earnings_rate**](PayrollNZApi.md#get_earnings_rate) | **GET** /EarningsRates/{EarningsRateID} | Retrieves a specific earnings rates by using a unique earnings rate id
+[**get_earnings_rates**](PayrollNZApi.md#get_earnings_rates) | **GET** /EarningsRates | Retrieves earnings rates
+[**get_employee**](PayrollNZApi.md#get_employee) | **GET** /Employees/{EmployeeID} | Retrieves an employees using a unique employee ID
+[**get_employee_leave_balances**](PayrollNZApi.md#get_employee_leave_balances) | **GET** /Employees/{EmployeeID}/LeaveBalances | Retrieves leave balances for a specific employee
+[**get_employee_leave_periods**](PayrollNZApi.md#get_employee_leave_periods) | **GET** /Employees/{EmployeeID}/LeavePeriods | Retrieves leave periods for a specific employee
+[**get_employee_leave_types**](PayrollNZApi.md#get_employee_leave_types) | **GET** /Employees/{EmployeeID}/LeaveTypes | Retrieves leave types for a specific employee
+[**get_employee_leaves**](PayrollNZApi.md#get_employee_leaves) | **GET** /Employees/{EmployeeID}/Leave | Retrieves leave records for a specific employee
+[**get_employee_opening_balances**](PayrollNZApi.md#get_employee_opening_balances) | **GET** /Employees/{EmployeeID}/OpeningBalances | Retrieves the opening balance for a specific employee
+[**get_employee_pay_templates**](PayrollNZApi.md#get_employee_pay_templates) | **GET** /Employees/{EmployeeID}/PayTemplates | Retrieves pay templates for a specific employee
+[**get_employee_payment_method**](PayrollNZApi.md#get_employee_payment_method) | **GET** /Employees/{EmployeeID}/PaymentMethods | Retrieves available payment methods for a specific employee
+[**get_employee_salary_and_wage**](PayrollNZApi.md#get_employee_salary_and_wage) | **GET** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Retrieves an employee&#39;s salary and wages record by using a unique salary and wage ID
+[**get_employee_salary_and_wages**](PayrollNZApi.md#get_employee_salary_and_wages) | **GET** /Employees/{EmployeeID}/SalaryAndWages | Retrieves an employee&#39;s salary and wages
+[**get_employee_tax**](PayrollNZApi.md#get_employee_tax) | **GET** /Employees/{EmployeeID}/Tax | Retrieves tax records for a specific employee
+[**get_employee_working_pattern**](PayrollNZApi.md#get_employee_working_pattern) | **GET** /Employees/{EmployeeID}/Working-Patterns/{EmployeeWorkingPatternID} | Retrieves employee&#39;s working patterns
+[**get_employee_working_patterns**](PayrollNZApi.md#get_employee_working_patterns) | **GET** /Employees/{EmployeeID}/Working-Patterns | Retrieves employee&#39;s working patterns
+[**get_employees**](PayrollNZApi.md#get_employees) | **GET** /Employees | Retrieves employees
+[**get_leave_type**](PayrollNZApi.md#get_leave_type) | **GET** /LeaveTypes/{LeaveTypeID} | Retrieves a specific leave type by using a unique leave type ID
+[**get_leave_types**](PayrollNZApi.md#get_leave_types) | **GET** /LeaveTypes | Retrieves leave types
+[**get_pay_run**](PayrollNZApi.md#get_pay_run) | **GET** /PayRuns/{PayRunID} | Retrieves a specific pay run by using a unique pay run ID
+[**get_pay_run_calendar**](PayrollNZApi.md#get_pay_run_calendar) | **GET** /PayRunCalendars/{PayrollCalendarID} | Retrieves a specific payrun calendar by using a unique payroll calendar ID
+[**get_pay_run_calendars**](PayrollNZApi.md#get_pay_run_calendars) | **GET** /PayRunCalendars | Retrieves payrun calendars
+[**get_pay_runs**](PayrollNZApi.md#get_pay_runs) | **GET** /PayRuns | Retrieves pay runs
+[**get_pay_slip**](PayrollNZApi.md#get_pay_slip) | **GET** /PaySlips/{PaySlipID} | Retrieves a specific payslip by a unique pay slip ID
+[**get_pay_slips**](PayrollNZApi.md#get_pay_slips) | **GET** /PaySlips | Retrieves payslips
+[**get_reimbursement**](PayrollNZApi.md#get_reimbursement) | **GET** /Reimbursements/{ReimbursementID} | Retrieves a specific reimbursement by using a unique reimbursement ID
+[**get_reimbursements**](PayrollNZApi.md#get_reimbursements) | **GET** /Reimbursements | Retrieves reimbursements
+[**get_settings**](PayrollNZApi.md#get_settings) | **GET** /Settings | Retrieves settings
+[**get_statutory_deduction**](PayrollNZApi.md#get_statutory_deduction) | **GET** /StatutoryDeductions/{id} | Retrieves a specific statutory deduction by using a unique statutory deductions id
+[**get_statutory_deductions**](PayrollNZApi.md#get_statutory_deductions) | **GET** /StatutoryDeductions | Retrieves statutory deductions
+[**get_superannuation**](PayrollNZApi.md#get_superannuation) | **GET** /Superannuations/{SuperannuationID} | Retrieves a specific superannuation using a unique superannuation ID
+[**get_superannuations**](PayrollNZApi.md#get_superannuations) | **GET** /Superannuations | Retrieves superannuations
+[**get_timesheet**](PayrollNZApi.md#get_timesheet) | **GET** /Timesheets/{TimesheetID} | Retrieves a specific timesheet by using a unique timesheet ID
+[**get_timesheets**](PayrollNZApi.md#get_timesheets) | **GET** /Timesheets | Retrieves timesheets
+[**get_tracking_categories**](PayrollNZApi.md#get_tracking_categories) | **GET** /Settings/TrackingCategories | Retrieves tracking categories
+[**revert_timesheet**](PayrollNZApi.md#revert_timesheet) | **POST** /Timesheets/{TimesheetID}/RevertToDraft | Reverts a timesheet to draft
+[**update_employee**](PayrollNZApi.md#update_employee) | **PUT** /Employees/{EmployeeID} | Updates an existing employee
+[**update_employee_earnings_template**](PayrollNZApi.md#update_employee_earnings_template) | **PUT** /Employees/{EmployeeID}/PayTemplates/Earnings/{PayTemplateEarningID} | Updates an earnings template records for an employee
+[**update_employee_leave**](PayrollNZApi.md#update_employee_leave) | **PUT** /Employees/{EmployeeID}/Leave/{LeaveID} | Updates leave records for a specific employee
+[**update_employee_salary_and_wage**](PayrollNZApi.md#update_employee_salary_and_wage) | **PUT** /Employees/{EmployeeID}/SalaryAndWages/{SalaryAndWagesID} | Updates an employee&#39;s salary and wages record
+[**update_employee_tax**](PayrollNZApi.md#update_employee_tax) | **POST** /Employees/{EmployeeID}/Tax | Updates the tax records for a specific employee
+[**update_pay_slip_line_items**](PayrollNZApi.md#update_pay_slip_line_items) | **PUT** /PaySlips/{PaySlipID} | Creates an employee pay slip
+[**update_timesheet_line**](PayrollNZApi.md#update_timesheet_line) | **PUT** /Timesheets/{TimesheetID}/Lines/{TimesheetLineID} | Updates a timesheet line for a specific timesheet
 
 
 # **approve_timesheet**
@@ -124,7 +124,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
@@ -133,14 +133,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_deduction**
 > DeductionObject create_deduction(xero_tenant_id, deduction, idempotency_key=idempotency_key)
@@ -198,14 +198,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_earnings_rate**
 > EarningsRateObject create_earnings_rate(xero_tenant_id, earnings_rate, idempotency_key=idempotency_key)
@@ -263,14 +263,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee**
 > EmployeeObject create_employee(xero_tenant_id, employee, idempotency_key=idempotency_key)
@@ -328,14 +328,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_earnings_template**
 > EarningsTemplateObject create_employee_earnings_template(xero_tenant_id, employee_id, earnings_template, idempotency_key=idempotency_key)
@@ -385,7 +385,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **earnings_template** | [**EarningsTemplate**](EarningsTemplate.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -395,14 +395,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_leave**
 > EmployeeLeaveObject create_employee_leave(xero_tenant_id, employee_id, employee_leave, idempotency_key=idempotency_key)
@@ -452,7 +452,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee_leave** | [**EmployeeLeave**](EmployeeLeave.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -462,14 +462,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_leave_setup**
 > EmployeeLeaveSetupObject create_employee_leave_setup(xero_tenant_id, employee_id, employee_leave_setup, idempotency_key=idempotency_key)
@@ -519,7 +519,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee_leave_setup** | [**EmployeeLeaveSetup**](EmployeeLeaveSetup.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -529,14 +529,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_leave_type**
 > EmployeeLeaveTypeObject create_employee_leave_type(xero_tenant_id, employee_id, employee_leave_type, idempotency_key=idempotency_key)
@@ -571,7 +571,7 @@ api_instance = PayrollNzApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Employee id for single object
-employee_leave_type = {"leaveTypeID":"35da97ae-05b9-427f-9a98-69157ba42cec","scheduleOfAccrual":"AnnuallyAfter6Months","unitsAccruedAnnually":10,"typeOfUnitsToAccrue":"Hours","openingBalanceTypeOfUnits":"Hours","maximumToAccrue":80,"openingBalance":100,"rateAccruedHourly":null} # EmployeeLeaveType | 
+employee_leave_type = {"leaveTypeID":"35da97ae-05b9-427f-9a98-69157ba42cec","scheduleOfAccrual":"AnnuallyAfter6Months","unitsAccruedAnnually":10,"typeOfUnitsToAccrue":"Hours","openingBalanceTypeOfUnits":"Hours","maximumToAccrue":80,"openingBalance":100,"rateAccruedHourly":None} # EmployeeLeaveType | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates leave type records for a specific employee
@@ -586,7 +586,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee_leave_type** | [**EmployeeLeaveType**](EmployeeLeaveType.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -596,14 +596,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_opening_balances**
 > EmployeeOpeningBalancesObject create_employee_opening_balances(xero_tenant_id, employee_id, employee_opening_balance, idempotency_key=idempotency_key)
@@ -653,7 +653,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee_opening_balance** | [**list[EmployeeOpeningBalance]**](EmployeeOpeningBalance.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -663,14 +663,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_payment_method**
 > PaymentMethodObject create_employee_payment_method(xero_tenant_id, employee_id, payment_method, idempotency_key=idempotency_key)
@@ -705,7 +705,7 @@ api_instance = PayrollNzApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Employee id for single object
-payment_method = {"bankAccounts":[{"accountName":"Casual Worker","accountNumber":"0607050201419000","sortCode":null,"particulars":null,"code":null,"dollarAmount":null,"reference":"","calculationType":"Balance"}]} # PaymentMethod | 
+payment_method = {"bankAccounts":[{"accountName":"Casual Worker","accountNumber":"0607050201419000","sortCode":None,"particulars":None,"code":None,"dollarAmount":None,"reference":"","calculationType":"Balance"}]} # PaymentMethod | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a payment method for an employee
@@ -720,7 +720,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **payment_method** | [**PaymentMethod**](PaymentMethod.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -730,14 +730,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_salary_and_wage**
 > SalaryAndWageObject create_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wage, idempotency_key=idempotency_key)
@@ -787,7 +787,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **salary_and_wage** | [**SalaryAndWage**](SalaryAndWage.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -797,14 +797,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee_working_pattern**
 > EmployeeWorkingPatternWithWorkingWeeksObject create_employee_working_pattern(xero_tenant_id, employee_id, employee_working_pattern_with_working_weeks_request, idempotency_key=idempotency_key)
@@ -854,7 +854,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee_working_pattern_with_working_weeks_request** | [**EmployeeWorkingPatternWithWorkingWeeksRequest**](EmployeeWorkingPatternWithWorkingWeeksRequest.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -864,14 +864,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employment**
 > EmploymentObject create_employment(xero_tenant_id, employee_id, employment, idempotency_key=idempotency_key)
@@ -921,7 +921,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employment** | [**Employment**](Employment.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -931,14 +931,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_leave_type**
 > LeaveTypeObject create_leave_type(xero_tenant_id, leave_type, idempotency_key=idempotency_key)
@@ -972,7 +972,7 @@ api_client = ApiClient(
 api_instance = PayrollNzApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-leave_type = {"name":"My wqwhhiktun Leave","isPaidLeave":false,"showOnPayslip":true} # LeaveType | 
+leave_type = {"name":"My wqwhhiktun Leave","isPaidLeave":False,"showOnPayslip":True} # LeaveType | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a new leave type
@@ -996,14 +996,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_multiple_employee_earnings_template**
 > EmployeeEarningsTemplates create_multiple_employee_earnings_template(xero_tenant_id, employee_id, earnings_template, idempotency_key=idempotency_key)
@@ -1053,7 +1053,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **earnings_template** | [**list[EarningsTemplate]**](EarningsTemplate.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1063,14 +1063,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_pay_run**
 > PayRunObject create_pay_run(xero_tenant_id, pay_run, idempotency_key=idempotency_key)
@@ -1128,14 +1128,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_pay_run_calendar**
 > PayRunCalendarObject create_pay_run_calendar(xero_tenant_id, pay_run_calendar, idempotency_key=idempotency_key)
@@ -1193,14 +1193,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_reimbursement**
 > ReimbursementObject create_reimbursement(xero_tenant_id, reimbursement, idempotency_key=idempotency_key)
@@ -1258,14 +1258,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_superannuation**
 > SuperannuationObject create_superannuation(xero_tenant_id, benefit, idempotency_key=idempotency_key)
@@ -1323,14 +1323,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_timesheet**
 > TimesheetObject create_timesheet(xero_tenant_id, timesheet, idempotency_key=idempotency_key)
@@ -1388,14 +1388,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_timesheet_line**
 > TimesheetLineObject create_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line, idempotency_key=idempotency_key)
@@ -1445,7 +1445,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
  **timesheet_line** | [**TimesheetLine**](TimesheetLine.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1455,14 +1455,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_employee_earnings_template**
 > EarningsTemplateObject delete_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id)
@@ -1511,8 +1511,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **pay_template_earning_id** | [**str**](.md)| Id for single pay template earnings object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **pay_template_earning_id** | **str**| Id for single pay template earnings object | 
 
 ### Return type
 
@@ -1520,14 +1520,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_employee_leave**
 > EmployeeLeaveObject delete_employee_leave(xero_tenant_id, employee_id, leave_id)
@@ -1576,8 +1576,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **leave_id** | [**str**](.md)| Leave id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **leave_id** | **str**| Leave id for single object | 
 
 ### Return type
 
@@ -1585,14 +1585,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_employee_salary_and_wage**
 > SalaryAndWageObject delete_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id)
@@ -1641,8 +1641,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **salary_and_wages_id** | [**str**](.md)| Id for single salary and wages object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **salary_and_wages_id** | **str**| Id for single salary and wages object | 
 
 ### Return type
 
@@ -1650,14 +1650,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_employee_working_pattern**
 > EmployeeLeaveObject delete_employee_working_pattern(xero_tenant_id, employee_id, employee_working_pattern_id)
@@ -1706,8 +1706,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **employee_working_pattern_id** | [**str**](.md)| Employee working pattern id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **employee_working_pattern_id** | **str**| Employee working pattern id for single object | 
 
 ### Return type
 
@@ -1715,14 +1715,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_timesheet**
 > TimesheetLine delete_timesheet(xero_tenant_id, timesheet_id)
@@ -1770,7 +1770,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
 
 ### Return type
 
@@ -1778,14 +1778,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_timesheet_line**
 > TimesheetLine delete_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id)
@@ -1834,8 +1834,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
- **timesheet_line_id** | [**str**](.md)| Identifier for the timesheet line | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
+ **timesheet_line_id** | **str**| Identifier for the timesheet line | 
 
 ### Return type
 
@@ -1843,14 +1843,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_deduction**
 > DeductionObject get_deduction(xero_tenant_id, deduction_id)
@@ -1898,7 +1898,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **deduction_id** | [**str**](.md)| Identifier for the deduction | 
+ **deduction_id** | **str**| Identifier for the deduction | 
 
 ### Return type
 
@@ -1906,14 +1906,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_deductions**
 > Deductions get_deductions(xero_tenant_id, page=page)
@@ -1969,14 +1969,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_earnings_rate**
 > EarningsRateObject get_earnings_rate(xero_tenant_id, earnings_rate_id)
@@ -2024,7 +2024,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **earnings_rate_id** | [**str**](.md)| Identifier for the earnings rate | 
+ **earnings_rate_id** | **str**| Identifier for the earnings rate | 
 
 ### Return type
 
@@ -2032,14 +2032,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_earnings_rates**
 > EarningsRates get_earnings_rates(xero_tenant_id, page=page)
@@ -2095,14 +2095,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee**
 > EmployeeObject get_employee(xero_tenant_id, employee_id)
@@ -2150,7 +2150,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2158,14 +2158,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_leave_balances**
 > EmployeeLeaveBalances get_employee_leave_balances(xero_tenant_id, employee_id)
@@ -2213,7 +2213,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2221,14 +2221,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_leave_periods**
 > LeavePeriods get_employee_leave_periods(xero_tenant_id, employee_id, start_date=start_date, end_date=end_date)
@@ -2278,7 +2278,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **start_date** | **date**| Filter by start date | [optional] 
  **end_date** | **date**| Filter by end date | [optional] 
 
@@ -2288,14 +2288,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_leave_types**
 > EmployeeLeaveTypes get_employee_leave_types(xero_tenant_id, employee_id)
@@ -2343,7 +2343,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2351,14 +2351,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_leaves**
 > EmployeeLeaves get_employee_leaves(xero_tenant_id, employee_id)
@@ -2406,7 +2406,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2414,14 +2414,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_opening_balances**
 > EmployeeOpeningBalancesObject get_employee_opening_balances(xero_tenant_id, employee_id)
@@ -2469,7 +2469,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2477,14 +2477,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_pay_templates**
 > EmployeePayTemplates get_employee_pay_templates(xero_tenant_id, employee_id)
@@ -2532,7 +2532,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2540,14 +2540,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_payment_method**
 > PaymentMethodObject get_employee_payment_method(xero_tenant_id, employee_id)
@@ -2595,7 +2595,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2603,14 +2603,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_salary_and_wage**
 > SalaryAndWages get_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id)
@@ -2659,8 +2659,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **salary_and_wages_id** | [**str**](.md)| Id for single pay template earnings object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **salary_and_wages_id** | **str**| Id for single pay template earnings object | 
 
 ### Return type
 
@@ -2668,14 +2668,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_salary_and_wages**
 > SalaryAndWages get_employee_salary_and_wages(xero_tenant_id, employee_id, page=page)
@@ -2724,7 +2724,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **page** | **int**| Page number which specifies the set of records to retrieve. By default the number of the records per set is 100. | [optional] 
 
 ### Return type
@@ -2733,14 +2733,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_tax**
 > EmployeeTaxObject get_employee_tax(xero_tenant_id, employee_id)
@@ -2788,7 +2788,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2796,14 +2796,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_working_pattern**
 > EmployeeWorkingPatternWithWorkingWeeksObject get_employee_working_pattern(xero_tenant_id, employee_id, employee_working_pattern_id)
@@ -2852,8 +2852,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **employee_working_pattern_id** | [**str**](.md)| Employee working pattern id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **employee_working_pattern_id** | **str**| Employee working pattern id for single object | 
 
 ### Return type
 
@@ -2861,14 +2861,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee_working_patterns**
 > EmployeeWorkingPatternsObject get_employee_working_patterns(xero_tenant_id, employee_id)
@@ -2916,7 +2916,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -2924,14 +2924,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employees**
 > Employees get_employees(xero_tenant_id, filter=filter, page=page)
@@ -2989,14 +2989,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_leave_type**
 > LeaveTypeObject get_leave_type(xero_tenant_id, leave_type_id)
@@ -3044,7 +3044,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **leave_type_id** | [**str**](.md)| Identifier for the leave type | 
+ **leave_type_id** | **str**| Identifier for the leave type | 
 
 ### Return type
 
@@ -3052,14 +3052,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_leave_types**
 > LeaveTypes get_leave_types(xero_tenant_id, page=page, active_only=active_only)
@@ -3094,7 +3094,7 @@ api_instance = PayrollNzApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 page = 56 # int | Page number which specifies the set of records to retrieve. By default the number of the records per set is 100. (optional)
-active_only = true # bool | Filters leave types by active status. By default the API returns all leave types. (optional)
+active_only = True # bool | Filters leave types by active status. By default the API returns all leave types. (optional)
 try:
     # Retrieves leave types
     api_response = api_instance.get_leave_types(xero_tenant_id, page=page, active_only=active_only)
@@ -3117,14 +3117,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_run**
 > PayRunObject get_pay_run(xero_tenant_id, pay_run_id)
@@ -3172,7 +3172,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **pay_run_id** | [**str**](.md)| Identifier for the pay run | 
+ **pay_run_id** | **str**| Identifier for the pay run | 
 
 ### Return type
 
@@ -3180,14 +3180,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_run_calendar**
 > PayRunCalendarObject get_pay_run_calendar(xero_tenant_id, payroll_calendar_id)
@@ -3235,7 +3235,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payroll_calendar_id** | [**str**](.md)| Identifier for the payrun calendars | 
+ **payroll_calendar_id** | **str**| Identifier for the payrun calendars | 
 
 ### Return type
 
@@ -3243,14 +3243,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_run_calendars**
 > PayRunCalendars get_pay_run_calendars(xero_tenant_id, page=page)
@@ -3306,14 +3306,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_runs**
 > PayRuns get_pay_runs(xero_tenant_id, page=page, status=status)
@@ -3371,14 +3371,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_slip**
 > PaySlipObject get_pay_slip(xero_tenant_id, pay_slip_id)
@@ -3426,7 +3426,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **pay_slip_id** | [**str**](.md)| Identifier for the payslip | 
+ **pay_slip_id** | **str**| Identifier for the payslip | 
 
 ### Return type
 
@@ -3434,14 +3434,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_slips**
 > PaySlips get_pay_slips(xero_tenant_id, pay_run_id, page=page)
@@ -3490,7 +3490,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **pay_run_id** | [**str**](.md)| PayrunID which specifies the containing payrun of payslips to retrieve. By default, the API does not group payslips by payrun. | 
+ **pay_run_id** | **str**| PayrunID which specifies the containing payrun of payslips to retrieve. By default, the API does not group payslips by payrun. | 
  **page** | **int**| Page number which specifies the set of records to retrieve. By default the number of the records per set is 100. | [optional] 
 
 ### Return type
@@ -3499,14 +3499,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_reimbursement**
 > ReimbursementObject get_reimbursement(xero_tenant_id, reimbursement_id)
@@ -3554,7 +3554,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **reimbursement_id** | [**str**](.md)| Identifier for the reimbursement | 
+ **reimbursement_id** | **str**| Identifier for the reimbursement | 
 
 ### Return type
 
@@ -3562,14 +3562,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_reimbursements**
 > Reimbursements get_reimbursements(xero_tenant_id, page=page)
@@ -3625,14 +3625,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_settings**
 > Settings get_settings(xero_tenant_id)
@@ -3686,14 +3686,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_statutory_deduction**
 > StatutoryDeductionObject get_statutory_deduction(xero_tenant_id, id)
@@ -3741,7 +3741,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **id** | [**str**](.md)| Identifier for the statutory deduction | 
+ **id** | **str**| Identifier for the statutory deduction | 
 
 ### Return type
 
@@ -3749,14 +3749,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_statutory_deductions**
 > StatutoryDeductions get_statutory_deductions(xero_tenant_id, page=page)
@@ -3812,14 +3812,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_superannuation**
 > SuperannuationObject get_superannuation(xero_tenant_id, superannuation_id)
@@ -3867,7 +3867,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **superannuation_id** | [**str**](.md)| Identifier for the superannuation | 
+ **superannuation_id** | **str**| Identifier for the superannuation | 
 
 ### Return type
 
@@ -3875,14 +3875,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_superannuations**
 > Superannuations get_superannuations(xero_tenant_id, page=page)
@@ -3938,14 +3938,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_timesheet**
 > TimesheetObject get_timesheet(xero_tenant_id, timesheet_id)
@@ -3993,7 +3993,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
 
 ### Return type
 
@@ -4001,14 +4001,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_timesheets**
 > Timesheets get_timesheets(xero_tenant_id, page=page, filter=filter, status=status, start_date=start_date, end_date=end_date, sort=sort)
@@ -4074,14 +4074,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_tracking_categories**
 > TrackingCategories get_tracking_categories(xero_tenant_id)
@@ -4135,14 +4135,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **revert_timesheet**
 > TimesheetObject revert_timesheet(xero_tenant_id, timesheet_id, idempotency_key=idempotency_key)
@@ -4191,7 +4191,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
@@ -4200,14 +4200,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_employee**
 > EmployeeObject update_employee(xero_tenant_id, employee_id, employee, idempotency_key=idempotency_key)
@@ -4257,7 +4257,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee** | [**Employee**](Employee.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4267,14 +4267,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_employee_earnings_template**
 > EarningsTemplateObject update_employee_earnings_template(xero_tenant_id, employee_id, pay_template_earning_id, earnings_template, idempotency_key=idempotency_key)
@@ -4325,8 +4325,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **pay_template_earning_id** | [**str**](.md)| Id for single pay template earnings object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **pay_template_earning_id** | **str**| Id for single pay template earnings object | 
  **earnings_template** | [**EarningsTemplate**](EarningsTemplate.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4336,14 +4336,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_employee_leave**
 > EmployeeLeaveObject update_employee_leave(xero_tenant_id, employee_id, leave_id, employee_leave, idempotency_key=idempotency_key)
@@ -4394,8 +4394,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **leave_id** | [**str**](.md)| Leave id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **leave_id** | **str**| Leave id for single object | 
  **employee_leave** | [**EmployeeLeave**](EmployeeLeave.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4405,14 +4405,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_employee_salary_and_wage**
 > SalaryAndWageObject update_employee_salary_and_wage(xero_tenant_id, employee_id, salary_and_wages_id, salary_and_wage, idempotency_key=idempotency_key)
@@ -4463,8 +4463,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
- **salary_and_wages_id** | [**str**](.md)| Id for single pay template earnings object | 
+ **employee_id** | **str**| Employee id for single object | 
+ **salary_and_wages_id** | **str**| Id for single pay template earnings object | 
  **salary_and_wage** | [**SalaryAndWage**](SalaryAndWage.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4474,14 +4474,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_employee_tax**
 > EmployeeTaxObject update_employee_tax(xero_tenant_id, employee_id, employee_tax, idempotency_key=idempotency_key)
@@ -4516,7 +4516,7 @@ api_instance = PayrollNzApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 employee_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Employee id for single object
-employee_tax = {"irdNumber":"111111111","taxCode":"M","esctRatePercentage":17.5,"isEligibleForKiwiSaver":true,"hasSpecialStudentLoanRate":false,"specialStudentLoanRatePercentage":null,"specialTaxRatePercentage":null,"kiwiSaverContributions":"MakeContributions","kiwiSaverOptOutDate":null,"kiwiSaverContributionHolidayEndDate":null,"kiwiSaverEmployeeContributionRatePercentage":3,"kiwiSaverEmployerContributionRatePercentage":3,"kiwiSaverEmployerSalarySacrificeContributionRatePercentage":0,"hasStudentLoanBalance":false,"studentLoanBalance":null,"studentLoanAsAt":null} # EmployeeTax | 
+employee_tax = {"irdNumber":"111111111","taxCode":"M","esctRatePercentage":17.5,"isEligibleForKiwiSaver":True,"hasSpecialStudentLoanRate":False,"specialStudentLoanRatePercentage":None,"specialTaxRatePercentage":None,"kiwiSaverContributions":"MakeContributions","kiwiSaverOptOutDate":None,"kiwiSaverContributionHolidayEndDate":None,"kiwiSaverEmployeeContributionRatePercentage":3,"kiwiSaverEmployerContributionRatePercentage":3,"kiwiSaverEmployerSalarySacrificeContributionRatePercentage":0,"hasStudentLoanBalance":False,"studentLoanBalance":None,"studentLoanAsAt":None} # EmployeeTax | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Updates the tax records for a specific employee
@@ -4531,7 +4531,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee_tax** | [**EmployeeTax**](EmployeeTax.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4541,14 +4541,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_pay_slip_line_items**
 > PaySlipObject update_pay_slip_line_items(xero_tenant_id, pay_slip_id, pay_slip, idempotency_key=idempotency_key)
@@ -4583,7 +4583,7 @@ api_instance = PayrollNzApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 pay_slip_id = 'pay_slip_id_example' # str | Identifier for the payslip
-pay_slip = {"earningsLines":[{"earningsLineID":"f9d8f5b5-9049-47f4-8541-35e200f750a5","earningsRateID":"f9d8f5b5-9049-47f4-8541-35e200f750a5","displayName":"Ordinary Time","ratePerUnit":25,"numberOfUnits":0,"amount":0,"isLinkedToTimesheet":false,"isSystemGenerated":true},{"earningsLineID":"65b83d94-f20f-45e1-85ae-387fcf460c26","earningsRateID":"65b83d94-f20f-45e1-85ae-387fcf460c26","displayName":"Salary","ratePerUnit":0,"numberOfUnits":8,"amount":0,"isLinkedToTimesheet":false,"isSystemGenerated":false}],"leaveEarningsLines":[{"earningsLineID":"0441497f-5dc7-4cd3-a90d-f2e07e21b2a6","earningsRateID":"39b3560a-5d2f-4538-924a-4349dc86396e","displayName":"Holiday Pay","fixedAmount":268.8,"amount":268.8,"isLinkedToTimesheet":false,"isSystemGenerated":true}],"deductionLines":[{"deductionTypeID":"a3760fe4-68a4-4e38-8326-fe616af7dc74","amount":100}],"leaveAccrualLines":[{"leaveTypeID":"0441497f-5dc7-4cd3-a90d-f2e07e21b2a6","numberOfUnits":268.8},{"leaveTypeID":"b0b1b79e-2a25-46c2-ad08-ca25ef48d7e4","numberOfUnits":0},{"leaveTypeID":"f2f994cf-1899-46f3-ad4f-5d92d78c3719","numberOfUnits":0},{"leaveTypeID":"34129765-11cb-4d8c-b568-84a2219beda3","numberOfUnits":0}],"superannuationLines":[{"superannuationTypeID":"563273ea-0dae-4f82-86a4-e0db77c008ea","displayName":"KiwiSaver","amount":108.86,"fixedAmount":3,"percentage":3,"manualAdjustment":false}],"employeeTaxLines":[{"taxLineID":"1084146b-e890-489c-aed3-06de80f63d84","amount":1057.22,"globalTaxTypeID":"11","manualAdjustment":false}],"employerTaxLines":[{"taxLineID":"6f9eb8cd-0f4a-440b-939c-bdb0f6ad694c","amount":18.9,"globalTaxTypeID":"10","manualAdjustment":false}],"statutoryDeductionLines":[{"statutoryDeductionTypeID":"b5efd8d1-0c93-4a14-a314-b5cba4a4e6b3","amount":108.86}],"grossEarningsHistory":{"daysPaid":3,"unpaidWeeks":0}} # PaySlip | 
+pay_slip = {"earningsLines":[{"earningsLineID":"f9d8f5b5-9049-47f4-8541-35e200f750a5","earningsRateID":"f9d8f5b5-9049-47f4-8541-35e200f750a5","displayName":"Ordinary Time","ratePerUnit":25,"numberOfUnits":0,"amount":0,"isLinkedToTimesheet":False,"isSystemGenerated":True},{"earningsLineID":"65b83d94-f20f-45e1-85ae-387fcf460c26","earningsRateID":"65b83d94-f20f-45e1-85ae-387fcf460c26","displayName":"Salary","ratePerUnit":0,"numberOfUnits":8,"amount":0,"isLinkedToTimesheet":False,"isSystemGenerated":False}],"leaveEarningsLines":[{"earningsLineID":"0441497f-5dc7-4cd3-a90d-f2e07e21b2a6","earningsRateID":"39b3560a-5d2f-4538-924a-4349dc86396e","displayName":"Holiday Pay","fixedAmount":268.8,"amount":268.8,"isLinkedToTimesheet":False,"isSystemGenerated":True}],"deductionLines":[{"deductionTypeID":"a3760fe4-68a4-4e38-8326-fe616af7dc74","amount":100}],"leaveAccrualLines":[{"leaveTypeID":"0441497f-5dc7-4cd3-a90d-f2e07e21b2a6","numberOfUnits":268.8},{"leaveTypeID":"b0b1b79e-2a25-46c2-ad08-ca25ef48d7e4","numberOfUnits":0},{"leaveTypeID":"f2f994cf-1899-46f3-ad4f-5d92d78c3719","numberOfUnits":0},{"leaveTypeID":"34129765-11cb-4d8c-b568-84a2219beda3","numberOfUnits":0}],"superannuationLines":[{"superannuationTypeID":"563273ea-0dae-4f82-86a4-e0db77c008ea","displayName":"KiwiSaver","amount":108.86,"fixedAmount":3,"percentage":3,"manualAdjustment":False}],"employeeTaxLines":[{"taxLineID":"1084146b-e890-489c-aed3-06de80f63d84","amount":1057.22,"globalTaxTypeID":"11","manualAdjustment":False}],"employerTaxLines":[{"taxLineID":"6f9eb8cd-0f4a-440b-939c-bdb0f6ad694c","amount":18.9,"globalTaxTypeID":"10","manualAdjustment":False}],"statutoryDeductionLines":[{"statutoryDeductionTypeID":"b5efd8d1-0c93-4a14-a314-b5cba4a4e6b3","amount":108.86}],"grossEarningsHistory":{"daysPaid":3,"unpaidWeeks":0}} # PaySlip | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates an employee pay slip
@@ -4598,7 +4598,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **pay_slip_id** | [**str**](.md)| Identifier for the payslip | 
+ **pay_slip_id** | **str**| Identifier for the payslip | 
  **pay_slip** | [**PaySlip**](PaySlip.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4608,14 +4608,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_timesheet_line**
 > TimesheetLineObject update_timesheet_line(xero_tenant_id, timesheet_id, timesheet_line_id, timesheet_line, idempotency_key=idempotency_key)
@@ -4666,8 +4666,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Identifier for the timesheet | 
- **timesheet_line_id** | [**str**](.md)| Identifier for the timesheet line | 
+ **timesheet_id** | **str**| Identifier for the timesheet | 
+ **timesheet_line_id** | **str**| Identifier for the timesheet line | 
  **timesheet_line** | [**TimesheetLine**](TimesheetLine.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4677,12 +4677,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

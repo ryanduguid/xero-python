@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **company_max** | **float** | Company Maximum amount of the superannuation | [optional] 
 **current_record** | **bool** | Identifier of a record is active or not. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

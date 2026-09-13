@@ -54,7 +54,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | [**str**](.md)| Unique identifier for Subscription object | 
+ **subscription_id** | **str**| Unique identifier for Subscription object | 
 
 ### Return type
 
@@ -62,14 +62,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_usage_records**
 > UsageRecordsList get_usage_records(subscription_id)
@@ -115,7 +115,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | [**str**](.md)| Unique identifier for Subscription object | 
+ **subscription_id** | **str**| Unique identifier for Subscription object | 
 
 ### Return type
 
@@ -123,14 +123,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **post_usage_records**
 > UsageRecord post_usage_records(subscription_id, subscription_item_id, create_usage_record, idempotency_key=idempotency_key)
@@ -179,8 +179,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | [**str**](.md)| Unique identifier for Subscription object | 
- **subscription_item_id** | [**str**](.md)| The unique identifier of the subscriptionItem | 
+ **subscription_id** | **str**| Unique identifier for Subscription object | 
+ **subscription_item_id** | **str**| The unique identifier of the subscriptionItem | 
  **create_usage_record** | [**CreateUsageRecord**](CreateUsageRecord.md)| Contains the quantity for the usage record to create | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -190,14 +190,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **put_usage_records**
 > UsageRecord put_usage_records(subscription_id, subscription_item_id, usage_record_id, update_usage_record, idempotency_key=idempotency_key)
@@ -247,9 +247,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_id** | [**str**](.md)| Unique identifier for Subscription object | 
- **subscription_item_id** | [**str**](.md)| The unique identifier of the subscriptionItem | 
- **usage_record_id** | [**str**](.md)| The unique identifier of the usage record | 
+ **subscription_id** | **str**| Unique identifier for Subscription object | 
+ **subscription_item_id** | **str**| The unique identifier of the subscriptionItem | 
+ **usage_record_id** | **str**| The unique identifier of the usage record | 
  **update_usage_record** | [**UpdateUsageRecord**](UpdateUsageRecord.md)| Contains the quantity for the usage record to update | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -259,12 +259,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

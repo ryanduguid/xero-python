@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **payment_type** | **str** | The type of the payment of the corresponding salary and wages | 
 **work_pattern_type** | **str** | The type of the Working Pattern of the corresponding salary and wages | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

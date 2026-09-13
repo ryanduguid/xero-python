@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **reporting_code** | **str** | Reporting code (Shown if set) | [optional] 
 **total** | **float** | Total movement on this account | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

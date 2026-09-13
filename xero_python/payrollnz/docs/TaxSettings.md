@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **lump_sum_tax_code** | **str** | Tax code for a lump sum amount | [optional] 
 **lump_sum_amount** | **str** | The total of the lump sum amount | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 
