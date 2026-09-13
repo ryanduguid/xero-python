@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **saturday** | **float** | The number of hours worked on a Saturday | 
 **sunday** | **float** | The number of hours worked on a Sunday | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

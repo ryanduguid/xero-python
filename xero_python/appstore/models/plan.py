@@ -139,7 +139,6 @@ class Plan(BaseModel):
             "ACTIVE",
             "CANCELED",
             "PENDING_ACTIVATION",
-            "None",
         ]  # noqa: E501
 
         if status:

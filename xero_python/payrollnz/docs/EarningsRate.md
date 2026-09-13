@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **multiple_of_ordinary_earnings_rate** | **float** | This is the multiplier used to calculate the rate per unit, based on the employee’s ordinary earnings rate. For example, for time and a half enter 1.5. Only applicable if RateType is MultipleOfOrdinaryEarningsRate | [optional] 
 **fixed_amount** | **float** | Optional Fixed Rate Amount. Applicable for FixedAmount Rate | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

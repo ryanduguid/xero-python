@@ -26,6 +26,6 @@ Name | Type | Description | Notes
 **estimate** | [**Amount**](Amount.md) |  | [optional] 
 **status** | [**ProjectStatus**](ProjectStatus.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

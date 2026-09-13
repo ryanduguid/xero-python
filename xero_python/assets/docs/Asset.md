@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **accounting_book_value** | **float** | The accounting value of the asset | [optional] 
 **is_delete_enabled_for_date** | **bool** | Boolean to indicate whether delete is enabled | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

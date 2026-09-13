@@ -29,6 +29,6 @@ Name | Type | Description | Notes
 **business_name** | **str** | Contact business name | [optional] 
 **federal_tax_classification** | **str** | Contact federal tax classification | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

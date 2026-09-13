@@ -78,14 +78,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_task**
 > Task create_task(xero_tenant_id, project_id, task_create_or_update, idempotency_key=idempotency_key)
@@ -137,7 +137,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can create a task on a specified projectId | 
+ **project_id** | **str**| You can create a task on a specified projectId | 
  **task_create_or_update** | [**TaskCreateOrUpdate**](TaskCreateOrUpdate.md)| The task object you are creating | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -147,14 +147,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_time_entry**
 > TimeEntry create_time_entry(xero_tenant_id, project_id, time_entry_create_or_update, idempotency_key=idempotency_key)
@@ -206,7 +206,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
  **time_entry_create_or_update** | [**TimeEntryCreateOrUpdate**](TimeEntryCreateOrUpdate.md)| The time entry object you are creating | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -216,14 +216,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_task**
 > delete_task(xero_tenant_id, project_id, task_id)
@@ -273,8 +273,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
- **task_id** | [**str**](.md)| You can specify an individual task by appending the id to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
+ **task_id** | **str**| You can specify an individual task by appending the id to the endpoint | 
 
 ### Return type
 
@@ -282,14 +282,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_time_entry**
 > delete_time_entry(xero_tenant_id, project_id, time_entry_id)
@@ -339,8 +339,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
- **time_entry_id** | [**str**](.md)| You can specify an individual task by appending the id to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
+ **time_entry_id** | **str**| You can specify an individual task by appending the id to the endpoint | 
 
 ### Return type
 
@@ -348,14 +348,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_project**
 > Project get_project(xero_tenant_id, project_id)
@@ -405,7 +405,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
 
 ### Return type
 
@@ -413,14 +413,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_project_users**
 > ProjectUsers get_project_users(xero_tenant_id, page=page, page_size=page_size)
@@ -480,14 +480,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_projects**
 > Projects get_projects(xero_tenant_id, project_ids=project_ids, contact_id=contact_id, states=states, page=page, page_size=page_size)
@@ -541,8 +541,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_ids** | [**list[str]**](str.md)| Search for all projects that match a comma separated list of projectIds | [optional] 
- **contact_id** | [**str**](.md)| Filter for projects for a specific contact | [optional] 
+ **project_ids** | **list[str]**| Search for all projects that match a comma separated list of projectIds | [optional] 
+ **contact_id** | **str**| Filter for projects for a specific contact | [optional] 
  **states** | **str**| Filter for projects in a particular state (INPROGRESS or CLOSED) | [optional] 
  **page** | **int**| set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0. | [optional] [default to 1]
  **page_size** | **int**| Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500. | [optional] [default to 50]
@@ -553,14 +553,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_task**
 > Task get_task(xero_tenant_id, project_id, task_id)
@@ -611,8 +611,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
- **task_id** | [**str**](.md)| You can specify an individual task by appending the taskId to the endpoint, i.e. GET https://.../tasks/{taskID} | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
+ **task_id** | **str**| You can specify an individual task by appending the taskId to the endpoint, i.e. GET https://.../tasks/{taskID} | 
 
 ### Return type
 
@@ -620,14 +620,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_tasks**
 > Tasks get_tasks(xero_tenant_id, project_id, page=page, page_size=page_size, task_ids=task_ids, charge_type=charge_type)
@@ -643,7 +643,7 @@ Allows you to retrieve a specific project
 from xero_python.api_client import Configuration, ApiClient
 from xero_python.api_client.oauth2 import OAuth2Token
 from xero_python.exceptions import ApiException
-from xero_python.project import ProjectApi
+from xero_python.project import ProjectApi, ChargeType
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: OAuth2
@@ -667,7 +667,7 @@ project_id = 'project_id_example' # str | You can specify an individual project 
 page = 1 # int | Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0. (optional)
 page_size = 10 # int | Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500. (optional)
 task_ids = 'task_ids_example' # str | Search for all tasks that match a comma separated list of taskIds, i.e. GET https://.../tasks?taskIds={taskID},{taskID} (optional)
-charge_type = xero_python.project.ChargeType() # ChargeType |  (optional)
+charge_type = ChargeType.TIME # ChargeType |  (optional)
 try:
     # Retrieves all project tasks
     api_response = api_instance.get_tasks(xero_tenant_id, project_id, page=page, page_size=page_size, task_ids=task_ids, charge_type=charge_type)
@@ -681,11 +681,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
  **page** | **int**| Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0. | [optional] 
  **page_size** | **int**| Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500. | [optional] 
  **task_ids** | **str**| Search for all tasks that match a comma separated list of taskIds, i.e. GET https://.../tasks?taskIds&#x3D;{taskID},{taskID} | [optional] 
- **charge_type** | [**ChargeType**](.md)|  | [optional] 
+ **charge_type** | **ChargeType**|  | [optional] 
 
 ### Return type
 
@@ -693,14 +693,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_time_entries**
 > TimeEntries get_time_entries(xero_tenant_id, project_id, user_id=user_id, task_id=task_id, invoice_id=invoice_id, contact_id=contact_id, page=page, page_size=page_size, states=states, is_chargeable=is_chargeable, date_after_utc=date_after_utc, date_before_utc=date_before_utc)
@@ -760,14 +760,14 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| Identifier of the project, that the task (which the time entry is logged against) belongs to. | 
- **user_id** | [**str**](.md)| The xero user identifier of the person who logged time. | [optional] 
- **task_id** | [**str**](.md)| Identifier of the task that time entry is logged against. | [optional] 
- **invoice_id** | [**str**](.md)| Finds all time entries for this invoice. | [optional] 
- **contact_id** | [**str**](.md)| Finds all time entries for this contact identifier. | [optional] 
+ **project_id** | **str**| Identifier of the project, that the task (which the time entry is logged against) belongs to. | 
+ **user_id** | **str**| The xero user identifier of the person who logged time. | [optional] 
+ **task_id** | **str**| Identifier of the task that time entry is logged against. | [optional] 
+ **invoice_id** | **str**| Finds all time entries for this invoice. | [optional] 
+ **contact_id** | **str**| Finds all time entries for this contact identifier. | [optional] 
  **page** | **int**| Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0. | [optional] 
  **page_size** | **int**| Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500. | [optional] 
- **states** | [**list[str]**](str.md)| Comma-separated list of states to find. Will find all time entries that are in the status of whatever is specified. | [optional] 
+ **states** | **list[str]**| Comma-separated list of states to find. Will find all time entries that are in the status of whatever is specified. | [optional] 
  **is_chargeable** | **bool**| Finds all time entries which relate to tasks with the charge type &#x60;TIME&#x60; or &#x60;FIXED&#x60;. | [optional] 
  **date_after_utc** | **datetime**| ISO 8601 UTC date. Finds all time entries on or after this date filtered on the &#x60;dateUtc&#x60; field. | [optional] 
  **date_before_utc** | **datetime**| ISO 8601 UTC date. Finds all time entries on or before this date filtered on the &#x60;dateUtc&#x60; field. | [optional] 
@@ -778,14 +778,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_time_entry**
 > TimeEntry get_time_entry(xero_tenant_id, project_id, time_entry_id)
@@ -836,8 +836,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
- **time_entry_id** | [**str**](.md)| You can specify an individual time entry by appending the id to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
+ **time_entry_id** | **str**| You can specify an individual time entry by appending the id to the endpoint | 
 
 ### Return type
 
@@ -845,14 +845,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **patch_project**
 > patch_project(xero_tenant_id, project_id, project_patch, idempotency_key=idempotency_key)
@@ -903,7 +903,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
  **project_patch** | [**ProjectPatch**](ProjectPatch.md)| Update the status of an existing Project | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -913,14 +913,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_project**
 > update_project(xero_tenant_id, project_id, project_create_or_update, idempotency_key=idempotency_key)
@@ -971,7 +971,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
  **project_create_or_update** | [**ProjectCreateOrUpdate**](ProjectCreateOrUpdate.md)| Request of type ProjectCreateOrUpdate | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -981,14 +981,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_task**
 > update_task(xero_tenant_id, project_id, task_id, task_create_or_update, idempotency_key=idempotency_key)
@@ -1004,7 +1004,7 @@ Allows you to update a specific task
 from xero_python.api_client import Configuration, ApiClient
 from xero_python.api_client.oauth2 import OAuth2Token
 from xero_python.exceptions import ApiException
-from xero_python.project import ProjectApi
+from xero_python.project import ProjectApi, TaskCreateOrUpdate
 
 
 # Configure OAuth2 access token for authorization: OAuth2
@@ -1026,7 +1026,7 @@ api_instance = ProjectApi(api_client)
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 project_id = 'project_id_example' # str | You can specify an individual project by appending the projectId to the endpoint
 task_id = 'task_id_example' # str | You can specify an individual task by appending the id to the endpoint
-task_create_or_update = xero_python.project.TaskCreateOrUpdate() # TaskCreateOrUpdate | The task object you are updating
+task_create_or_update = TaskCreateOrUpdate() # TaskCreateOrUpdate | The task object you are updating
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Allows you to update a task
@@ -1040,8 +1040,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
- **task_id** | [**str**](.md)| You can specify an individual task by appending the id to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
+ **task_id** | **str**| You can specify an individual task by appending the id to the endpoint | 
  **task_create_or_update** | [**TaskCreateOrUpdate**](TaskCreateOrUpdate.md)| The task object you are updating | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1051,14 +1051,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_time_entry**
 > update_time_entry(xero_tenant_id, project_id, time_entry_id, time_entry_create_or_update, idempotency_key=idempotency_key)
@@ -1110,8 +1110,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **project_id** | [**str**](.md)| You can specify an individual project by appending the projectId to the endpoint | 
- **time_entry_id** | [**str**](.md)| You can specify an individual time entry by appending the id to the endpoint | 
+ **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
+ **time_entry_id** | **str**| You can specify an individual time entry by appending the id to the endpoint | 
  **time_entry_create_or_update** | [**TimeEntryCreateOrUpdate**](TimeEntryCreateOrUpdate.md)| The time entry object you are updating | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1121,12 +1121,12 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

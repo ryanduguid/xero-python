@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **tax_amount** | **float** | The calculated tax amount based on the TaxType and LineAmount | [optional] 
 **is_blank** | **bool** | is the line blank | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

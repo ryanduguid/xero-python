@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **student_loan_balance** | **float** | The employee&#39;s student loan balance shown on the letter from IR. | [optional] 
 **student_loan_as_at** | **date** | The date of the letter from IR. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

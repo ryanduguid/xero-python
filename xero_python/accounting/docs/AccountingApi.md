@@ -297,14 +297,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_account_attachment_by_file_name**
 > Attachments create_account_attachment_by_file_name(xero_tenant_id, account_id, file_name, body, idempotency_key=idempotency_key)
@@ -355,7 +355,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -366,14 +366,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_bank_transaction_attachment_by_file_name**
 > Attachments create_bank_transaction_attachment_by_file_name(xero_tenant_id, bank_transaction_id, file_name, body, idempotency_key=idempotency_key)
@@ -424,7 +424,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -435,14 +435,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_bank_transaction_history_record**
 > HistoryRecords create_bank_transaction_history_record(xero_tenant_id, bank_transaction_id, history_records, idempotency_key=idempotency_key)
@@ -492,7 +492,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -502,14 +502,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_bank_transactions**
 > BankTransactions create_bank_transactions(xero_tenant_id, bank_transactions, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -571,14 +571,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_bank_transfer**
 > BankTransfers create_bank_transfer(xero_tenant_id, bank_transfers, idempotency_key=idempotency_key)
@@ -612,7 +612,7 @@ api_client = ApiClient(
 api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-bank_transfers = {"BankTransfers":[{"FromBankAccount":{"Code":"090","Name":"My Savings","AccountID":"00000000-0000-0000-0000-000000000000","Type":"BANK","BankAccountNumber":"123455","Status":"ACTIVE","BankAccountType":"BANK","CurrencyCode":"USD","TaxType":"NONE","EnablePaymentsToAccount":false,"ShowInExpenseClaims":false,"Class":"ASSET","ReportingCode":"ASS","ReportingCodeName":"Assets","HasAttachments":false,"UpdatedDateUTC":"2016-10-17T13:45:33.993-07:00"},"ToBankAccount":{"Code":"088","Name":"Business Wells Fargo","AccountID":"00000000-0000-0000-0000-000000000000","Type":"BANK","BankAccountNumber":"123455","Status":"ACTIVE","BankAccountType":"BANK","CurrencyCode":"USD","TaxType":"NONE","EnablePaymentsToAccount":false,"ShowInExpenseClaims":false,"Class":"ASSET","ReportingCode":"ASS","ReportingCodeName":"Assets","HasAttachments":false,"UpdatedDateUTC":"2016-06-03T08:31:14.517-07:00"},"Amount":"50.00","FromIsReconciled":true,"ToIsReconciled":true,"Reference":"Sub 098801","FromTracking":[{"TrackingCategoryID":"e2f2f732-e92a-4f3a-9c4d-ee4da0182a13","TrackingOptionID":"cd0a4b7e-3c6b-4b3c-8e2a-1f2d3c4b5a69"}],"ToTracking":[{"TrackingCategoryID":"e2f2f732-e92a-4f3a-9c4d-ee4da0182a13","TrackingOptionID":"9f8e7d6c-5b4a-3c2d-1e0f-a9b8c7d6e5f4"}]}]} # BankTransfers | BankTransfers with array of BankTransfer objects in request body
+bank_transfers = {"BankTransfers":[{"FromBankAccount":{"Code":"090","Name":"My Savings","AccountID":"00000000-0000-0000-0000-000000000000","Type":"BANK","BankAccountNumber":"123455","Status":"ACTIVE","BankAccountType":"BANK","CurrencyCode":"USD","TaxType":"NONE","EnablePaymentsToAccount":False,"ShowInExpenseClaims":False,"Class":"ASSET","ReportingCode":"ASS","ReportingCodeName":"Assets","HasAttachments":False,"UpdatedDateUTC":"2016-10-17T13:45:33.993-07:00"},"ToBankAccount":{"Code":"088","Name":"Business Wells Fargo","AccountID":"00000000-0000-0000-0000-000000000000","Type":"BANK","BankAccountNumber":"123455","Status":"ACTIVE","BankAccountType":"BANK","CurrencyCode":"USD","TaxType":"NONE","EnablePaymentsToAccount":False,"ShowInExpenseClaims":False,"Class":"ASSET","ReportingCode":"ASS","ReportingCodeName":"Assets","HasAttachments":False,"UpdatedDateUTC":"2016-06-03T08:31:14.517-07:00"},"Amount":"50.00","FromIsReconciled":True,"ToIsReconciled":True,"Reference":"Sub 098801","FromTracking":[{"TrackingCategoryID":"e2f2f732-e92a-4f3a-9c4d-ee4da0182a13","TrackingOptionID":"cd0a4b7e-3c6b-4b3c-8e2a-1f2d3c4b5a69"}],"ToTracking":[{"TrackingCategoryID":"e2f2f732-e92a-4f3a-9c4d-ee4da0182a13","TrackingOptionID":"9f8e7d6c-5b4a-3c2d-1e0f-a9b8c7d6e5f4"}]}]} # BankTransfers | BankTransfers with array of BankTransfer objects in request body
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a bank transfer
@@ -636,14 +636,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_bank_transfer_attachment_by_file_name**
 > Attachments create_bank_transfer_attachment_by_file_name(xero_tenant_id, bank_transfer_id, file_name, body, idempotency_key=idempotency_key)
@@ -693,7 +693,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -704,14 +704,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_bank_transfer_history_record**
 > HistoryRecords create_bank_transfer_history_record(xero_tenant_id, bank_transfer_id, history_records, idempotency_key=idempotency_key)
@@ -761,7 +761,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -771,14 +771,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_batch_payment**
 > BatchPayments create_batch_payment(xero_tenant_id, batch_payments, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -838,14 +838,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_batch_payment_history_record**
 > HistoryRecords create_batch_payment_history_record(xero_tenant_id, batch_payment_id, history_records, idempotency_key=idempotency_key)
@@ -895,7 +895,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **batch_payment_id** | [**str**](.md)| Unique identifier for BatchPayment | 
+ **batch_payment_id** | **str**| Unique identifier for BatchPayment | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -905,14 +905,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_branding_theme_payment_services**
 > PaymentServices create_branding_theme_payment_services(xero_tenant_id, branding_theme_id, payment_services, idempotency_key=idempotency_key)
@@ -962,7 +962,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **branding_theme_id** | [**str**](.md)| Unique identifier for a Branding Theme | 
+ **branding_theme_id** | **str**| Unique identifier for a Branding Theme | 
  **payment_services** | [**PaymentServices**](PaymentServices.md)| PaymentServices array with PaymentService object in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -972,14 +972,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_contact_attachment_by_file_name**
 > Attachments create_contact_attachment_by_file_name(xero_tenant_id, contact_id, file_name, body, idempotency_key=idempotency_key)
@@ -1029,7 +1029,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -1040,14 +1040,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_contact_group**
 > ContactGroups create_contact_group(xero_tenant_id, contact_groups, idempotency_key=idempotency_key)
@@ -1105,14 +1105,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_contact_group_contacts**
 > Contacts create_contact_group_contacts(xero_tenant_id, contact_group_id, contacts, idempotency_key=idempotency_key)
@@ -1162,7 +1162,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_group_id** | [**str**](.md)| Unique identifier for a Contact Group | 
+ **contact_group_id** | **str**| Unique identifier for a Contact Group | 
  **contacts** | [**Contacts**](Contacts.md)| Contacts with array of contacts specifying the ContactID to be added to ContactGroup in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1172,14 +1172,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_contact_history**
 > HistoryRecords create_contact_history(xero_tenant_id, contact_id, history_records, idempotency_key=idempotency_key)
@@ -1229,7 +1229,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1239,14 +1239,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_contacts**
 > Contacts create_contacts(xero_tenant_id, contacts, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -1280,7 +1280,7 @@ api_client = ApiClient(
 api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-contacts = {"Contacts":[{"ContactID":"3ff6d40c-af9a-40a3-89ce-3c1556a25591","ContactStatus":"ACTIVE","Name":"Foo9987","EmailAddress":"sid32476@blah.com","BankAccountDetails":"","Addresses":[{"AddressType":"STREET","City":"","Region":"","PostalCode":"","Country":""},{"AddressType":"POBOX","City":"","Region":"","PostalCode":"","Country":""}],"Phones":[{"PhoneType":"DEFAULT","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"DDI","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"FAX","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"MOBILE","PhoneNumber":"555-1212","PhoneAreaCode":"415","PhoneCountryCode":""}],"UpdatedDateUTC":"/Date(1551399321043+0000)/","ContactGroups":[],"IsSupplier":false,"IsCustomer":false,"SalesTrackingCategories":[],"PurchasesTrackingCategories":[],"PaymentTerms":{"Bills":{"Day":15,"Type":"OFCURRENTMONTH"},"Sales":{"Day":10,"Type":"DAYSAFTERBILLMONTH"}},"ContactPersons":[]}]} # Contacts | Contacts with an array of Contact objects to create in body of request
+contacts = {"Contacts":[{"ContactID":"3ff6d40c-af9a-40a3-89ce-3c1556a25591","ContactStatus":"ACTIVE","Name":"Foo9987","EmailAddress":"sid32476@blah.com","BankAccountDetails":"","Addresses":[{"AddressType":"STREET","City":"","Region":"","PostalCode":"","Country":""},{"AddressType":"POBOX","City":"","Region":"","PostalCode":"","Country":""}],"Phones":[{"PhoneType":"DEFAULT","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"DDI","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"FAX","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"MOBILE","PhoneNumber":"555-1212","PhoneAreaCode":"415","PhoneCountryCode":""}],"UpdatedDateUTC":"/Date(1551399321043+0000)/","ContactGroups":[],"IsSupplier":False,"IsCustomer":False,"SalesTrackingCategories":[],"PurchasesTrackingCategories":[],"PaymentTerms":{"Bills":{"Day":15,"Type":"OFCURRENTMONTH"},"Sales":{"Day":10,"Type":"DAYSAFTERBILLMONTH"}},"ContactPersons":[]}]} # Contacts | Contacts with an array of Contact objects to create in body of request
 summarize_errors = False # bool | If false return 200 OK and mix of successfully created objects and any with validation errors (optional) (default to False)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
@@ -1306,14 +1306,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_credit_note_allocation**
 > Allocations create_credit_note_allocation(xero_tenant_id, credit_note_id, allocations, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -1364,7 +1364,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **allocations** | [**Allocations**](Allocations.md)| Allocations with array of Allocation object in body of request. | 
  **summarize_errors** | **bool**| If false return 200 OK and mix of successfully created objects and any with validation errors | [optional] [default to False]
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -1375,14 +1375,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_credit_note_attachment_by_file_name**
 > Attachments create_credit_note_attachment_by_file_name(xero_tenant_id, credit_note_id, file_name, body, include_online=include_online, idempotency_key=idempotency_key)
@@ -1434,7 +1434,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **include_online** | **bool**| Allows an attachment to be seen by the end customer within their online invoice | [optional] [default to False]
@@ -1446,14 +1446,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_credit_note_history**
 > HistoryRecords create_credit_note_history(xero_tenant_id, credit_note_id, history_records, idempotency_key=idempotency_key)
@@ -1503,7 +1503,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1513,14 +1513,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_credit_notes**
 > CreditNotes create_credit_notes(xero_tenant_id, credit_notes, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -1582,14 +1582,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_currency**
 > Currencies create_currency(xero_tenant_id, currency, idempotency_key=idempotency_key)
@@ -1647,14 +1647,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_expense_claim_history**
 > HistoryRecords create_expense_claim_history(xero_tenant_id, expense_claim_id, history_records, idempotency_key=idempotency_key)
@@ -1704,7 +1704,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **expense_claim_id** | [**str**](.md)| Unique identifier for a ExpenseClaim | 
+ **expense_claim_id** | **str**| Unique identifier for a ExpenseClaim | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1714,14 +1714,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_expense_claims**
 > ExpenseClaims create_expense_claims(xero_tenant_id, expense_claims, idempotency_key=idempotency_key)
@@ -1779,14 +1779,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_invoice_attachment_by_file_name**
 > Attachments create_invoice_attachment_by_file_name(xero_tenant_id, invoice_id, file_name, body, include_online=include_online, idempotency_key=idempotency_key)
@@ -1838,7 +1838,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **include_online** | **bool**| Allows an attachment to be seen by the end customer within their online invoice | [optional] [default to False]
@@ -1850,14 +1850,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_invoice_history**
 > HistoryRecords create_invoice_history(xero_tenant_id, invoice_id, history_records, idempotency_key=idempotency_key)
@@ -1907,7 +1907,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1917,14 +1917,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_invoices**
 > Invoices create_invoices(xero_tenant_id, invoices, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key, allow_backorders=allow_backorders)
@@ -1962,7 +1962,7 @@ invoices = {"Invoices":[{"Type":"ACCREC","Contact":{"ContactID":"430fa14a-f945-4
 summarize_errors = False # bool | If false return 200 OK and mix of successfully created objects and any with validation errors (optional) (default to False)
 unitdp = 4 # int | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts (optional)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
-allow_backorders = true # bool | Allows an invoice to be created even when one or more line items contain tracked inventory where the invoice quantity would cause the available quantity to go negative (optional)
+allow_backorders = True # bool | Allows an invoice to be created even when one or more line items contain tracked inventory where the invoice quantity would cause the available quantity to go negative (optional)
 try:
     # Creates one or more sales invoices or purchase bills
     api_response = api_instance.create_invoices(xero_tenant_id, invoices, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key, allow_backorders=allow_backorders)
@@ -1988,14 +1988,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_item_history**
 > HistoryRecords create_item_history(xero_tenant_id, item_id, history_records, idempotency_key=idempotency_key)
@@ -2045,7 +2045,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **item_id** | [**str**](.md)| Unique identifier for an Item | 
+ **item_id** | **str**| Unique identifier for an Item | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2055,14 +2055,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_items**
 > Items create_items(xero_tenant_id, items, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -2124,14 +2124,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_linked_transaction**
 > LinkedTransactions create_linked_transaction(xero_tenant_id, linked_transaction, idempotency_key=idempotency_key)
@@ -2189,14 +2189,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_manual_journal_attachment_by_file_name**
 > Attachments create_manual_journal_attachment_by_file_name(xero_tenant_id, manual_journal_id, file_name, body, idempotency_key=idempotency_key)
@@ -2247,7 +2247,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -2258,14 +2258,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_manual_journal_history_record**
 > HistoryRecords create_manual_journal_history_record(xero_tenant_id, manual_journal_id, history_records, idempotency_key=idempotency_key)
@@ -2315,7 +2315,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2325,14 +2325,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_manual_journals**
 > ManualJournals create_manual_journals(xero_tenant_id, manual_journals, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -2392,14 +2392,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_overpayment_allocations**
 > Allocations create_overpayment_allocations(xero_tenant_id, overpayment_id, allocations, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -2450,7 +2450,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **overpayment_id** | [**str**](.md)| Unique identifier for a Overpayment | 
+ **overpayment_id** | **str**| Unique identifier for a Overpayment | 
  **allocations** | [**Allocations**](Allocations.md)| Allocations array with Allocation object in body of request | 
  **summarize_errors** | **bool**| If false return 200 OK and mix of successfully created objects and any with validation errors | [optional] [default to False]
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -2461,14 +2461,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_overpayment_history**
 > HistoryRecords create_overpayment_history(xero_tenant_id, overpayment_id, history_records, idempotency_key=idempotency_key)
@@ -2518,7 +2518,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **overpayment_id** | [**str**](.md)| Unique identifier for a Overpayment | 
+ **overpayment_id** | **str**| Unique identifier for a Overpayment | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2528,14 +2528,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_payment**
 > Payments create_payment(xero_tenant_id, payment, idempotency_key=idempotency_key)
@@ -2593,14 +2593,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_payment_history**
 > HistoryRecords create_payment_history(xero_tenant_id, payment_id, history_records, idempotency_key=idempotency_key)
@@ -2650,7 +2650,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payment_id** | [**str**](.md)| Unique identifier for a Payment | 
+ **payment_id** | **str**| Unique identifier for a Payment | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2660,14 +2660,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_payment_service**
 > PaymentServices create_payment_service(xero_tenant_id, payment_services, idempotency_key=idempotency_key)
@@ -2725,14 +2725,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_payments**
 > Payments create_payments(xero_tenant_id, payments, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -2792,14 +2792,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_prepayment_allocations**
 > Allocations create_prepayment_allocations(xero_tenant_id, prepayment_id, allocations, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -2850,7 +2850,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **prepayment_id** | [**str**](.md)| Unique identifier for a PrePayment | 
+ **prepayment_id** | **str**| Unique identifier for a PrePayment | 
  **allocations** | [**Allocations**](Allocations.md)| Allocations with an array of Allocation object in body of request | 
  **summarize_errors** | **bool**| If false return 200 OK and mix of successfully created objects and any with validation errors | [optional] [default to False]
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -2861,14 +2861,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_prepayment_history**
 > HistoryRecords create_prepayment_history(xero_tenant_id, prepayment_id, history_records, idempotency_key=idempotency_key)
@@ -2918,7 +2918,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **prepayment_id** | [**str**](.md)| Unique identifier for a PrePayment | 
+ **prepayment_id** | **str**| Unique identifier for a PrePayment | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2928,14 +2928,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_purchase_order_attachment_by_file_name**
 > Attachments create_purchase_order_attachment_by_file_name(xero_tenant_id, purchase_order_id, file_name, body, idempotency_key=idempotency_key)
@@ -2986,7 +2986,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -2997,14 +2997,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_purchase_order_history**
 > HistoryRecords create_purchase_order_history(xero_tenant_id, purchase_order_id, history_records, idempotency_key=idempotency_key)
@@ -3054,7 +3054,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -3064,14 +3064,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_purchase_orders**
 > PurchaseOrders create_purchase_orders(xero_tenant_id, purchase_orders, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -3131,14 +3131,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_quote_attachment_by_file_name**
 > Attachments create_quote_attachment_by_file_name(xero_tenant_id, quote_id, file_name, body, idempotency_key=idempotency_key)
@@ -3189,7 +3189,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -3200,14 +3200,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_quote_history**
 > HistoryRecords create_quote_history(xero_tenant_id, quote_id, history_records, idempotency_key=idempotency_key)
@@ -3257,7 +3257,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -3267,14 +3267,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_quotes**
 > Quotes create_quotes(xero_tenant_id, quotes, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -3334,14 +3334,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_receipt**
 > Receipts create_receipt(xero_tenant_id, receipts, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -3401,14 +3401,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_receipt_attachment_by_file_name**
 > Attachments create_receipt_attachment_by_file_name(xero_tenant_id, receipt_id, file_name, body, idempotency_key=idempotency_key)
@@ -3459,7 +3459,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -3470,14 +3470,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_receipt_history**
 > HistoryRecords create_receipt_history(xero_tenant_id, receipt_id, history_records, idempotency_key=idempotency_key)
@@ -3527,7 +3527,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -3537,14 +3537,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_repeating_invoice_attachment_by_file_name**
 > Attachments create_repeating_invoice_attachment_by_file_name(xero_tenant_id, repeating_invoice_id, file_name, body, idempotency_key=idempotency_key)
@@ -3595,7 +3595,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -3606,14 +3606,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_repeating_invoice_history**
 > HistoryRecords create_repeating_invoice_history(xero_tenant_id, repeating_invoice_id, history_records, idempotency_key=idempotency_key)
@@ -3663,7 +3663,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
  **history_records** | [**HistoryRecords**](HistoryRecords.md)| HistoryRecords containing an array of HistoryRecord objects in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -3673,14 +3673,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_repeating_invoices**
 > RepeatingInvoices create_repeating_invoices(xero_tenant_id, repeating_invoices, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -3714,7 +3714,7 @@ api_client = ApiClient(
 api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-repeating_invoices = {"RepeatingInvoices":[{"Schedule":{"Period":1,"Unit":"MONTHLY","DueDate":10,"DueDateType":"OFFOLLOWINGMONTH","StartDate":"/Date(1555286400000+0000)/"},"Type":"ACCREC","Reference":"[Week]","ApprovedForSending":false,"SendCopy":false,"MarkAsSent":false,"IncludePDF":false,"Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8","Name":"Liam Gallagher"},"Status":"AUTHORISED","LineAmountTypes":"Exclusive","LineItems":[{"Description":"Guitars Fender Strat","UnitAmount":5000.0,"TaxType":"OUTPUT2","TaxAmount":750.0,"LineAmount":5000.0,"AccountCode":"200","Tracking":[],"Quantity":1.0,"LineItemID":"13a8353c-d2af-4d5b-920c-438449f08900","DiscountEnteredAsPercent":true}],"CurrencyCode":"NZD"}]} # RepeatingInvoices | RepeatingInvoices with an array of repeating invoice objects in body of request
+repeating_invoices = {"RepeatingInvoices":[{"Schedule":{"Period":1,"Unit":"MONTHLY","DueDate":10,"DueDateType":"OFFOLLOWINGMONTH","StartDate":"/Date(1555286400000+0000)/"},"Type":"ACCREC","Reference":"[Week]","ApprovedForSending":False,"SendCopy":False,"MarkAsSent":False,"IncludePDF":False,"Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8","Name":"Liam Gallagher"},"Status":"AUTHORISED","LineAmountTypes":"Exclusive","LineItems":[{"Description":"Guitars Fender Strat","UnitAmount":5000.0,"TaxType":"OUTPUT2","TaxAmount":750.0,"LineAmount":5000.0,"AccountCode":"200","Tracking":[],"Quantity":1.0,"LineItemID":"13a8353c-d2af-4d5b-920c-438449f08900","DiscountEnteredAsPercent":True}],"CurrencyCode":"NZD"}]} # RepeatingInvoices | RepeatingInvoices with an array of repeating invoice objects in body of request
 summarize_errors = False # bool | If false return 200 OK and mix of successfully created objects and any with validation errors (optional) (default to False)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
@@ -3740,14 +3740,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_tax_rates**
 > TaxRates create_tax_rates(xero_tenant_id, tax_rates, idempotency_key=idempotency_key)
@@ -3805,14 +3805,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_tracking_category**
 > TrackingCategories create_tracking_category(xero_tenant_id, tracking_category, idempotency_key=idempotency_key)
@@ -3870,14 +3870,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_tracking_options**
 > TrackingOptions create_tracking_options(xero_tenant_id, tracking_category_id, tracking_option, idempotency_key=idempotency_key)
@@ -3927,7 +3927,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **tracking_category_id** | [**str**](.md)| Unique identifier for a TrackingCategory | 
+ **tracking_category_id** | **str**| Unique identifier for a TrackingCategory | 
  **tracking_option** | [**TrackingOption**](TrackingOption.md)| TrackingOption object in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -3937,14 +3937,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_account**
 > Accounts delete_account(xero_tenant_id, account_id)
@@ -3992,7 +3992,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
 
 ### Return type
 
@@ -4000,14 +4000,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_bank_transfer**
 > BankTransfers delete_bank_transfer(xero_tenant_id, bank_transfer_id, bank_transfer_delete_by_url_param, idempotency_key=idempotency_key)
@@ -4057,7 +4057,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
  **bank_transfer_delete_by_url_param** | [**BankTransferDeleteByUrlParam**](BankTransferDeleteByUrlParam.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4067,14 +4067,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_bank_transfers**
 > BankTransfers delete_bank_transfers(xero_tenant_id, bank_transfers_delete, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -4134,14 +4134,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_batch_payment**
 > BatchPayments delete_batch_payment(xero_tenant_id, batch_payment_delete, idempotency_key=idempotency_key)
@@ -4199,14 +4199,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_batch_payment_by_url_param**
 > BatchPayments delete_batch_payment_by_url_param(xero_tenant_id, batch_payment_id, batch_payment_delete_by_url_param, idempotency_key=idempotency_key)
@@ -4256,7 +4256,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **batch_payment_id** | [**str**](.md)| Unique identifier for BatchPayment | 
+ **batch_payment_id** | **str**| Unique identifier for BatchPayment | 
  **batch_payment_delete_by_url_param** | [**BatchPaymentDeleteByUrlParam**](BatchPaymentDeleteByUrlParam.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4266,14 +4266,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_contact_group_contact**
 > delete_contact_group_contact(xero_tenant_id, contact_group_id, contact_id)
@@ -4321,8 +4321,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_group_id** | [**str**](.md)| Unique identifier for a Contact Group | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_group_id** | **str**| Unique identifier for a Contact Group | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
 
 ### Return type
 
@@ -4330,14 +4330,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_contact_group_contacts**
 > delete_contact_group_contacts(xero_tenant_id, contact_group_id)
@@ -4384,7 +4384,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_group_id** | [**str**](.md)| Unique identifier for a Contact Group | 
+ **contact_group_id** | **str**| Unique identifier for a Contact Group | 
 
 ### Return type
 
@@ -4392,14 +4392,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_credit_note_allocations**
 > Allocation delete_credit_note_allocations(xero_tenant_id, credit_note_id, allocation_id)
@@ -4448,8 +4448,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
- **allocation_id** | [**str**](.md)| Unique identifier for Allocation object | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
+ **allocation_id** | **str**| Unique identifier for Allocation object | 
 
 ### Return type
 
@@ -4457,14 +4457,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_item**
 > delete_item(xero_tenant_id, item_id)
@@ -4511,7 +4511,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **item_id** | [**str**](.md)| Unique identifier for an Item | 
+ **item_id** | **str**| Unique identifier for an Item | 
 
 ### Return type
 
@@ -4519,14 +4519,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_linked_transaction**
 > delete_linked_transaction(xero_tenant_id, linked_transaction_id)
@@ -4573,7 +4573,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **linked_transaction_id** | [**str**](.md)| Unique identifier for a LinkedTransaction | 
+ **linked_transaction_id** | **str**| Unique identifier for a LinkedTransaction | 
 
 ### Return type
 
@@ -4581,14 +4581,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_overpayment_allocations**
 > Allocation delete_overpayment_allocations(xero_tenant_id, overpayment_id, allocation_id)
@@ -4637,8 +4637,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **overpayment_id** | [**str**](.md)| Unique identifier for a Overpayment | 
- **allocation_id** | [**str**](.md)| Unique identifier for Allocation object | 
+ **overpayment_id** | **str**| Unique identifier for a Overpayment | 
+ **allocation_id** | **str**| Unique identifier for Allocation object | 
 
 ### Return type
 
@@ -4646,14 +4646,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_payment**
 > Payments delete_payment(xero_tenant_id, payment_id, payment_delete, idempotency_key=idempotency_key)
@@ -4703,7 +4703,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payment_id** | [**str**](.md)| Unique identifier for a Payment | 
+ **payment_id** | **str**| Unique identifier for a Payment | 
  **payment_delete** | [**PaymentDelete**](PaymentDelete.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4713,14 +4713,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_prepayment_allocations**
 > Allocation delete_prepayment_allocations(xero_tenant_id, prepayment_id, allocation_id)
@@ -4769,8 +4769,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **prepayment_id** | [**str**](.md)| Unique identifier for a PrePayment | 
- **allocation_id** | [**str**](.md)| Unique identifier for Allocation object | 
+ **prepayment_id** | **str**| Unique identifier for a PrePayment | 
+ **allocation_id** | **str**| Unique identifier for Allocation object | 
 
 ### Return type
 
@@ -4778,14 +4778,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_tracking_category**
 > TrackingCategories delete_tracking_category(xero_tenant_id, tracking_category_id)
@@ -4833,7 +4833,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **tracking_category_id** | [**str**](.md)| Unique identifier for a TrackingCategory | 
+ **tracking_category_id** | **str**| Unique identifier for a TrackingCategory | 
 
 ### Return type
 
@@ -4841,14 +4841,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete_tracking_options**
 > TrackingOptions delete_tracking_options(xero_tenant_id, tracking_category_id, tracking_option_id)
@@ -4897,8 +4897,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **tracking_category_id** | [**str**](.md)| Unique identifier for a TrackingCategory | 
- **tracking_option_id** | [**str**](.md)| Unique identifier for a Tracking Option | 
+ **tracking_category_id** | **str**| Unique identifier for a TrackingCategory | 
+ **tracking_option_id** | **str**| Unique identifier for a Tracking Option | 
 
 ### Return type
 
@@ -4906,14 +4906,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **email_invoice**
 > email_invoice(xero_tenant_id, invoice_id, request_empty, idempotency_key=idempotency_key)
@@ -4962,7 +4962,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **request_empty** | [**RequestEmpty**](RequestEmpty.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -4972,14 +4972,14 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_account**
 > Accounts get_account(xero_tenant_id, account_id)
@@ -5027,7 +5027,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
 
 ### Return type
 
@@ -5035,14 +5035,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_account_attachment_by_file_name**
 > file get_account_attachment_by_file_name(xero_tenant_id, account_id, file_name, content_type)
@@ -5092,7 +5092,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -5102,14 +5102,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_account_attachment_by_id**
 > file get_account_attachment_by_id(xero_tenant_id, account_id, attachment_id, content_type)
@@ -5159,8 +5159,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **account_id** | **str**| Unique identifier for Account object | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -5169,14 +5169,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_account_attachments**
 > Attachments get_account_attachments(xero_tenant_id, account_id)
@@ -5224,7 +5224,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
 
 ### Return type
 
@@ -5232,14 +5232,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_accounts**
 > Accounts get_accounts(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order)
@@ -5299,14 +5299,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transaction**
 > BankTransactions get_bank_transaction(xero_tenant_id, bank_transaction_id, unitdp=unitdp)
@@ -5355,7 +5355,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
 
 ### Return type
@@ -5364,14 +5364,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transaction_attachment_by_file_name**
 > file get_bank_transaction_attachment_by_file_name(xero_tenant_id, bank_transaction_id, file_name, content_type)
@@ -5421,7 +5421,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -5431,14 +5431,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transaction_attachment_by_id**
 > file get_bank_transaction_attachment_by_id(xero_tenant_id, bank_transaction_id, attachment_id, content_type)
@@ -5488,8 +5488,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -5498,14 +5498,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transaction_attachments**
 > Attachments get_bank_transaction_attachments(xero_tenant_id, bank_transaction_id)
@@ -5553,7 +5553,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
 
 ### Return type
 
@@ -5561,14 +5561,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transactions**
 > BankTransactions get_bank_transactions(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page, unitdp=unitdp, page_size=page_size, references=references)
@@ -5628,7 +5628,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Up to 100 bank transactions will be returned in a single API call with line items details | [optional] 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **page_size** | **int**| Number of records to retrieve per page | [optional] 
- **references** | [**list[str]**](str.md)| Filter by a comma-separated list of References | [optional] 
+ **references** | **list[str]**| Filter by a comma-separated list of References | [optional] 
 
 ### Return type
 
@@ -5636,14 +5636,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transactions_history**
 > HistoryRecords get_bank_transactions_history(xero_tenant_id, bank_transaction_id)
@@ -5691,7 +5691,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
 
 ### Return type
 
@@ -5699,14 +5699,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transfer**
 > BankTransfers get_bank_transfer(xero_tenant_id, bank_transfer_id)
@@ -5754,7 +5754,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
 
 ### Return type
 
@@ -5762,14 +5762,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transfer_attachment_by_file_name**
 > file get_bank_transfer_attachment_by_file_name(xero_tenant_id, bank_transfer_id, file_name, content_type)
@@ -5819,7 +5819,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -5829,14 +5829,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transfer_attachment_by_id**
 > file get_bank_transfer_attachment_by_id(xero_tenant_id, bank_transfer_id, attachment_id, content_type)
@@ -5886,8 +5886,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -5896,14 +5896,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transfer_attachments**
 > Attachments get_bank_transfer_attachments(xero_tenant_id, bank_transfer_id)
@@ -5951,7 +5951,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
 
 ### Return type
 
@@ -5959,14 +5959,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transfer_history**
 > HistoryRecords get_bank_transfer_history(xero_tenant_id, bank_transfer_id)
@@ -6014,7 +6014,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
 
 ### Return type
 
@@ -6022,14 +6022,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_bank_transfers**
 > BankTransfers get_bank_transfers(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, include_deleted=include_deleted)
@@ -6066,7 +6066,7 @@ xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
 where = 'HasAttachments==true' # str | Filter by an any element (optional)
 order = 'Amount ASC' # str | Order by an any element (optional)
-include_deleted = true # bool | e.g. includeDeleted=true - Bank transfers with a status of DELETED will be included in the response (optional)
+include_deleted = True # bool | e.g. includeDeleted=true - Bank transfers with a status of DELETED will be included in the response (optional)
 try:
     # Retrieves all bank transfers
     api_response = api_instance.get_bank_transfers(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, include_deleted=include_deleted)
@@ -6091,14 +6091,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_batch_payment**
 > BatchPayments get_batch_payment(xero_tenant_id, batch_payment_id)
@@ -6146,7 +6146,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **batch_payment_id** | [**str**](.md)| Unique identifier for BatchPayment | 
+ **batch_payment_id** | **str**| Unique identifier for BatchPayment | 
 
 ### Return type
 
@@ -6154,14 +6154,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_batch_payment_history**
 > HistoryRecords get_batch_payment_history(xero_tenant_id, batch_payment_id)
@@ -6209,7 +6209,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **batch_payment_id** | [**str**](.md)| Unique identifier for BatchPayment | 
+ **batch_payment_id** | **str**| Unique identifier for BatchPayment | 
 
 ### Return type
 
@@ -6217,14 +6217,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_batch_payments**
 > BatchPayments get_batch_payments(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order)
@@ -6284,14 +6284,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_branding_theme**
 > BrandingThemes get_branding_theme(xero_tenant_id, branding_theme_id)
@@ -6339,7 +6339,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **branding_theme_id** | [**str**](.md)| Unique identifier for a Branding Theme | 
+ **branding_theme_id** | **str**| Unique identifier for a Branding Theme | 
 
 ### Return type
 
@@ -6347,14 +6347,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_branding_theme_payment_services**
 > PaymentServices get_branding_theme_payment_services(xero_tenant_id, branding_theme_id)
@@ -6402,7 +6402,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **branding_theme_id** | [**str**](.md)| Unique identifier for a Branding Theme | 
+ **branding_theme_id** | **str**| Unique identifier for a Branding Theme | 
 
 ### Return type
 
@@ -6410,14 +6410,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_branding_themes**
 > BrandingThemes get_branding_themes(xero_tenant_id)
@@ -6471,14 +6471,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_budget**
 > Budgets get_budget(xero_tenant_id, budget_id, date_to=date_to, date_from=date_from)
@@ -6528,7 +6528,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **budget_id** | [**str**](.md)| Unique identifier for Budgets | 
+ **budget_id** | **str**| Unique identifier for Budgets | 
  **date_to** | **date**| Filter by start date | [optional] 
  **date_from** | **date**| Filter by end date | [optional] 
 
@@ -6538,14 +6538,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_budgets**
 > Budgets get_budgets(xero_tenant_id, i_ds=i_ds, date_to=date_to, date_from=date_from)
@@ -6595,7 +6595,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **i_ds** | [**list[str]**](str.md)| Filter by BudgetID. Allows you to retrieve a specific individual budget. | [optional] 
+ **i_ds** | **list[str]**| Filter by BudgetID. Allows you to retrieve a specific individual budget. | [optional] 
  **date_to** | **date**| Filter by start date | [optional] 
  **date_from** | **date**| Filter by end date | [optional] 
 
@@ -6605,14 +6605,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact**
 > Contacts get_contact(xero_tenant_id, contact_id)
@@ -6660,7 +6660,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
 
 ### Return type
 
@@ -6668,14 +6668,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_attachment_by_file_name**
 > file get_contact_attachment_by_file_name(xero_tenant_id, contact_id, file_name, content_type)
@@ -6725,7 +6725,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -6735,14 +6735,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_attachment_by_id**
 > file get_contact_attachment_by_id(xero_tenant_id, contact_id, attachment_id, content_type)
@@ -6792,8 +6792,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -6802,14 +6802,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_attachments**
 > Attachments get_contact_attachments(xero_tenant_id, contact_id)
@@ -6857,7 +6857,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
 
 ### Return type
 
@@ -6865,14 +6865,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_by_contact_number**
 > Contacts get_contact_by_contact_number(xero_tenant_id, contact_number)
@@ -6928,14 +6928,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_cis_settings**
 > CISSettings get_contact_cis_settings(xero_tenant_id, contact_id)
@@ -6983,7 +6983,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
 
 ### Return type
 
@@ -6991,14 +6991,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_group**
 > ContactGroups get_contact_group(xero_tenant_id, contact_group_id)
@@ -7046,7 +7046,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_group_id** | [**str**](.md)| Unique identifier for a Contact Group | 
+ **contact_group_id** | **str**| Unique identifier for a Contact Group | 
 
 ### Return type
 
@@ -7054,14 +7054,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_groups**
 > ContactGroups get_contact_groups(xero_tenant_id, where=where, order=order)
@@ -7119,14 +7119,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contact_history**
 > HistoryRecords get_contact_history(xero_tenant_id, contact_id)
@@ -7174,7 +7174,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
 
 ### Return type
 
@@ -7182,14 +7182,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_contacts**
 > Contacts get_contacts(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, i_ds=i_ds, page=page, include_archived=include_archived, summary_only=summary_only, search_term=search_term, page_size=page_size)
@@ -7228,7 +7228,7 @@ where = 'ContactStatus==&quot;ACTIVE&quot;' # str | Filter by an any element (op
 order = 'Name ASC' # str | Order by an any element (optional)
 i_ds = ['&quot;00000000-0000-0000-0000-000000000000&quot;'] # list[str] | Filter by a comma separated list of ContactIDs. Allows you to retrieve a specific set of contacts in a single call. (optional)
 page = 1 # int | e.g. page=1 - Up to 100 contacts will be returned in a single API call. (optional)
-include_archived = true # bool | e.g. includeArchived=true - Contacts with a status of ARCHIVED will be included in the response (optional)
+include_archived = True # bool | e.g. includeArchived=true - Contacts with a status of ARCHIVED will be included in the response (optional)
 summary_only = False # bool | Use summaryOnly=true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. (optional) (default to False)
 search_term = 'Joe Bloggs' # str | Search parameter that performs a case-insensitive text search across the Name, FirstName, LastName, ContactNumber and EmailAddress fields. (optional)
 page_size = 100 # int | Number of records to retrieve per page (optional)
@@ -7248,7 +7248,7 @@ Name | Type | Description  | Notes
  **if_modified_since** | **datetime**| Only records created or modified since this timestamp will be returned | [optional] 
  **where** | **str**| Filter by an any element | [optional] 
  **order** | **str**| Order by an any element | [optional] 
- **i_ds** | [**list[str]**](str.md)| Filter by a comma separated list of ContactIDs. Allows you to retrieve a specific set of contacts in a single call. | [optional] 
+ **i_ds** | **list[str]**| Filter by a comma separated list of ContactIDs. Allows you to retrieve a specific set of contacts in a single call. | [optional] 
  **page** | **int**| e.g. page&#x3D;1 - Up to 100 contacts will be returned in a single API call. | [optional] 
  **include_archived** | **bool**| e.g. includeArchived&#x3D;true - Contacts with a status of ARCHIVED will be included in the response | [optional] 
  **summary_only** | **bool**| Use summaryOnly&#x3D;true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. | [optional] [default to False]
@@ -7261,14 +7261,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_note**
 > CreditNotes get_credit_note(xero_tenant_id, credit_note_id, unitdp=unitdp)
@@ -7317,7 +7317,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
 
 ### Return type
@@ -7326,14 +7326,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_note_as_pdf**
 > file get_credit_note_as_pdf(xero_tenant_id, credit_note_id)
@@ -7381,7 +7381,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
 
 ### Return type
 
@@ -7389,14 +7389,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/pdf
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_note_attachment_by_file_name**
 > file get_credit_note_attachment_by_file_name(xero_tenant_id, credit_note_id, file_name, content_type)
@@ -7446,7 +7446,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -7456,14 +7456,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_note_attachment_by_id**
 > file get_credit_note_attachment_by_id(xero_tenant_id, credit_note_id, attachment_id, content_type)
@@ -7513,8 +7513,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -7523,14 +7523,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_note_attachments**
 > Attachments get_credit_note_attachments(xero_tenant_id, credit_note_id)
@@ -7578,7 +7578,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
 
 ### Return type
 
@@ -7586,14 +7586,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_note_history**
 > HistoryRecords get_credit_note_history(xero_tenant_id, credit_note_id)
@@ -7641,7 +7641,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
 
 ### Return type
 
@@ -7649,14 +7649,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_credit_notes**
 > CreditNotes get_credit_notes(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page, unitdp=unitdp, page_size=page_size)
@@ -7722,14 +7722,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_currencies**
 > Currencies get_currencies(xero_tenant_id, where=where, order=order)
@@ -7787,14 +7787,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_expense_claim**
 > ExpenseClaims get_expense_claim(xero_tenant_id, expense_claim_id)
@@ -7842,7 +7842,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **expense_claim_id** | [**str**](.md)| Unique identifier for a ExpenseClaim | 
+ **expense_claim_id** | **str**| Unique identifier for a ExpenseClaim | 
 
 ### Return type
 
@@ -7850,14 +7850,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_expense_claim_history**
 > HistoryRecords get_expense_claim_history(xero_tenant_id, expense_claim_id)
@@ -7905,7 +7905,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **expense_claim_id** | [**str**](.md)| Unique identifier for a ExpenseClaim | 
+ **expense_claim_id** | **str**| Unique identifier for a ExpenseClaim | 
 
 ### Return type
 
@@ -7913,14 +7913,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_expense_claims**
 > ExpenseClaims get_expense_claims(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order)
@@ -7980,14 +7980,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice**
 > Invoices get_invoice(xero_tenant_id, invoice_id, unitdp=unitdp)
@@ -8036,7 +8036,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
 
 ### Return type
@@ -8045,14 +8045,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice_as_pdf**
 > file get_invoice_as_pdf(xero_tenant_id, invoice_id)
@@ -8100,7 +8100,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
 
 ### Return type
 
@@ -8108,14 +8108,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/pdf
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice_attachment_by_file_name**
 > file get_invoice_attachment_by_file_name(xero_tenant_id, invoice_id, file_name, content_type)
@@ -8165,7 +8165,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -8175,14 +8175,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice_attachment_by_id**
 > file get_invoice_attachment_by_id(xero_tenant_id, invoice_id, attachment_id, content_type)
@@ -8232,8 +8232,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -8242,14 +8242,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice_attachments**
 > Attachments get_invoice_attachments(xero_tenant_id, invoice_id)
@@ -8297,7 +8297,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
 
 ### Return type
 
@@ -8305,14 +8305,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice_history**
 > HistoryRecords get_invoice_history(xero_tenant_id, invoice_id)
@@ -8360,7 +8360,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
 
 ### Return type
 
@@ -8368,14 +8368,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoice_reminders**
 > InvoiceReminders get_invoice_reminders(xero_tenant_id)
@@ -8429,14 +8429,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_invoices**
 > Invoices get_invoices(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, i_ds=i_ds, invoice_numbers=invoice_numbers, contact_i_ds=contact_i_ds, statuses=statuses, page=page, include_archived=include_archived, created_by_my_app=created_by_my_app, unitdp=unitdp, summary_only=summary_only, page_size=page_size, search_term=search_term)
@@ -8478,8 +8478,8 @@ invoice_numbers = ['&quot;INV-001&quot;, &quot;INV-002&quot;'] # list[str] | Fil
 contact_i_ds = ['&quot;00000000-0000-0000-0000-000000000000&quot;'] # list[str] | Filter by a comma-separated list of ContactIDs. (optional)
 statuses = ['&quot;DRAFT&quot;, &quot;SUBMITTED&quot;'] # list[str] | Filter by a comma-separated list Statuses. For faster response times we recommend using these explicit parameters instead of passing OR conditions into the Where filter. (optional)
 page = 1 # int | e.g. page=1 – Up to 100 invoices will be returned in a single API call with line items shown for each invoice (optional)
-include_archived = true # bool | e.g. includeArchived=true - Invoices with a status of ARCHIVED will be included in the response (optional)
-created_by_my_app = false # bool | When set to true you'll only retrieve Invoices created by your app (optional)
+include_archived = True # bool | e.g. includeArchived=true - Invoices with a status of ARCHIVED will be included in the response (optional)
+created_by_my_app = False # bool | When set to true you'll only retrieve Invoices created by your app (optional)
 unitdp = 4 # int | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts (optional)
 summary_only = False # bool | Use summaryOnly=true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. (optional) (default to False)
 page_size = 100 # int | Number of records to retrieve per page (optional)
@@ -8500,10 +8500,10 @@ Name | Type | Description  | Notes
  **if_modified_since** | **datetime**| Only records created or modified since this timestamp will be returned | [optional] 
  **where** | **str**| Filter by an any element | [optional] 
  **order** | **str**| Order by an any element | [optional] 
- **i_ds** | [**list[str]**](str.md)| Filter by a comma-separated list of InvoicesIDs. | [optional] 
- **invoice_numbers** | [**list[str]**](str.md)| Filter by a comma-separated list of InvoiceNumbers. | [optional] 
- **contact_i_ds** | [**list[str]**](str.md)| Filter by a comma-separated list of ContactIDs. | [optional] 
- **statuses** | [**list[str]**](str.md)| Filter by a comma-separated list Statuses. For faster response times we recommend using these explicit parameters instead of passing OR conditions into the Where filter. | [optional] 
+ **i_ds** | **list[str]**| Filter by a comma-separated list of InvoicesIDs. | [optional] 
+ **invoice_numbers** | **list[str]**| Filter by a comma-separated list of InvoiceNumbers. | [optional] 
+ **contact_i_ds** | **list[str]**| Filter by a comma-separated list of ContactIDs. | [optional] 
+ **statuses** | **list[str]**| Filter by a comma-separated list Statuses. For faster response times we recommend using these explicit parameters instead of passing OR conditions into the Where filter. | [optional] 
  **page** | **int**| e.g. page&#x3D;1 – Up to 100 invoices will be returned in a single API call with line items shown for each invoice | [optional] 
  **include_archived** | **bool**| e.g. includeArchived&#x3D;true - Invoices with a status of ARCHIVED will be included in the response | [optional] 
  **created_by_my_app** | **bool**| When set to true you&#39;ll only retrieve Invoices created by your app | [optional] 
@@ -8518,14 +8518,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_item**
 > Items get_item(xero_tenant_id, item_id, unitdp=unitdp)
@@ -8574,7 +8574,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **item_id** | [**str**](.md)| Unique identifier for an Item | 
+ **item_id** | **str**| Unique identifier for an Item | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
 
 ### Return type
@@ -8583,14 +8583,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_item_history**
 > HistoryRecords get_item_history(xero_tenant_id, item_id)
@@ -8638,7 +8638,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **item_id** | [**str**](.md)| Unique identifier for an Item | 
+ **item_id** | **str**| Unique identifier for an Item | 
 
 ### Return type
 
@@ -8646,14 +8646,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_items**
 > Items get_items(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, unitdp=unitdp)
@@ -8715,14 +8715,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_journal**
 > Journals get_journal(xero_tenant_id, journal_id)
@@ -8770,7 +8770,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **journal_id** | [**str**](.md)| Unique identifier for a Journal | 
+ **journal_id** | **str**| Unique identifier for a Journal | 
 
 ### Return type
 
@@ -8778,14 +8778,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_journal_by_number**
 > Journals get_journal_by_number(xero_tenant_id, journal_number)
@@ -8841,14 +8841,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_journals**
 > Journals get_journals(xero_tenant_id, if_modified_since=if_modified_since, offset=offset, payments_only=payments_only)
@@ -8884,7 +8884,7 @@ api_instance = AccountingApi(api_client)
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
 offset = 10 # int | Offset by a specified journal number. e.g. journals with a JournalNumber greater than the offset will be returned (optional)
-payments_only = true # bool | Filter to retrieve journals on a cash basis. Journals are returned on an accrual basis by default. (optional)
+payments_only = True # bool | Filter to retrieve journals on a cash basis. Journals are returned on an accrual basis by default. (optional)
 try:
     # Retrieves journals
     api_response = api_instance.get_journals(xero_tenant_id, if_modified_since=if_modified_since, offset=offset, payments_only=payments_only)
@@ -8908,14 +8908,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_linked_transaction**
 > LinkedTransactions get_linked_transaction(xero_tenant_id, linked_transaction_id)
@@ -8963,7 +8963,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **linked_transaction_id** | [**str**](.md)| Unique identifier for a LinkedTransaction | 
+ **linked_transaction_id** | **str**| Unique identifier for a LinkedTransaction | 
 
 ### Return type
 
@@ -8971,14 +8971,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_linked_transactions**
 > LinkedTransactions get_linked_transactions(xero_tenant_id, page=page, linked_transaction_id=linked_transaction_id, source_transaction_id=source_transaction_id, contact_id=contact_id, status=status, target_transaction_id=target_transaction_id)
@@ -9032,11 +9032,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
  **page** | **int**| Up to 100 linked transactions will be returned in a single API call. Use the page parameter to specify the page to be returned e.g. page&#x3D;1. | [optional] 
- **linked_transaction_id** | [**str**](.md)| The Xero identifier for an Linked Transaction | [optional] 
- **source_transaction_id** | [**str**](.md)| Filter by the SourceTransactionID. Get the linked transactions created from a particular ACCPAY invoice | [optional] 
- **contact_id** | [**str**](.md)| Filter by the ContactID. Get all the linked transactions that have been assigned to a particular customer. | [optional] 
+ **linked_transaction_id** | **str**| The Xero identifier for an Linked Transaction | [optional] 
+ **source_transaction_id** | **str**| Filter by the SourceTransactionID. Get the linked transactions created from a particular ACCPAY invoice | [optional] 
+ **contact_id** | **str**| Filter by the ContactID. Get all the linked transactions that have been assigned to a particular customer. | [optional] 
  **status** | **str**| Filter by the combination of ContactID and Status. Get  the linked transactions associated to a  customer and with a status | [optional] 
- **target_transaction_id** | [**str**](.md)| Filter by the TargetTransactionID. Get all the linked transactions allocated to a particular ACCREC invoice | [optional] 
+ **target_transaction_id** | **str**| Filter by the TargetTransactionID. Get all the linked transactions allocated to a particular ACCREC invoice | [optional] 
 
 ### Return type
 
@@ -9044,14 +9044,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_manual_journal**
 > ManualJournals get_manual_journal(xero_tenant_id, manual_journal_id)
@@ -9099,7 +9099,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
 
 ### Return type
 
@@ -9107,14 +9107,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_manual_journal_attachment_by_file_name**
 > file get_manual_journal_attachment_by_file_name(xero_tenant_id, manual_journal_id, file_name, content_type)
@@ -9164,7 +9164,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -9174,14 +9174,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_manual_journal_attachment_by_id**
 > file get_manual_journal_attachment_by_id(xero_tenant_id, manual_journal_id, attachment_id, content_type)
@@ -9231,8 +9231,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -9241,14 +9241,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_manual_journal_attachments**
 > Attachments get_manual_journal_attachments(xero_tenant_id, manual_journal_id)
@@ -9296,7 +9296,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
 
 ### Return type
 
@@ -9304,14 +9304,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_manual_journals**
 > ManualJournals get_manual_journals(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page, page_size=page_size)
@@ -9375,14 +9375,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_manual_journals_history**
 > HistoryRecords get_manual_journals_history(xero_tenant_id, manual_journal_id)
@@ -9430,7 +9430,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
 
 ### Return type
 
@@ -9438,14 +9438,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_online_invoice**
 > OnlineInvoices get_online_invoice(xero_tenant_id, invoice_id)
@@ -9493,7 +9493,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
 
 ### Return type
 
@@ -9501,14 +9501,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_organisation_actions**
 > Actions get_organisation_actions(xero_tenant_id)
@@ -9562,14 +9562,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_organisation_cis_settings**
 > CISOrgSettings get_organisation_cis_settings(xero_tenant_id, organisation_id)
@@ -9617,7 +9617,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **organisation_id** | [**str**](.md)| The unique Xero identifier for an organisation | 
+ **organisation_id** | **str**| The unique Xero identifier for an organisation | 
 
 ### Return type
 
@@ -9625,14 +9625,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_organisations**
 > Organisations get_organisations(xero_tenant_id)
@@ -9686,14 +9686,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_overpayment**
 > Overpayments get_overpayment(xero_tenant_id, overpayment_id)
@@ -9741,7 +9741,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **overpayment_id** | [**str**](.md)| Unique identifier for a Overpayment | 
+ **overpayment_id** | **str**| Unique identifier for a Overpayment | 
 
 ### Return type
 
@@ -9749,14 +9749,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_overpayment_history**
 > HistoryRecords get_overpayment_history(xero_tenant_id, overpayment_id)
@@ -9804,7 +9804,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **overpayment_id** | [**str**](.md)| Unique identifier for a Overpayment | 
+ **overpayment_id** | **str**| Unique identifier for a Overpayment | 
 
 ### Return type
 
@@ -9812,14 +9812,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_overpayments**
 > Overpayments get_overpayments(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page, unitdp=unitdp, page_size=page_size, references=references)
@@ -9879,7 +9879,7 @@ Name | Type | Description  | Notes
  **page** | **int**| e.g. page&#x3D;1 – Up to 100 overpayments will be returned in a single API call with line items shown for each overpayment | [optional] 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **page_size** | **int**| Number of records to retrieve per page | [optional] 
- **references** | [**list[str]**](str.md)| Filter by a comma-separated list of References | [optional] 
+ **references** | **list[str]**| Filter by a comma-separated list of References | [optional] 
 
 ### Return type
 
@@ -9887,14 +9887,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payment**
 > Payments get_payment(xero_tenant_id, payment_id)
@@ -9942,7 +9942,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payment_id** | [**str**](.md)| Unique identifier for a Payment | 
+ **payment_id** | **str**| Unique identifier for a Payment | 
 
 ### Return type
 
@@ -9950,14 +9950,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payment_history**
 > HistoryRecords get_payment_history(xero_tenant_id, payment_id)
@@ -10005,7 +10005,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payment_id** | [**str**](.md)| Unique identifier for a Payment | 
+ **payment_id** | **str**| Unique identifier for a Payment | 
 
 ### Return type
 
@@ -10013,14 +10013,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payment_services**
 > PaymentServices get_payment_services(xero_tenant_id)
@@ -10074,14 +10074,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payments**
 > Payments get_payments(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page, page_size=page_size)
@@ -10145,14 +10145,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_prepayment**
 > Prepayments get_prepayment(xero_tenant_id, prepayment_id)
@@ -10200,7 +10200,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **prepayment_id** | [**str**](.md)| Unique identifier for a PrePayment | 
+ **prepayment_id** | **str**| Unique identifier for a PrePayment | 
 
 ### Return type
 
@@ -10208,14 +10208,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_prepayment_history**
 > HistoryRecords get_prepayment_history(xero_tenant_id, prepayment_id)
@@ -10263,7 +10263,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **prepayment_id** | [**str**](.md)| Unique identifier for a PrePayment | 
+ **prepayment_id** | **str**| Unique identifier for a PrePayment | 
 
 ### Return type
 
@@ -10271,14 +10271,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_prepayments**
 > Prepayments get_prepayments(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page, unitdp=unitdp, page_size=page_size, invoice_numbers=invoice_numbers, references=references)
@@ -10339,8 +10339,8 @@ Name | Type | Description  | Notes
  **page** | **int**| e.g. page&#x3D;1 – Up to 100 prepayments will be returned in a single API call with line items shown for each prepayment | [optional] 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **page_size** | **int**| Number of records to retrieve per page | [optional] 
- **invoice_numbers** | [**list[str]**](str.md)| Filter by a comma-separated list of InvoiceNumbers | [optional] 
- **references** | [**list[str]**](str.md)| Filter by a comma-separated list of References | [optional] 
+ **invoice_numbers** | **list[str]**| Filter by a comma-separated list of InvoiceNumbers | [optional] 
+ **references** | **list[str]**| Filter by a comma-separated list of References | [optional] 
 
 ### Return type
 
@@ -10348,14 +10348,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order**
 > PurchaseOrders get_purchase_order(xero_tenant_id, purchase_order_id)
@@ -10403,7 +10403,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
 
 ### Return type
 
@@ -10411,14 +10411,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order_as_pdf**
 > file get_purchase_order_as_pdf(xero_tenant_id, purchase_order_id)
@@ -10466,7 +10466,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
 
 ### Return type
 
@@ -10474,14 +10474,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/pdf
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order_attachment_by_file_name**
 > file get_purchase_order_attachment_by_file_name(xero_tenant_id, purchase_order_id, file_name, content_type)
@@ -10531,7 +10531,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -10541,14 +10541,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order_attachment_by_id**
 > file get_purchase_order_attachment_by_id(xero_tenant_id, purchase_order_id, attachment_id, content_type)
@@ -10598,8 +10598,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -10608,14 +10608,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order_attachments**
 > Attachments get_purchase_order_attachments(xero_tenant_id, purchase_order_id)
@@ -10663,7 +10663,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
 
 ### Return type
 
@@ -10671,14 +10671,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order_by_number**
 > PurchaseOrders get_purchase_order_by_number(xero_tenant_id, purchase_order_number)
@@ -10734,14 +10734,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_order_history**
 > HistoryRecords get_purchase_order_history(xero_tenant_id, purchase_order_id)
@@ -10789,7 +10789,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
 
 ### Return type
 
@@ -10797,14 +10797,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_purchase_orders**
 > PurchaseOrders get_purchase_orders(xero_tenant_id, if_modified_since=if_modified_since, status=status, date_from=date_from, date_to=date_to, order=order, page=page, page_size=page_size)
@@ -10872,14 +10872,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quote**
 > Quotes get_quote(xero_tenant_id, quote_id)
@@ -10927,7 +10927,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
 
 ### Return type
 
@@ -10935,14 +10935,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quote_as_pdf**
 > file get_quote_as_pdf(xero_tenant_id, quote_id)
@@ -10990,7 +10990,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
 
 ### Return type
 
@@ -10998,14 +10998,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/pdf
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quote_attachment_by_file_name**
 > file get_quote_attachment_by_file_name(xero_tenant_id, quote_id, file_name, content_type)
@@ -11055,7 +11055,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -11065,14 +11065,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quote_attachment_by_id**
 > file get_quote_attachment_by_id(xero_tenant_id, quote_id, attachment_id, content_type)
@@ -11122,8 +11122,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -11132,14 +11132,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quote_attachments**
 > Attachments get_quote_attachments(xero_tenant_id, quote_id)
@@ -11187,7 +11187,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
 
 ### Return type
 
@@ -11195,14 +11195,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quote_history**
 > HistoryRecords get_quote_history(xero_tenant_id, quote_id)
@@ -11250,7 +11250,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
 
 ### Return type
 
@@ -11258,14 +11258,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_quotes**
 > Quotes get_quotes(xero_tenant_id, if_modified_since=if_modified_since, date_from=date_from, date_to=date_to, expiry_date_from=expiry_date_from, expiry_date_to=expiry_date_to, contact_id=contact_id, status=status, page=page, order=order, quote_number=quote_number)
@@ -11327,7 +11327,7 @@ Name | Type | Description  | Notes
  **date_to** | **date**| Filter for quotes before a particular date | [optional] 
  **expiry_date_from** | **date**| Filter for quotes expiring after a particular date | [optional] 
  **expiry_date_to** | **date**| Filter for quotes before a particular date | [optional] 
- **contact_id** | [**str**](.md)| Filter for quotes belonging to a particular contact | [optional] 
+ **contact_id** | **str**| Filter for quotes belonging to a particular contact | [optional] 
  **status** | **str**| Filter for quotes of a particular Status | [optional] 
  **page** | **int**| e.g. page&#x3D;1 – Up to 100 Quotes will be returned in a single API call with line items shown for each quote | [optional] 
  **order** | **str**| Order by an any element | [optional] 
@@ -11339,14 +11339,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_receipt**
 > Receipts get_receipt(xero_tenant_id, receipt_id, unitdp=unitdp)
@@ -11395,7 +11395,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
 
 ### Return type
@@ -11404,14 +11404,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_receipt_attachment_by_file_name**
 > file get_receipt_attachment_by_file_name(xero_tenant_id, receipt_id, file_name, content_type)
@@ -11461,7 +11461,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -11471,14 +11471,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_receipt_attachment_by_id**
 > file get_receipt_attachment_by_id(xero_tenant_id, receipt_id, attachment_id, content_type)
@@ -11528,8 +11528,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -11538,14 +11538,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_receipt_attachments**
 > Attachments get_receipt_attachments(xero_tenant_id, receipt_id)
@@ -11593,7 +11593,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
 
 ### Return type
 
@@ -11601,14 +11601,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_receipt_history**
 > HistoryRecords get_receipt_history(xero_tenant_id, receipt_id)
@@ -11656,7 +11656,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
 
 ### Return type
 
@@ -11664,14 +11664,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_receipts**
 > Receipts get_receipts(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, unitdp=unitdp)
@@ -11733,14 +11733,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_repeating_invoice**
 > RepeatingInvoices get_repeating_invoice(xero_tenant_id, repeating_invoice_id)
@@ -11788,7 +11788,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
 
 ### Return type
 
@@ -11796,14 +11796,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_repeating_invoice_attachment_by_file_name**
 > file get_repeating_invoice_attachment_by_file_name(xero_tenant_id, repeating_invoice_id, file_name, content_type)
@@ -11853,7 +11853,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
  **file_name** | **str**| Name of the attachment | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
@@ -11863,14 +11863,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_repeating_invoice_attachment_by_id**
 > file get_repeating_invoice_attachment_by_id(xero_tenant_id, repeating_invoice_id, attachment_id, content_type)
@@ -11920,8 +11920,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
- **attachment_id** | [**str**](.md)| Unique identifier for Attachment object | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
+ **attachment_id** | **str**| Unique identifier for Attachment object | 
  **content_type** | **str**| The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | 
 
 ### Return type
@@ -11930,14 +11930,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/octet-stream
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_repeating_invoice_attachments**
 > Attachments get_repeating_invoice_attachments(xero_tenant_id, repeating_invoice_id)
@@ -11985,7 +11985,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
 
 ### Return type
 
@@ -11993,14 +11993,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_repeating_invoice_history**
 > HistoryRecords get_repeating_invoice_history(xero_tenant_id, repeating_invoice_id)
@@ -12048,7 +12048,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
 
 ### Return type
 
@@ -12056,14 +12056,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_repeating_invoices**
 > RepeatingInvoices get_repeating_invoices(xero_tenant_id, where=where, order=order)
@@ -12121,14 +12121,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_aged_payables_by_contact**
 > ReportWithRows get_report_aged_payables_by_contact(xero_tenant_id, contact_id, date=date, from_date=from_date, to_date=to_date)
@@ -12179,7 +12179,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **date** | **date**| The date of the Aged Payables By Contact report | [optional] 
  **from_date** | **date**| filter by the from date of the report e.g. 2021-02-01 | [optional] 
  **to_date** | **date**| filter by the to date of the report e.g. 2021-02-28 | [optional] 
@@ -12190,14 +12190,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_aged_receivables_by_contact**
 > ReportWithRows get_report_aged_receivables_by_contact(xero_tenant_id, contact_id, date=date, from_date=from_date, to_date=to_date)
@@ -12248,7 +12248,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **date** | **date**| The date of the Aged Receivables By Contact report | [optional] 
  **from_date** | **date**| filter by the from date of the report e.g. 2021-02-01 | [optional] 
  **to_date** | **date**| filter by the to date of the report e.g. 2021-02-28 | [optional] 
@@ -12259,14 +12259,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_balance_sheet**
 > ReportWithRows get_report_balance_sheet(xero_tenant_id, date=date, periods=periods, timeframe=timeframe, tracking_option_id1=tracking_option_id1, tracking_option_id2=tracking_option_id2, standard_layout=standard_layout, payments_only=payments_only)
@@ -12305,8 +12305,8 @@ periods = 3 # int | The number of periods for the Balance Sheet report (optional
 timeframe = 'MONTH' # str | The period size to compare to (MONTH, QUARTER, YEAR) (optional)
 tracking_option_id1 = '00000000-0000-0000-0000-000000000000' # str | The tracking option 1 for the Balance Sheet report (optional)
 tracking_option_id2 = '00000000-0000-0000-0000-000000000000' # str | The tracking option 2 for the Balance Sheet report (optional)
-standard_layout = true # bool | The standard layout boolean for the Balance Sheet report (optional)
-payments_only = false # bool | return a cash basis for the Balance Sheet report (optional)
+standard_layout = True # bool | The standard layout boolean for the Balance Sheet report (optional)
+payments_only = False # bool | return a cash basis for the Balance Sheet report (optional)
 try:
     # Retrieves report for balancesheet
     api_response = api_instance.get_report_balance_sheet(xero_tenant_id, date=date, periods=periods, timeframe=timeframe, tracking_option_id1=tracking_option_id1, tracking_option_id2=tracking_option_id2, standard_layout=standard_layout, payments_only=payments_only)
@@ -12334,14 +12334,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_bank_summary**
 > ReportWithRows get_report_bank_summary(xero_tenant_id, from_date=from_date, to_date=to_date)
@@ -12399,14 +12399,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_budget_summary**
 > ReportWithRows get_report_budget_summary(xero_tenant_id, date=date, periods=periods, timeframe=timeframe)
@@ -12466,14 +12466,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_executive_summary**
 > ReportWithRows get_report_executive_summary(xero_tenant_id, date=date)
@@ -12529,14 +12529,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_from_id**
 > ReportWithRows get_report_from_id(xero_tenant_id, report_id)
@@ -12592,14 +12592,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_profit_and_loss**
 > ReportWithRows get_report_profit_and_loss(xero_tenant_id, from_date=from_date, to_date=to_date, periods=periods, timeframe=timeframe, tracking_category_id=tracking_category_id, tracking_category_id2=tracking_category_id2, tracking_option_id=tracking_option_id, tracking_option_id2=tracking_option_id2, standard_layout=standard_layout, payments_only=payments_only)
@@ -12641,8 +12641,8 @@ tracking_category_id = '00000000-0000-0000-0000-000000000000' # str | The tracki
 tracking_category_id2 = '00000000-0000-0000-0000-000000000000' # str | The trackingCategory 2 for the ProfitAndLoss report (optional)
 tracking_option_id = '00000000-0000-0000-0000-000000000000' # str | The tracking option 1 for the ProfitAndLoss report (optional)
 tracking_option_id2 = '00000000-0000-0000-0000-000000000000' # str | The tracking option 2 for the ProfitAndLoss report (optional)
-standard_layout = true # bool | Return the standard layout for the ProfitAndLoss report (optional)
-payments_only = false # bool | Return cash only basis for the ProfitAndLoss report (optional)
+standard_layout = True # bool | Return the standard layout for the ProfitAndLoss report (optional)
+payments_only = False # bool | Return cash only basis for the ProfitAndLoss report (optional)
 try:
     # Retrieves report for profit and loss
     api_response = api_instance.get_report_profit_and_loss(xero_tenant_id, from_date=from_date, to_date=to_date, periods=periods, timeframe=timeframe, tracking_category_id=tracking_category_id, tracking_category_id2=tracking_category_id2, tracking_option_id=tracking_option_id, tracking_option_id2=tracking_option_id2, standard_layout=standard_layout, payments_only=payments_only)
@@ -12673,14 +12673,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_ten_ninety_nine**
 > Reports get_report_ten_ninety_nine(xero_tenant_id, report_year=report_year)
@@ -12736,14 +12736,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_report_trial_balance**
 > ReportWithRows get_report_trial_balance(xero_tenant_id, date=date, payments_only=payments_only)
@@ -12778,7 +12778,7 @@ api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 date = '2019-10-31' # date | The date for the Trial Balance report e.g. 2018-03-31 (optional)
-payments_only = true # bool | Return cash only basis for the Trial Balance report (optional)
+payments_only = True # bool | Return cash only basis for the Trial Balance report (optional)
 try:
     # Retrieves report for trial balance
     api_response = api_instance.get_report_trial_balance(xero_tenant_id, date=date, payments_only=payments_only)
@@ -12801,14 +12801,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_reports_list**
 > ReportWithRows get_reports_list(xero_tenant_id)
@@ -12862,14 +12862,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_tax_rate_by_tax_type**
 > TaxRates get_tax_rate_by_tax_type(xero_tenant_id, tax_type)
@@ -12925,14 +12925,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_tax_rates**
 > TaxRates get_tax_rates(xero_tenant_id, where=where, order=order)
@@ -12990,14 +12990,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_tracking_categories**
 > TrackingCategories get_tracking_categories(xero_tenant_id, where=where, order=order, include_archived=include_archived)
@@ -13033,7 +13033,7 @@ api_instance = AccountingApi(api_client)
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
 order = 'Name ASC' # str | Order by an any element (optional)
-include_archived = true # bool | e.g. includeArchived=true - Categories and options with a status of ARCHIVED will be included in the response (optional)
+include_archived = True # bool | e.g. includeArchived=true - Categories and options with a status of ARCHIVED will be included in the response (optional)
 try:
     # Retrieves tracking categories and options
     api_response = api_instance.get_tracking_categories(xero_tenant_id, where=where, order=order, include_archived=include_archived)
@@ -13057,14 +13057,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_tracking_category**
 > TrackingCategories get_tracking_category(xero_tenant_id, tracking_category_id)
@@ -13112,7 +13112,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **tracking_category_id** | [**str**](.md)| Unique identifier for a TrackingCategory | 
+ **tracking_category_id** | **str**| Unique identifier for a TrackingCategory | 
 
 ### Return type
 
@@ -13120,14 +13120,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_user**
 > Users get_user(xero_tenant_id, user_id)
@@ -13175,7 +13175,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **user_id** | [**str**](.md)| Unique identifier for a User | 
+ **user_id** | **str**| Unique identifier for a User | 
 
 ### Return type
 
@@ -13183,14 +13183,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_users**
 > Users get_users(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order)
@@ -13250,14 +13250,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **post_setup**
 > ImportSummaryObject post_setup(xero_tenant_id, setup, idempotency_key=idempotency_key)
@@ -13315,14 +13315,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_account**
 > Accounts update_account(xero_tenant_id, account_id, accounts, idempotency_key=idempotency_key)
@@ -13357,7 +13357,7 @@ api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 account_id = '00000000-0000-0000-0000-000000000000' # str | Unique identifier for Account object
-accounts = {"Accounts":[{"Code":"123456","Name":"BarFoo","AccountID":"99ce6032-0678-4aa0-8148-240c75fee33a","Type":"EXPENSE","Description":"GoodBye World","TaxType":"INPUT","EnablePaymentsToAccount":false,"ShowInExpenseClaims":false,"Class":"EXPENSE","ReportingCode":"EXP","ReportingCodeName":"Expense","UpdatedDateUTC":"2019-02-21T16:29:47.96-08:00"}]} # Accounts | Request of type Accounts array with one Account
+accounts = {"Accounts":[{"Code":"123456","Name":"BarFoo","AccountID":"99ce6032-0678-4aa0-8148-240c75fee33a","Type":"EXPENSE","Description":"GoodBye World","TaxType":"INPUT","EnablePaymentsToAccount":False,"ShowInExpenseClaims":False,"Class":"EXPENSE","ReportingCode":"EXP","ReportingCodeName":"Expense","UpdatedDateUTC":"2019-02-21T16:29:47.96-08:00"}]} # Accounts | Request of type Accounts array with one Account
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Updates a chart of accounts
@@ -13372,7 +13372,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
  **accounts** | [**Accounts**](Accounts.md)| Request of type Accounts array with one Account | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -13382,14 +13382,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_account_attachment_by_file_name**
 > Attachments update_account_attachment_by_file_name(xero_tenant_id, account_id, file_name, body, idempotency_key=idempotency_key)
@@ -13440,7 +13440,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **account_id** | [**str**](.md)| Unique identifier for Account object | 
+ **account_id** | **str**| Unique identifier for Account object | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13451,14 +13451,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_bank_transaction**
 > BankTransactions update_bank_transaction(xero_tenant_id, bank_transaction_id, bank_transactions, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -13493,7 +13493,7 @@ api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 bank_transaction_id = '00000000-0000-0000-0000-000000000000' # str | Xero generated unique identifier for a bank transaction
-bank_transactions = {"BankTransactions":[{"Type":"SPEND","Contact":{"ContactID":"00000000-0000-0000-0000-000000000000","ContactStatus":"ACTIVE","Name":"Buzz Lightyear","FirstName":"Buzz","LastName":"Lightyear","EmailAddress":"buzz.Lightyear@email.com","ContactPersons":[],"BankAccountDetails":"","Addresses":[{"AddressType":"STREET","City":"","Region":"","PostalCode":"","Country":""},{"AddressType":"POBOX","AddressLine1":"","AddressLine2":"","AddressLine3":"","AddressLine4":"","City":"Palo Alto","Region":"CA","PostalCode":"94020","Country":"United States"}],"Phones":[{"PhoneType":"DEFAULT","PhoneNumber":"847-1294","PhoneAreaCode":"(626)","PhoneCountryCode":""},{"PhoneType":"DDI","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"FAX","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"MOBILE","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""}],"UpdatedDateUTC":"2017-08-21T13:49:04.227-07:00","ContactGroups":[]},"Lineitems":[],"BankAccount":{"Code":"088","Name":"Business Wells Fargo","AccountID":"00000000-0000-0000-0000-000000000000"},"IsReconciled":false,"Date":"2019-02-25","Reference":"You just updated","CurrencyCode":"USD","CurrencyRate":1,"Status":"AUTHORISED","LineAmountTypes":"Inclusive","TotalTax":1.74,"BankTransactionID":"00000000-0000-0000-0000-000000000000","UpdatedDateUTC":"2019-02-26T12:39:27.813-08:00"}]} # BankTransactions | 
+bank_transactions = {"BankTransactions":[{"Type":"SPEND","Contact":{"ContactID":"00000000-0000-0000-0000-000000000000","ContactStatus":"ACTIVE","Name":"Buzz Lightyear","FirstName":"Buzz","LastName":"Lightyear","EmailAddress":"buzz.Lightyear@email.com","ContactPersons":[],"BankAccountDetails":"","Addresses":[{"AddressType":"STREET","City":"","Region":"","PostalCode":"","Country":""},{"AddressType":"POBOX","AddressLine1":"","AddressLine2":"","AddressLine3":"","AddressLine4":"","City":"Palo Alto","Region":"CA","PostalCode":"94020","Country":"United States"}],"Phones":[{"PhoneType":"DEFAULT","PhoneNumber":"847-1294","PhoneAreaCode":"(626)","PhoneCountryCode":""},{"PhoneType":"DDI","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"FAX","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""},{"PhoneType":"MOBILE","PhoneNumber":"","PhoneAreaCode":"","PhoneCountryCode":""}],"UpdatedDateUTC":"2017-08-21T13:49:04.227-07:00","ContactGroups":[]},"Lineitems":[],"BankAccount":{"Code":"088","Name":"Business Wells Fargo","AccountID":"00000000-0000-0000-0000-000000000000"},"IsReconciled":False,"Date":"2019-02-25","Reference":"You just updated","CurrencyCode":"USD","CurrencyRate":1,"Status":"AUTHORISED","LineAmountTypes":"Inclusive","TotalTax":1.74,"BankTransactionID":"00000000-0000-0000-0000-000000000000","UpdatedDateUTC":"2019-02-26T12:39:27.813-08:00"}]} # BankTransactions | 
 unitdp = 4 # int | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts (optional)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
@@ -13509,7 +13509,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
  **bank_transactions** | [**BankTransactions**](BankTransactions.md)|  | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13520,14 +13520,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_bank_transaction_attachment_by_file_name**
 > Attachments update_bank_transaction_attachment_by_file_name(xero_tenant_id, bank_transaction_id, file_name, body, idempotency_key=idempotency_key)
@@ -13578,7 +13578,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transaction_id** | [**str**](.md)| Xero generated unique identifier for a bank transaction | 
+ **bank_transaction_id** | **str**| Xero generated unique identifier for a bank transaction | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13589,14 +13589,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_bank_transfer_attachment_by_file_name**
 > Attachments update_bank_transfer_attachment_by_file_name(xero_tenant_id, bank_transfer_id, file_name, body, idempotency_key=idempotency_key)
@@ -13646,7 +13646,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **bank_transfer_id** | [**str**](.md)| Xero generated unique identifier for a bank transfer | 
+ **bank_transfer_id** | **str**| Xero generated unique identifier for a bank transfer | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13657,14 +13657,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_contact**
 > Contacts update_contact(xero_tenant_id, contact_id, contacts, idempotency_key=idempotency_key)
@@ -13714,7 +13714,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **contacts** | [**Contacts**](Contacts.md)| an array of Contacts containing single Contact object with properties to update | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -13724,14 +13724,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_contact_attachment_by_file_name**
 > Attachments update_contact_attachment_by_file_name(xero_tenant_id, contact_id, file_name, body, idempotency_key=idempotency_key)
@@ -13781,7 +13781,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_id** | [**str**](.md)| Unique identifier for a Contact | 
+ **contact_id** | **str**| Unique identifier for a Contact | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13792,14 +13792,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_contact_group**
 > ContactGroups update_contact_group(xero_tenant_id, contact_group_id, contact_groups, idempotency_key=idempotency_key)
@@ -13849,7 +13849,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **contact_group_id** | [**str**](.md)| Unique identifier for a Contact Group | 
+ **contact_group_id** | **str**| Unique identifier for a Contact Group | 
  **contact_groups** | [**ContactGroups**](ContactGroups.md)| an array of Contact groups with Name of specific group to update | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -13859,14 +13859,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_credit_note**
 > CreditNotes update_credit_note(xero_tenant_id, credit_note_id, credit_notes, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -13901,7 +13901,7 @@ api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 credit_note_id = '00000000-0000-0000-0000-000000000000' # str | Unique identifier for a Credit Note
-credit_notes = {"CreditNotes":[{"Type":"ACCPAYCREDIT","Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8"},"Date":"2019-01-05","Status":"AUTHORISED","Reference":"HelloWorld","SentToContact":true,"LineItems":[{"Description":"Foobar","Quantity":2,"UnitAmount":20,"AccountCode":"400"}]}]} # CreditNotes | an array of Credit Notes containing credit note details to update
+credit_notes = {"CreditNotes":[{"Type":"ACCPAYCREDIT","Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8"},"Date":"2019-01-05","Status":"AUTHORISED","Reference":"HelloWorld","SentToContact":True,"LineItems":[{"Description":"Foobar","Quantity":2,"UnitAmount":20,"AccountCode":"400"}]}]} # CreditNotes | an array of Credit Notes containing credit note details to update
 unitdp = 4 # int | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts (optional)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
@@ -13917,7 +13917,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **credit_notes** | [**CreditNotes**](CreditNotes.md)| an array of Credit Notes containing credit note details to update | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13928,14 +13928,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_credit_note_attachment_by_file_name**
 > Attachments update_credit_note_attachment_by_file_name(xero_tenant_id, credit_note_id, file_name, body, idempotency_key=idempotency_key)
@@ -13986,7 +13986,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **credit_note_id** | [**str**](.md)| Unique identifier for a Credit Note | 
+ **credit_note_id** | **str**| Unique identifier for a Credit Note | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -13997,14 +13997,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_expense_claim**
 > ExpenseClaims update_expense_claim(xero_tenant_id, expense_claim_id, expense_claims, idempotency_key=idempotency_key)
@@ -14054,7 +14054,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **expense_claim_id** | [**str**](.md)| Unique identifier for a ExpenseClaim | 
+ **expense_claim_id** | **str**| Unique identifier for a ExpenseClaim | 
  **expense_claims** | [**ExpenseClaims**](ExpenseClaims.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -14064,14 +14064,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_invoice**
 > Invoices update_invoice(xero_tenant_id, invoice_id, invoices, unitdp=unitdp, idempotency_key=idempotency_key, allow_backorders=allow_backorders)
@@ -14109,7 +14109,7 @@ invoice_id = '00000000-0000-0000-0000-000000000000' # str | Unique identifier fo
 invoices = {"Invoices":[{"Reference":"May the force be with you","InvoiceID":"00000000-0000-0000-0000-000000000000","LineItems":[],"Contact":{},"Type":"ACCPAY"}]} # Invoices | 
 unitdp = 4 # int | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts (optional)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
-allow_backorders = true # bool | Allows an invoice to be created even when one or more line items contain tracked inventory where the invoice quantity would cause the available quantity to go negative (optional)
+allow_backorders = True # bool | Allows an invoice to be created even when one or more line items contain tracked inventory where the invoice quantity would cause the available quantity to go negative (optional)
 try:
     # Updates a specific sales invoices or purchase bills
     api_response = api_instance.update_invoice(xero_tenant_id, invoice_id, invoices, unitdp=unitdp, idempotency_key=idempotency_key, allow_backorders=allow_backorders)
@@ -14123,7 +14123,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **invoices** | [**Invoices**](Invoices.md)|  | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -14135,14 +14135,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_invoice_attachment_by_file_name**
 > Attachments update_invoice_attachment_by_file_name(xero_tenant_id, invoice_id, file_name, body, idempotency_key=idempotency_key)
@@ -14193,7 +14193,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **invoice_id** | [**str**](.md)| Unique identifier for an Invoice | 
+ **invoice_id** | **str**| Unique identifier for an Invoice | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -14204,14 +14204,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_item**
 > Items update_item(xero_tenant_id, item_id, items, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -14262,7 +14262,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **item_id** | [**str**](.md)| Unique identifier for an Item | 
+ **item_id** | **str**| Unique identifier for an Item | 
  **items** | [**Items**](Items.md)|  | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -14273,14 +14273,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_linked_transaction**
 > LinkedTransactions update_linked_transaction(xero_tenant_id, linked_transaction_id, linked_transactions, idempotency_key=idempotency_key)
@@ -14330,7 +14330,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **linked_transaction_id** | [**str**](.md)| Unique identifier for a LinkedTransaction | 
+ **linked_transaction_id** | **str**| Unique identifier for a LinkedTransaction | 
  **linked_transactions** | [**LinkedTransactions**](LinkedTransactions.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -14340,14 +14340,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_manual_journal**
 > ManualJournals update_manual_journal(xero_tenant_id, manual_journal_id, manual_journals, idempotency_key=idempotency_key)
@@ -14397,7 +14397,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
  **manual_journals** | [**ManualJournals**](ManualJournals.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -14407,14 +14407,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_manual_journal_attachment_by_file_name**
 > Attachments update_manual_journal_attachment_by_file_name(xero_tenant_id, manual_journal_id, file_name, body, idempotency_key=idempotency_key)
@@ -14465,7 +14465,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **manual_journal_id** | [**str**](.md)| Unique identifier for a ManualJournal | 
+ **manual_journal_id** | **str**| Unique identifier for a ManualJournal | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -14476,14 +14476,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_bank_transactions**
 > BankTransactions update_or_create_bank_transactions(xero_tenant_id, bank_transactions, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -14545,14 +14545,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_contacts**
 > Contacts update_or_create_contacts(xero_tenant_id, contacts, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -14612,14 +14612,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_credit_notes**
 > CreditNotes update_or_create_credit_notes(xero_tenant_id, credit_notes, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -14681,14 +14681,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_invoices**
 > Invoices update_or_create_invoices(xero_tenant_id, invoices, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key, allow_backorders=allow_backorders)
@@ -14726,7 +14726,7 @@ invoices = {"Invoices":[{"Type":"ACCREC","Contact":{"ContactID":"430fa14a-f945-4
 summarize_errors = False # bool | If false return 200 OK and mix of successfully created objects and any with validation errors (optional) (default to False)
 unitdp = 4 # int | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts (optional)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
-allow_backorders = true # bool | Allows an invoice to be created even when one or more line items contain tracked inventory where the invoice quantity would cause the available quantity to go negative (optional)
+allow_backorders = True # bool | Allows an invoice to be created even when one or more line items contain tracked inventory where the invoice quantity would cause the available quantity to go negative (optional)
 try:
     # Updates or creates one or more sales invoices or purchase bills
     api_response = api_instance.update_or_create_invoices(xero_tenant_id, invoices, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key, allow_backorders=allow_backorders)
@@ -14752,14 +14752,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_items**
 > Items update_or_create_items(xero_tenant_id, items, summarize_errors=summarize_errors, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -14821,14 +14821,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_manual_journals**
 > ManualJournals update_or_create_manual_journals(xero_tenant_id, manual_journals, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -14888,14 +14888,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_purchase_orders**
 > PurchaseOrders update_or_create_purchase_orders(xero_tenant_id, purchase_orders, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -14955,14 +14955,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_quotes**
 > Quotes update_or_create_quotes(xero_tenant_id, quotes, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -15022,14 +15022,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_or_create_repeating_invoices**
 > RepeatingInvoices update_or_create_repeating_invoices(xero_tenant_id, repeating_invoices, summarize_errors=summarize_errors, idempotency_key=idempotency_key)
@@ -15063,7 +15063,7 @@ api_client = ApiClient(
 api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-repeating_invoices = {"RepeatingInvoices":[{"Schedule":{"Period":1,"Unit":"MONTHLY","DueDate":10,"DueDateType":"OFFOLLOWINGMONTH","StartDate":"/Date(1555286400000+0000)/"},"Type":"ACCREC","Reference":"[Week]","ApprovedForSending":false,"SendCopy":false,"MarkAsSent":false,"IncludePDF":false,"Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8","Name":"Liam Gallagher"},"Status":"AUTHORISED","LineAmountTypes":"Exclusive","LineItems":[{"Description":"Guitars Fender Strat","UnitAmount":5000.0,"TaxType":"OUTPUT2","TaxAmount":750.0,"LineAmount":5000.0,"AccountCode":"200","Tracking":[],"Quantity":1.0,"LineItemID":"13a8353c-d2af-4d5b-920c-438449f08900","DiscountEnteredAsPercent":true}],"CurrencyCode":"NZD"}]} # RepeatingInvoices | RepeatingInvoices with an array of repeating invoice objects in body of request
+repeating_invoices = {"RepeatingInvoices":[{"Schedule":{"Period":1,"Unit":"MONTHLY","DueDate":10,"DueDateType":"OFFOLLOWINGMONTH","StartDate":"/Date(1555286400000+0000)/"},"Type":"ACCREC","Reference":"[Week]","ApprovedForSending":False,"SendCopy":False,"MarkAsSent":False,"IncludePDF":False,"Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8","Name":"Liam Gallagher"},"Status":"AUTHORISED","LineAmountTypes":"Exclusive","LineItems":[{"Description":"Guitars Fender Strat","UnitAmount":5000.0,"TaxType":"OUTPUT2","TaxAmount":750.0,"LineAmount":5000.0,"AccountCode":"200","Tracking":[],"Quantity":1.0,"LineItemID":"13a8353c-d2af-4d5b-920c-438449f08900","DiscountEnteredAsPercent":True}],"CurrencyCode":"NZD"}]} # RepeatingInvoices | RepeatingInvoices with an array of repeating invoice objects in body of request
 summarize_errors = False # bool | If false return 200 OK and mix of successfully created objects and any with validation errors (optional) (default to False)
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
@@ -15089,14 +15089,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_purchase_order**
 > PurchaseOrders update_purchase_order(xero_tenant_id, purchase_order_id, purchase_orders, idempotency_key=idempotency_key)
@@ -15146,7 +15146,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
  **purchase_orders** | [**PurchaseOrders**](PurchaseOrders.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -15156,14 +15156,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_purchase_order_attachment_by_file_name**
 > Attachments update_purchase_order_attachment_by_file_name(xero_tenant_id, purchase_order_id, file_name, body, idempotency_key=idempotency_key)
@@ -15214,7 +15214,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **purchase_order_id** | [**str**](.md)| Unique identifier for an Purchase Order | 
+ **purchase_order_id** | **str**| Unique identifier for an Purchase Order | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -15225,14 +15225,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_quote**
 > Quotes update_quote(xero_tenant_id, quote_id, quotes, idempotency_key=idempotency_key)
@@ -15282,7 +15282,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
  **quotes** | [**Quotes**](Quotes.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -15292,14 +15292,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_quote_attachment_by_file_name**
 > Attachments update_quote_attachment_by_file_name(xero_tenant_id, quote_id, file_name, body, idempotency_key=idempotency_key)
@@ -15350,7 +15350,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **quote_id** | [**str**](.md)| Unique identifier for an Quote | 
+ **quote_id** | **str**| Unique identifier for an Quote | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -15361,14 +15361,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_receipt**
 > Receipts update_receipt(xero_tenant_id, receipt_id, receipts, unitdp=unitdp, idempotency_key=idempotency_key)
@@ -15419,7 +15419,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
  **receipts** | [**Receipts**](Receipts.md)|  | 
  **unitdp** | **int**| e.g. unitdp&#x3D;4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts | [optional] 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -15430,14 +15430,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_receipt_attachment_by_file_name**
 > Attachments update_receipt_attachment_by_file_name(xero_tenant_id, receipt_id, file_name, body, idempotency_key=idempotency_key)
@@ -15488,7 +15488,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **receipt_id** | [**str**](.md)| Unique identifier for a Receipt | 
+ **receipt_id** | **str**| Unique identifier for a Receipt | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -15499,14 +15499,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_repeating_invoice**
 > RepeatingInvoices update_repeating_invoice(xero_tenant_id, repeating_invoice_id, repeating_invoices, idempotency_key=idempotency_key)
@@ -15541,7 +15541,7 @@ api_instance = AccountingApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 repeating_invoice_id = '00000000-0000-0000-0000-000000000000' # str | Unique identifier for a Repeating Invoice
-repeating_invoices = {"Schedule":{"Period":1,"Unit":"MONTHLY","DueDate":10,"DueDateType":"OFFOLLOWINGMONTH","StartDate":"/Date(1555286400000+0000)/","EndDate":"/Date(1569801600000+0000)/","NextScheduledDate":"/Date(1555286400000+0000)/"},"RepeatingInvoiceID":"428c0d75-909f-4b04-8403-a48dc27283b0","Type":"ACCREC","Reference":"[Week]","HasAttachments":true,"ApprovedForSending":false,"SendCopy":false,"MarkAsSent":false,"IncludePDF":false,"ID":"428c0d75-909f-4b04-8403-a48dc27283b0","Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8","Name":"Liam Gallagher","Addresses":[],"Phones":[],"ContactGroups":[],"ContactPersons":[],"HasValidationErrors":false},"Status":"DELETED","LineAmountTypes":"Exclusive","LineItems":[{"Description":"Guitars Fender Strat","UnitAmount":5000.0,"TaxType":"OUTPUT2","TaxAmount":750.0,"LineAmount":5000.0,"AccountCode":"200","Tracking":[],"Quantity":1.0,"LineItemID":"13a8353c-d2af-4d5b-920c-438449f08900","DiscountEnteredAsPercent":true}],"SubTotal":5000.0,"TotalTax":750.0,"Total":5750.0,"CurrencyCode":"NZD"} # RepeatingInvoices | 
+repeating_invoices = {"Schedule":{"Period":1,"Unit":"MONTHLY","DueDate":10,"DueDateType":"OFFOLLOWINGMONTH","StartDate":"/Date(1555286400000+0000)/","EndDate":"/Date(1569801600000+0000)/","NextScheduledDate":"/Date(1555286400000+0000)/"},"RepeatingInvoiceID":"428c0d75-909f-4b04-8403-a48dc27283b0","Type":"ACCREC","Reference":"[Week]","HasAttachments":True,"ApprovedForSending":False,"SendCopy":False,"MarkAsSent":False,"IncludePDF":False,"ID":"428c0d75-909f-4b04-8403-a48dc27283b0","Contact":{"ContactID":"430fa14a-f945-44d3-9f97-5df5e28441b8","Name":"Liam Gallagher","Addresses":[],"Phones":[],"ContactGroups":[],"ContactPersons":[],"HasValidationErrors":False},"Status":"DELETED","LineAmountTypes":"Exclusive","LineItems":[{"Description":"Guitars Fender Strat","UnitAmount":5000.0,"TaxType":"OUTPUT2","TaxAmount":750.0,"LineAmount":5000.0,"AccountCode":"200","Tracking":[],"Quantity":1.0,"LineItemID":"13a8353c-d2af-4d5b-920c-438449f08900","DiscountEnteredAsPercent":True}],"SubTotal":5000.0,"TotalTax":750.0,"Total":5750.0,"CurrencyCode":"NZD"} # RepeatingInvoices | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Deletes a specific repeating invoice template
@@ -15556,7 +15556,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
  **repeating_invoices** | [**RepeatingInvoices**](RepeatingInvoices.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -15566,14 +15566,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_repeating_invoice_attachment_by_file_name**
 > Attachments update_repeating_invoice_attachment_by_file_name(xero_tenant_id, repeating_invoice_id, file_name, body, idempotency_key=idempotency_key)
@@ -15624,7 +15624,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **repeating_invoice_id** | [**str**](.md)| Unique identifier for a Repeating Invoice | 
+ **repeating_invoice_id** | **str**| Unique identifier for a Repeating Invoice | 
  **file_name** | **str**| Name of the attachment | 
  **body** | **str**| Byte array of file in body of request | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
@@ -15635,14 +15635,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/octet-stream
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_tax_rate**
 > TaxRates update_tax_rate(xero_tenant_id, tax_rates, idempotency_key=idempotency_key)
@@ -15700,14 +15700,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_tracking_category**
 > TrackingCategories update_tracking_category(xero_tenant_id, tracking_category_id, tracking_category, idempotency_key=idempotency_key)
@@ -15757,7 +15757,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **tracking_category_id** | [**str**](.md)| Unique identifier for a TrackingCategory | 
+ **tracking_category_id** | **str**| Unique identifier for a TrackingCategory | 
  **tracking_category** | [**TrackingCategory**](TrackingCategory.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -15767,14 +15767,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_tracking_options**
 > TrackingOptions update_tracking_options(xero_tenant_id, tracking_category_id, tracking_option_id, tracking_option, idempotency_key=idempotency_key)
@@ -15825,8 +15825,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **tracking_category_id** | [**str**](.md)| Unique identifier for a TrackingCategory | 
- **tracking_option_id** | [**str**](.md)| Unique identifier for a Tracking Option | 
+ **tracking_category_id** | **str**| Unique identifier for a TrackingCategory | 
+ **tracking_option_id** | **str**| Unique identifier for a Tracking Option | 
  **tracking_option** | [**TrackingOption**](TrackingOption.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -15836,12 +15836,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

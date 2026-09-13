@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **book_depreciation_setting** | [**BookDepreciationSetting**](BookDepreciationSetting.md) |  | 
 **locks** | **int** | All asset types that have accumulated depreciation for any assets that use them are deemed ‘locked’ and cannot be removed. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

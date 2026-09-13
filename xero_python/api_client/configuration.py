@@ -21,6 +21,8 @@ import urllib3
 
 import http.client as httplib
 
+from xero_python import __version__
+
 from .oauth2 import OAuth2Token
 
 
@@ -30,8 +32,12 @@ class TypeWithDefault(type):
         cls._default = None
 
     def __call__(cls, *args, **kwargs):
+        if args or kwargs:
+            # explicit arguments always build the requested configuration
+            # rather than returning a copy of the saved default
+            return type.__call__(cls, *args, **kwargs)
         if cls._default is None:
-            cls._default = type.__call__(cls, *args, **kwargs)
+            cls._default = type.__call__(cls)
         return copy.copy(cls._default)
 
     def set_default(cls, default):
@@ -230,5 +236,7 @@ class Configuration(metaclass=TypeWithDefault):
             "OS: {env}\n"
             "Python Version: {pyversion}\n"
             "Version of the API: 2.0.4\n"
-            "SDK Package Version: 0.1.0".format(env=sys.platform, pyversion=sys.version)
+            "SDK Package Version: {sdkversion}".format(
+                env=sys.platform, pyversion=sys.version, sdkversion=__version__
+            )
         )

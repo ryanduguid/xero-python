@@ -24,6 +24,6 @@ Name | Type | Description | Notes
 **mark_as_sent** | **bool** | Boolean to indicate whether the invoice in the Xero app displays as \&quot;sent\&quot; | [optional] [default to False]
 **include_pdf** | **bool** | Boolean to indicate whether to include PDF attachment | [optional] [default to False]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

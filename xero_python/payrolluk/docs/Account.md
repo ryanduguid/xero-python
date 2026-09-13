@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **code** | **str** | A unique 3 digit number for each Account | [optional] 
 **name** | **str** | Name of the Account. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

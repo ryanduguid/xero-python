@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **rate_accrued_hourly** | **float** | The number of hours added to the leave balance for every hour worked by the employee. This is normally 0, unless the scheduleOfAccrual chosen is \&quot;OnHourWorked\&quot; | [optional] 
 **schedule_of_accrual_date** | **date** | The date when an employee becomes entitled to their accrual. Only applicable when scheduleOfAccrual is \&quot;OnAnniversaryDate\&quot; | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -39,6 +39,7 @@ class EarningsLine(BaseModel):
         "amount": "float",
         "number_of_units": "float",
         "fixed_amount": "float",
+        "lump_sum_e_tax_year": "int",
     }
 
     attribute_map = {
@@ -51,6 +52,7 @@ class EarningsLine(BaseModel):
         "amount": "Amount",
         "number_of_units": "NumberOfUnits",
         "fixed_amount": "FixedAmount",
+        "lump_sum_e_tax_year": "LumpSumETaxYear",
     }
 
     def __init__(
@@ -64,6 +66,7 @@ class EarningsLine(BaseModel):
         amount=None,
         number_of_units=None,
         fixed_amount=None,
+        lump_sum_e_tax_year=None,
     ):  # noqa: E501
         """EarningsLine - a model defined in OpenAPI"""  # noqa: E501
 
@@ -76,6 +79,7 @@ class EarningsLine(BaseModel):
         self._amount = None
         self._number_of_units = None
         self._fixed_amount = None
+        self._lump_sum_e_tax_year = None
         self.discriminator = None
 
         self.earnings_rate_id = earnings_rate_id
@@ -95,6 +99,8 @@ class EarningsLine(BaseModel):
             self.number_of_units = number_of_units
         if fixed_amount is not None:
             self.fixed_amount = fixed_amount
+        if lump_sum_e_tax_year is not None:
+            self.lump_sum_e_tax_year = lump_sum_e_tax_year
 
     @property
     def earnings_rate_id(self):
@@ -304,3 +310,26 @@ class EarningsLine(BaseModel):
         """
 
         self._fixed_amount = fixed_amount
+
+    @property
+    def lump_sum_e_tax_year(self):
+        """Gets the lump_sum_e_tax_year of this EarningsLine.  # noqa: E501
+
+        The tax year in which a Lump Sum E earnings line was accrued. Only applicable if the EarningsRate EarningsType is LUMPSUME  # noqa: E501
+
+        :return: The lump_sum_e_tax_year of this EarningsLine.  # noqa: E501
+        :rtype: int
+        """
+        return self._lump_sum_e_tax_year
+
+    @lump_sum_e_tax_year.setter
+    def lump_sum_e_tax_year(self, lump_sum_e_tax_year):
+        """Sets the lump_sum_e_tax_year of this EarningsLine.
+
+        The tax year in which a Lump Sum E earnings line was accrued. Only applicable if the EarningsRate EarningsType is LUMPSUME  # noqa: E501
+
+        :param lump_sum_e_tax_year: The lump_sum_e_tax_year of this EarningsLine.  # noqa: E501
+        :type: int
+        """
+
+        self._lump_sum_e_tax_year = lump_sum_e_tax_year

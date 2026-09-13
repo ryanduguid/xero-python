@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **earnings_rate_id** | **str** | The corresponding earnings rate identifier | [optional] 
 **name** | **str** | The read-only name of the Earning Template. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

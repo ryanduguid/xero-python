@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **net_pay** | **float** | The NetPay for the Payslip | [optional] 
 **updated_date_utc** | **datetime** | Last modified timestamp | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

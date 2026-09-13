@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **total_voided** | **float** | Total voided value. | [optional] 
 **total_credited** | **float** | Total credited value. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

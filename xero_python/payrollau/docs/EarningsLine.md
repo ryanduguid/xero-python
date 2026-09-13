@@ -12,7 +12,8 @@ Name | Type | Description | Notes
 **amount** | **float** | Earnings rate amount | [optional] 
 **number_of_units** | **float** | Earnings rate number of units. | [optional] 
 **fixed_amount** | **float** | Earnings rate amount. Only applicable if the EarningsRate RateType is Fixed | [optional] 
+**lump_sum_e_tax_year** | **int** | The tax year in which a Lump Sum E earnings line was accrued. Only applicable if the EarningsRate EarningsType is LUMPSUME | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

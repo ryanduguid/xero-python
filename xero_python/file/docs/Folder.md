@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **is_inbox** | **bool** | to indicate if the folder is the Inbox. The Inbox cannot be renamed or deleted. | [optional] 
 **id** | **str** | Xero unique identifier for a folder  Files | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

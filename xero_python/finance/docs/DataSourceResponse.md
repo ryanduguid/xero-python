@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **other_neg** | **float** | Sum of the amounts of all statement lines where the source of the data was unknown.   This gives an indication on the certainty of correctness of the data.  Only negative transactions are included. | [optional] 
 **other** | **float** | Sum of the amounts of all statement lines where the source of the data was unknown.   This gives an indication on the certainty of correctness of the data. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

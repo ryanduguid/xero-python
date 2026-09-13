@@ -604,7 +604,7 @@ class FilesApi(object):
             )
 
         collection_formats = {
-            "ObjectIds": "multi",
+            "ObjectIds": "csv",
         }
         path_params = {}
 

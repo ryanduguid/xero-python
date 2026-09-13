@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **number_of_units** | **list[float]** | The number of units on a timesheet line | [optional] 
 **updated_date_utc** | **datetime** | Last modified timestamp | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

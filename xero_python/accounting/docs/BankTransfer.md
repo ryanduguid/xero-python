@@ -21,6 +21,6 @@ Name | Type | Description | Notes
 **to_tracking** | [**list[TrackingReference]**](TrackingReference.md) | Optional Tracking Category for the destination account – see Tracking. A bank transfer can have a maximum of 2 tracking categories per account. | [optional] 
 **validation_errors** | [**list[ValidationError]**](ValidationError.md) | Displays array of validation error messages from the API | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

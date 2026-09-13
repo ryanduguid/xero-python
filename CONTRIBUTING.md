@@ -101,7 +101,7 @@ Here are a few things you can do that will increase the likelihood of your pull 
 
 ### Local development requirements
 
-* Python3.5+ installed.
+* Python3.8+ installed.
 
 ### Local installation
 
@@ -123,19 +123,16 @@ Here are a few things you can do that will increase the likelihood of your pull 
 * We use [tox](https://tox.readthedocs.io/en/latest/) to create different python environments and execute tests.
 
 #### Local installation requirements
-* You need to have python interpreters for python 3.5, 3.6, 3.7, and 3.8 installed locally.
+* You need to have a python 3.8 interpreter installed locally.
 * You can install them using [pyenv](https://github.com/pyenv/pyenv)
 * Install `pyenv` - follow https://github.com/pyenv/pyenv#installation
 * Install python versions required
     ```bash
-    pyenv install 3.5.9 && \
-    pyenv install 3.6.10 && \
-    pyenv install 3.7.6 && \
     pyenv install 3.8.2
     ```
 
 #### Running all tests
-* Activate pyenv installed python versions `pyenv local 3.5.9 3.6.10 3.7.6 3.8.2`
+* Activate the pyenv installed python version `pyenv local 3.8.2`
 * Activate virtual environment by running `source venv/bin/activate`
 * Execute `tox` to run all tests in all python versions
 

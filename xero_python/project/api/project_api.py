@@ -718,7 +718,7 @@ class ProjectApi(object):
                 "`1`"
             )
         collection_formats = {
-            "projectIds": "multi",
+            "projectIds": "csv",
         }
         path_params = {}
 
@@ -1011,7 +1011,7 @@ class ProjectApi(object):
             )
 
         collection_formats = {
-            "states": "multi",
+            "states": "csv",
         }
         path_params = {
             "projectId": project_id,

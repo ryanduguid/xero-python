@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **is_subscriber** | **bool** | Boolean to indicate if user is the subscriber | [optional] 
 **organisation_role** | **str** | User role that defines permissions in Xero and via API (READONLY, INVOICEONLY, STANDARD, FINANCIALADVISER, etc) | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

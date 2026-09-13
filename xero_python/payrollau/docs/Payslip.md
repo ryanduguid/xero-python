@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **payslip_id** | **str** | Xero identifier for the payslip | [optional] 
 **first_name** | **str** | First name of employee | [optional] 
 **last_name** | **str** | Last name of employee | [optional] 
+**employee_group** | **str** | Employee group name | [optional] 
+**last_edited** | **datetime** | Last edited timestamp | [optional] 
 **wages** | **float** | The Wages for the Payslip | [optional] 
 **deductions** | **float** | The Deductions for the Payslip | [optional] 
 **tax** | **float** | The Tax for the Payslip | [optional] 
@@ -23,6 +25,6 @@ Name | Type | Description | Notes
 **tax_lines** | [**list[TaxLine]**](TaxLine.md) |  | [optional] 
 **updated_date_utc** | **datetime** | Last modified timestamp | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

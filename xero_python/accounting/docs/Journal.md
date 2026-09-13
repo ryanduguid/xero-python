@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **source_type** | **str** | The journal source type. The type of transaction that created the journal | [optional] 
 **journal_lines** | [**list[JournalLine]**](JournalLine.md) | See JournalLines | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

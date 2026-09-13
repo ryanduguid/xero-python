@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **type_of_units** | **str** | The type of units to be paid for the leave type | [optional] 
 **type_of_units_to_accrue** | **str** | The type of units to be accrued for the leave type | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -47,6 +47,6 @@ Name | Type | Description | Notes
 **has_validation_errors** | **bool** | A boolean to indicate if a contact has an validation errors | [optional] [default to False]
 **status_attribute_string** | **str** | Status of object | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

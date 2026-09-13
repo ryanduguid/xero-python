@@ -27,6 +27,6 @@ Name | Type | Description | Notes
 **has_attachments** | **bool** | boolean to indicate if a prepayment has an attachment | [optional] [default to False]
 **attachments** | [**list[Attachment]**](Attachment.md) | See Attachments | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

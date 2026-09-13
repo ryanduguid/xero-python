@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **is_active** | **bool** | Shows whether the leave type is active or not | [optional] 
 **is_statutory_leave** | **bool** | Shows whether the leave type is a statutory leave type or not | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

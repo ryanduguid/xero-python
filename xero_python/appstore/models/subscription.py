@@ -265,7 +265,7 @@ class Subscription(BaseModel):
             raise ValueError(
                 "Invalid value for `status`, must not be `None`"
             )  # noqa: E501
-        allowed_values = ["ACTIVE", "CANCELED", "PAST_DUE", "None"]  # noqa: E501
+        allowed_values = ["ACTIVE", "CANCELED", "PAST_DUE"]  # noqa: E501
 
         if status:
             if status not in allowed_values:

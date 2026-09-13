@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **sgc_exempt** | **bool** | Set this to indicate that the leave type is exempt from superannuation guarantee contribution | [optional] 
 **is_qualifying_earnings** | **bool** | Boolean to determine if the leave type is considered as qualifying earnings for superannuation guarantee calculations | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

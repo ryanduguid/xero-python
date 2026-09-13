@@ -25,6 +25,6 @@ Name | Type | Description | Notes
 **reference** | **str** | An optional description for Overpayment | [optional] 
 **attachments** | [**list[Attachment]**](Attachment.md) | See Attachments | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

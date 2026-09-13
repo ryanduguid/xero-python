@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **is_linked_to_timesheet** | **bool** | Identifies if the earnings is taken from the timesheet. False for earnings line | [optional] 
 **is_average_daily_pay_rate** | **bool** | Identifies if the earnings is using an average daily pay rate | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

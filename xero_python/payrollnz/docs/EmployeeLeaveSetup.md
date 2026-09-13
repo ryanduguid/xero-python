@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **sick_leave_anniversary_date** | **date** | If Sick Leave Schedule of Accrual is \&quot;OnAnniversaryDate\&quot;, this is the date when entitled to Sick Leave. When null the Employee&#39;s start date is used as the anniversary date | [optional] 
 **annual_leave_anniversary_date** | **date** | The first date the employee will accrue Annual Leave. When null the Employee&#39;s start date is used as the anniversary date | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

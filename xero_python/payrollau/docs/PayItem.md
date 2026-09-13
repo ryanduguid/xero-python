@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **leave_types** | [**list[LeaveType]**](LeaveType.md) |  | [optional] 
 **reimbursement_types** | [**list[ReimbursementType]**](ReimbursementType.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

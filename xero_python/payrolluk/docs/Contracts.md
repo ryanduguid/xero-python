@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **fixed_term_end_date** | **date** | The fixed term end date of the employee. Not required if isFixedTerm is false or not provided (required if trying to create Fixed term contract) | [optional] 
 **developmental_role_details** | [**DevelopmentalRoleDetails**](DevelopmentalRoleDetails.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

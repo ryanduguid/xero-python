@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **tracking_item_id** | **str** | The Xero identifier for the Tracking Item that the Timesheet is for | [optional] 
 **number_of_units** | **float** | The Number of Units of the Timesheet Line | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

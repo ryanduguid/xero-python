@@ -85,7 +85,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **leave_application_id** | [**str**](.md)| Leave Application id for single object | 
+ **leave_application_id** | **str**| Leave Application id for single object | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
@@ -94,14 +94,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee**
 > Employees create_employee(xero_tenant_id, employee, idempotency_key=idempotency_key)
@@ -135,7 +135,7 @@ api_client = ApiClient(
 api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-employee = [ { "FirstName": "Albus", "LastName": "Dumbledore", "DateOfBirth": "/Date(321523200000+0000)/", "HomeAddress": { "AddressLine1": "101 Green St", "City": "Island Bay", "Region": "NSW", "PostalCode": "6023", "Country": "AUSTRALIA" }, "StartDate": "/Date(321523200000+0000)/", "MiddleNames": "Percival", "Email": "albus39608@hogwarts.edu", "Gender": "M", "Phone": "444-2323", "Mobile": "555-1212", "IsAuthorisedToApproveLeave": true, "IsAuthorisedToApproveTimesheets": true, "JobTitle": "Regional Manager", "Classification": "corporate", "OrdinaryEarningsRateID": "ab874dfb-ab09-4c91-954e-43acf6fc23b4", "Status": "ACTIVE" } ] # list[Employee] | 
+employee = [ { "FirstName": "Albus", "LastName": "Dumbledore", "DateOfBirth": "/Date(321523200000+0000)/", "HomeAddress": { "AddressLine1": "101 Green St", "City": "Island Bay", "Region": "NSW", "PostalCode": "6023", "Country": "AUSTRALIA" }, "StartDate": "/Date(321523200000+0000)/", "MiddleNames": "Percival", "Email": "albus39608@hogwarts.edu", "Gender": "M", "Phone": "444-2323", "Mobile": "555-1212", "IsAuthorisedToApproveLeave": True, "IsAuthorisedToApproveTimesheets": True, "JobTitle": "Regional Manager", "Classification": "corporate", "OrdinaryEarningsRateID": "ab874dfb-ab09-4c91-954e-43acf6fc23b4", "Status": "ACTIVE" } ] # list[Employee] | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a payroll employee
@@ -159,14 +159,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_leave_application**
 > LeaveApplications create_leave_application(xero_tenant_id, leave_application, idempotency_key=idempotency_key)
@@ -224,19 +224,26 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_pay_item**
 > PayItems create_pay_item(xero_tenant_id, pay_item, idempotency_key=idempotency_key)
 
 Creates a pay item
+
+A supplied item collection replaces the existing collection of that type, so
+include every item you want to keep, each with its identifier. Omitting an item
+from a supplied collection can delete it. Omitting the whole collection leaves
+that item type unchanged. Items used in a posted pay run, and the two protected
+earnings rates, cannot be deleted. Read the current pay items first and send
+them back with the new item when you are adding to a collection.
 
 ### Example
 
@@ -265,7 +272,7 @@ api_client = ApiClient(
 api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-pay_item = {"EarningsRates":[{"Name":"MyRate","AccountCode":"400","TypeOfUnits":"4.00","IsExemptFromTax":false,"IsExemptFromSuper":true,"IsReportableAsW1":false,"IsQualifyingEarnings":true,"AllowanceContributesToAnnualLeaveRate":false,"AllowanceContributesToOvertimeRate":false,"EarningsType":"ORDINARYTIMEEARNINGS","EarningsRateID":"1fa4e226-b711-46ba-a8a7-4344c9c5fb87","RateType":"MULTIPLE","RatePerUnit":"10.0","Multiplier":1.5,"Amount":5,"EmploymentTerminationPaymentType":"O"}]} # PayItem | 
+pay_item = {"EarningsRates":[{"Name":"MyRate","AccountCode":"400","TypeOfUnits":"4.00","IsExemptFromTax":False,"IsExemptFromSuper":True,"IsReportableAsW1":False,"IsQualifyingEarnings":True,"AllowanceContributesToAnnualLeaveRate":False,"AllowanceContributesToOvertimeRate":False,"EarningsType":"ORDINARYTIMEEARNINGS","EarningsRateID":"1fa4e226-b711-46ba-a8a7-4344c9c5fb87","RateType":"MULTIPLE","RatePerUnit":"10.0","Multiplier":1.5,"Amount":5,"EmploymentTerminationPaymentType":"O"}]} # PayItem | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a pay item
@@ -289,14 +296,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_pay_run**
 > PayRuns create_pay_run(xero_tenant_id, pay_run, idempotency_key=idempotency_key)
@@ -354,14 +361,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_payroll_calendar**
 > PayrollCalendars create_payroll_calendar(xero_tenant_id, payroll_calendar, idempotency_key=idempotency_key)
@@ -419,14 +426,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_superfund**
 > SuperFunds create_superfund(xero_tenant_id, super_fund, idempotency_key=idempotency_key)
@@ -484,14 +491,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_timesheet**
 > Timesheets create_timesheet(xero_tenant_id, timesheet, idempotency_key=idempotency_key)
@@ -549,14 +556,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employee**
 > Employees get_employee(xero_tenant_id, employee_id)
@@ -604,7 +611,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
 
 ### Return type
 
@@ -612,14 +619,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_employees**
 > Employees get_employees(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -655,7 +662,7 @@ api_instance = PayrollAuApi(api_client)
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
 where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+order = 'Email DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 employees will be returned in a single API call (optional)
 try:
     # Searches payroll employees
@@ -681,14 +688,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_leave_application**
 > LeaveApplications get_leave_application(xero_tenant_id, leave_application_id)
@@ -736,7 +743,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **leave_application_id** | [**str**](.md)| Leave Application id for single object | 
+ **leave_application_id** | **str**| Leave Application id for single object | 
 
 ### Return type
 
@@ -744,14 +751,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_leave_applications**
 > LeaveApplications get_leave_applications(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -786,12 +793,11 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+order = 'StartDate DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 objects will be returned in a single API call (optional)
 try:
     # Retrieves leave applications
-    api_response = api_instance.get_leave_applications(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
+    api_response = api_instance.get_leave_applications(xero_tenant_id, if_modified_since=if_modified_since, order=order, page=page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PayrollAuApi->get_leave_applications: %s\n" % e)
@@ -813,14 +819,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_leave_applications_v2**
 > LeaveApplications get_leave_applications_v2(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -855,12 +861,11 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+order = 'StartDate DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 objects will be returned in a single API call (optional)
 try:
     # Retrieves leave applications including leave requests
-    api_response = api_instance.get_leave_applications_v2(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
+    api_response = api_instance.get_leave_applications_v2(xero_tenant_id, if_modified_since=if_modified_since, order=order, page=page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PayrollAuApi->get_leave_applications_v2: %s\n" % e)
@@ -882,14 +887,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_items**
 > PayItems get_pay_items(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -924,12 +929,10 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 objects will be returned in a single API call (optional)
 try:
     # Retrieves pay items
-    api_response = api_instance.get_pay_items(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
+    api_response = api_instance.get_pay_items(xero_tenant_id, if_modified_since=if_modified_since, page=page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PayrollAuApi->get_pay_items: %s\n" % e)
@@ -951,14 +954,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_run**
 > PayRuns get_pay_run(xero_tenant_id, pay_run_id)
@@ -1006,7 +1009,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **pay_run_id** | [**str**](.md)| PayRun id for single object | 
+ **pay_run_id** | **str**| PayRun id for single object | 
 
 ### Return type
 
@@ -1014,14 +1017,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_pay_runs**
 > PayRuns get_pay_runs(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -1056,8 +1059,8 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+where = 'PayRunStatus==\"DRAFT\"' # str | Filter by an any element (optional)
+order = 'PaymentDate DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 PayRuns will be returned in a single API call (optional)
 try:
     # Retrieves pay runs
@@ -1083,14 +1086,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payroll_calendar**
 > PayrollCalendars get_payroll_calendar(xero_tenant_id, payroll_calendar_id)
@@ -1138,7 +1141,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payroll_calendar_id** | [**str**](.md)| Payroll Calendar id for single object | 
+ **payroll_calendar_id** | **str**| Payroll Calendar id for single object | 
 
 ### Return type
 
@@ -1146,14 +1149,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payroll_calendars**
 > PayrollCalendars get_payroll_calendars(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -1188,12 +1191,11 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+order = 'Name DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 objects will be returned in a single API call (optional)
 try:
     # Retrieves payroll calendars
-    api_response = api_instance.get_payroll_calendars(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
+    api_response = api_instance.get_payroll_calendars(xero_tenant_id, if_modified_since=if_modified_since, order=order, page=page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PayrollAuApi->get_payroll_calendars: %s\n" % e)
@@ -1215,14 +1217,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_payslip**
 > PayslipObject get_payslip(xero_tenant_id, payslip_id)
@@ -1270,7 +1272,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payslip_id** | [**str**](.md)| Payslip id for single object | 
+ **payslip_id** | **str**| Payslip id for single object | 
 
 ### Return type
 
@@ -1278,14 +1280,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_settings**
 > SettingsObject get_settings(xero_tenant_id)
@@ -1339,14 +1341,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_superfund**
 > SuperFunds get_superfund(xero_tenant_id, super_fund_id)
@@ -1394,7 +1396,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **super_fund_id** | [**str**](.md)| Superfund id for single object | 
+ **super_fund_id** | **str**| Superfund id for single object | 
 
 ### Return type
 
@@ -1402,19 +1404,22 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_superfund_products**
 > SuperFundProducts get_superfund_products(xero_tenant_id, abn=abn, usi=usi)
 
 Retrieves superfund products
+
+Supply at least one selector: ABN, USI, or both. The SDK does not check this,
+and a request with neither selector does not meet the documented requirement.
 
 ### Example
 
@@ -1458,8 +1463,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **abn** | **str**| The ABN of the Regulated SuperFund | [optional] 
- **usi** | **str**| The USI of the Regulated SuperFund | [optional] 
+ **abn** | **str**| The ABN of the Regulated SuperFund. Supply this, the USI, or both | [optional] 
+ **usi** | **str**| The USI of the Regulated SuperFund. Supply this, the ABN, or both | [optional] 
 
 ### Return type
 
@@ -1467,14 +1472,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_superfunds**
 > SuperFunds get_superfunds(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -1509,8 +1514,8 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+where = 'Type==\"SMSF\"' # str | Filter by an any element (optional)
+order = 'Name DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 SuperFunds will be returned in a single API call (optional)
 try:
     # Retrieves superfunds
@@ -1536,14 +1541,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_timesheet**
 > TimesheetObject get_timesheet(xero_tenant_id, timesheet_id)
@@ -1591,7 +1596,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Timesheet id for single object | 
+ **timesheet_id** | **str**| Timesheet id for single object | 
 
 ### Return type
 
@@ -1599,14 +1604,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **get_timesheets**
 > Timesheets get_timesheets(xero_tenant_id, if_modified_since=if_modified_since, where=where, order=order, page=page)
@@ -1641,8 +1646,8 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 if_modified_since = '2020-02-06T12:17:43.202-08:00' # datetime | Only records created or modified since this timestamp will be returned (optional)
-where = 'Status==\"ACTIVE\"' # str | Filter by an any element (optional)
-order = 'EmailAddress%20DESC' # str | Order by an any element (optional)
+where = 'Status==\"APPROVED\"' # str | Filter by an any element (optional)
+order = 'StartDate DESC' # str | Order by an any element (optional)
 page = 56 # int | e.g. page=1 – Up to 100 timesheets will be returned in a single API call (optional)
 try:
     # Retrieves timesheets
@@ -1668,14 +1673,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **reject_leave_application**
 > LeaveApplications reject_leave_application(xero_tenant_id, leave_application_id, idempotency_key=idempotency_key)
@@ -1724,7 +1729,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **leave_application_id** | [**str**](.md)| Leave Application id for single object | 
+ **leave_application_id** | **str**| Leave Application id for single object | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
 ### Return type
@@ -1733,14 +1738,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_employee**
 > Employees update_employee(xero_tenant_id, employee_id, employee, idempotency_key=idempotency_key)
@@ -1792,7 +1797,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **employee_id** | [**str**](.md)| Employee id for single object | 
+ **employee_id** | **str**| Employee id for single object | 
  **employee** | [**list[Employee]**](Employee.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1802,14 +1807,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_leave_application**
 > LeaveApplications update_leave_application(xero_tenant_id, leave_application_id, leave_application, idempotency_key=idempotency_key)
@@ -1844,7 +1849,7 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 leave_application_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Leave Application id for single object
-leave_application = [ { "EmployeeID": "cdfb8371-0b21-4b8a-8903-1024df6c391e", "LeaveApplicationID": "1d4cd583-0107-4386-936b-672eb3d1f624", "LeaveTypeID": "184ea8f7-d143-46dd-bef3-0c60e1aa6fca", "LeavePeriods": [ { "PayPeriodStartDate": "/Date(1572566400000+0000)/", "PayPeriodEndDate": "/Date(1573084800000+0000)/", "LeavePeriodStatus": "SCHEDULED", "NumberOfUnits": 7.6 } ], "Title": "vacation", "Description": "My updated Description", "StartDate": "/Date(1572559200000+0000)/", "EndDate": "/Date(1572645600000+0000)/", "PayOutType": "DEFAULT" } ] # list[LeaveApplication] | 
+leave_application = [ { "EmployeeID": "cdfb8371-0b21-4b8a-8903-1024df6c391e", "LeaveApplicationID": "4ff1e5cc-9835-40d5-bb18-09fdb118db9c", "LeaveTypeID": "184ea8f7-d143-46dd-bef3-0c60e1aa6fca", "LeavePeriods": [ { "PayPeriodStartDate": "/Date(1572566400000+0000)/", "PayPeriodEndDate": "/Date(1573084800000+0000)/", "LeavePeriodStatus": "SCHEDULED", "NumberOfUnits": 7.6 } ], "Title": "vacation", "Description": "My updated Description", "StartDate": "/Date(1572559200000+0000)/", "EndDate": "/Date(1572645600000+0000)/", "PayOutType": "DEFAULT" } ] # list[LeaveApplication] | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Updates a specific leave application
@@ -1859,7 +1864,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **leave_application_id** | [**str**](.md)| Leave Application id for single object | 
+ **leave_application_id** | **str**| Leave Application id for single object | 
  **leave_application** | [**list[LeaveApplication]**](LeaveApplication.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1869,14 +1874,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_pay_run**
 > PayRuns update_pay_run(xero_tenant_id, pay_run_id, pay_run, idempotency_key=idempotency_key)
@@ -1892,7 +1897,7 @@ Update properties on a single PayRun
 from xero_python.api_client import Configuration, ApiClient
 from xero_python.api_client.oauth2 import OAuth2Token
 from xero_python.exceptions import ApiException
-from xero_python.payrollau import PayrollAuApi
+from xero_python.payrollau import PayrollAuApi, PayRun
 from pprint import pprint
 
 # Configure OAuth2 access token for authorization: OAuth2
@@ -1913,7 +1918,10 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 pay_run_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | PayRun id for single object
-pay_run = [xero_python.payrollau.PayRun()] # list[PayRun] | 
+pay_run = [PayRun(
+    payroll_calendar_id='4ff1e5cc-9835-40d5-bb18-09fdb118db9c',
+    pay_run_status='DRAFT',
+)] # list[PayRun] | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Updates a pay run
@@ -1928,7 +1936,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **pay_run_id** | [**str**](.md)| PayRun id for single object | 
+ **pay_run_id** | **str**| PayRun id for single object | 
  **pay_run** | [**list[PayRun]**](PayRun.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -1938,14 +1946,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_payslip**
 > Payslips update_payslip(xero_tenant_id, payslip_id, payslip_lines, idempotency_key=idempotency_key)
@@ -1953,6 +1961,10 @@ Name | Type | Description  | Notes
 Updates a payslip
 
 Update lines on a single payslips
+
+Supplying a line type replaces that type's collection on the payslip and deletes
+the lines you leave out, so include every line of that type you want to keep. A
+line type you do not supply is left unchanged.
 
 ### Example
 
@@ -1997,7 +2009,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **payslip_id** | [**str**](.md)| Payslip id for single object | 
+ **payslip_id** | **str**| Payslip id for single object | 
  **payslip_lines** | [**list[PayslipLines]**](PayslipLines.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2007,14 +2019,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_superfund**
 > SuperFunds update_superfund(xero_tenant_id, super_fund_id, super_fund, idempotency_key=idempotency_key)
@@ -2066,7 +2078,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **super_fund_id** | [**str**](.md)| Superfund id for single object | 
+ **super_fund_id** | **str**| Superfund id for single object | 
  **super_fund** | [**list[SuperFund]**](SuperFund.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2076,14 +2088,14 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **update_timesheet**
 > Timesheets update_timesheet(xero_tenant_id, timesheet_id, timesheet, idempotency_key=idempotency_key)
@@ -2120,7 +2132,7 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 timesheet_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Timesheet id for single object
-timesheet = [ { "EmployeeID":"b34e89ff-770d-4099-b7e5-f968767118bc", "StartDate":"/Date(1573171200000+0000)/", "EndDate":"/Date(1573689600000+0000)/", "Status":"APPROVED", "Hours":22.0, "TimesheetID":"a7eb0a79-8511-4ee7-b473-3a25f28abcb9", "TimesheetLines":[ { "EarningsRateID":"ab874dfb-ab09-4c91-954e-43acf6fc23b4", "TrackingItemID":"af5e9ce2-2349-4136-be99-3561b189f473", "NumberOfUnits":[ 2.0, 10.0, 0.0, 0.0, 5.0, 0.0, 5.0 ], "UpdatedDateUTC":"/Date(1573516185127+0000)/" } ] } ] # list[Timesheet] | 
+timesheet = [ { "EmployeeID":"b34e89ff-770d-4099-b7e5-f968767118bc", "StartDate":"/Date(1573171200000+0000)/", "EndDate":"/Date(1573689600000+0000)/", "Status":"APPROVED", "Hours":22.0, "TimesheetID":"4ff1e5cc-9835-40d5-bb18-09fdb118db9c", "TimesheetLines":[ { "EarningsRateID":"ab874dfb-ab09-4c91-954e-43acf6fc23b4", "TrackingItemID":"af5e9ce2-2349-4136-be99-3561b189f473", "NumberOfUnits":[ 2.0, 10.0, 0.0, 0.0, 5.0, 0.0, 5.0 ], "UpdatedDateUTC":"/Date(1573516185127+0000)/" } ] } ] # list[Timesheet] | 
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Updates a timesheet
@@ -2135,7 +2147,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
- **timesheet_id** | [**str**](.md)| Timesheet id for single object | 
+ **timesheet_id** | **str**| Timesheet id for single object | 
  **timesheet** | [**list[Timesheet]**](Timesheet.md)|  | 
  **idempotency_key** | **str**| This allows you to safely retry requests without the risk of duplicate processing. 128 character max. | [optional] 
 
@@ -2145,12 +2157,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+[OAuth2](../../../README.md#authentication)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 

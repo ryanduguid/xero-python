@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **date_first_employed_as_civilian** | **date** | The date in which the employee was first employed as a civilian (YYYY-MM-DD) | [optional] 
 **workplace_postcode** | **str** | The workplace postcode | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **type_of_units_taken** | **str** | The type of units taken for the leave | [optional] 
 **period_status** | **str** | Status of leave | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

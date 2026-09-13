@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **end_date** | **date** | End date of the report | [optional] 
 **accounts** | [**list[TrialBalanceAccount]**](TrialBalanceAccount.md) | Refer to the accounts section below | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

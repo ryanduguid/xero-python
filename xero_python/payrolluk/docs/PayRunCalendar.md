@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **payment_date** | **date** | Payment date of the calendar | 
 **updated_date_utc** | **datetime** | UTC timestamp of the last update to the pay run calendar | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

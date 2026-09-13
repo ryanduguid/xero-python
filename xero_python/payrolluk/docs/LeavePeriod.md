@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **number_of_units** | **float** | The Number of Units for the leave | [optional] 
 **period_status** | **str** | Period Status | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -162,7 +162,6 @@ class Product(BaseModel):
             "PER_SEAT",
             "METERED",
             "SIMPLE",
-            "None",
         ]  # noqa: E501
 
         if type:

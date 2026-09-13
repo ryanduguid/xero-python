@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **overlaps_with_other_leave** | **bool** | Whether another leave (Paternity, Shared Parental specifically) occurs during the requested leave&#39;s period. While this is allowed it could affect payment amounts | [optional] 
 **entitlement_failure_reasons** | **list[str]** | If the leave requested was considered \&quot;not entitled\&quot;, the reasons why are listed here. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

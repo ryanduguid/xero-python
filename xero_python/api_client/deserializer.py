@@ -70,6 +70,10 @@ def deserialize_list(data_type, data, model_finder):
     :return: deserialized list
 
     """
+    if data is None:
+        # json null is preserved rather than failing on iteration
+        return None
+
     try:
         sub_data_type = LIST_DATA_TYPE.match(data_type).group(1)
     except AttributeError:
@@ -89,6 +93,10 @@ def deserialize_int(data_type, data, model_finder):
     :return: deserialized int
 
     """
+    if data is None:
+        # json null is preserved, documented nullable fields stay unset
+        return None
+
     return int(data)
 
 
@@ -109,6 +117,23 @@ def deserialize_decimal(data_type, data, model_finder):
     return data
 
 
+@deserialize.register("object")
+def deserialize_object(data_type, data, model_finder):
+    """Deserializes a generic json object.
+
+       Responses and model fields declared as `object` have no schema, so the
+       parsed json value is returned unchanged.
+
+    :param data_type: class literal for deserialized object, or string of class name
+    :param data: data to be parsed
+    :param model_finder: ModelFinder instance to find class for data_type class literal
+
+    :return: parsed json value
+
+    """
+    return data
+
+
 @deserialize.register("str")
 def deserialize_str(data_type, data, model_finder):
     """Deserializes data into a string
@@ -120,6 +145,10 @@ def deserialize_str(data_type, data, model_finder):
     :return: deserialized str
 
     """
+    if data is None:
+        # json null is preserved, a cleared field must not become "None"
+        return None
+
     return str(data)
 
 
@@ -135,9 +164,12 @@ def deserialize_bool(data_type, data, model_finder):
 
     """
     # allowed json payload is true or false - parsed to bool via json.loads
-    if data is not None:
-        if not isinstance(data, bool):
-            raise ValueError("Json parsed bool value expected. got {!r}".format(data))
+    if data is None:
+        # json null is preserved rather than reported as false
+        return None
+
+    if not isinstance(data, bool):
+        raise ValueError("Json parsed bool value expected. got {!r}".format(data))
 
     return bool(data)
 
@@ -148,8 +180,11 @@ def deserialize_date(data_type, data, model_finder):
        Expected input value in format YYYY-MM-DD as per
        https://tools.ietf.org/html/rfc3339#section-5.6 standard
 
-       Raise ValueError if the input is well formatted but not a valid date.
-       Return None if the input isn't well formatted.
+       A full timestamp is also accepted and returns a datetime keeping its
+       time and timezone.
+
+       Raise ValueError if the input is not a valid date.
+       Return None for a json null value.
 
     :param data_type: class literal for deserialized object, or string of class name
     :param data: data to be parsed
@@ -179,8 +214,8 @@ def deserialize_date_ms(data_type, data, model_finder):
     """Deserializes data into a python date
        Expected input value in format /Date(timestamp_in_milliseconds)/
 
-       Raise ValueError if the input is well formatted but not a valid date.
-       Return None if the input isn't well formatted.
+       Raise ValueError if the input is not a valid date, including a null
+       value.
 
     :param data_type: class literal for deserialized object, or string of class name
     :param data: data to be parsed
@@ -201,8 +236,8 @@ def deserialize_datetime(data_type, data, model_finder):
        Expected input value in format YYYY-MM-DDTHH:mm:ss[Z] as per
        https://tools.ietf.org/html/rfc3339#section-5.6 standard
 
-       Raise ValueError if the input is well formatted but not a valid datetime.
-       Return None if the input isn't well formatted.
+       Raise ValueError if the input is not a valid datetime.
+       Return None for a json null value.
 
     :param data_type: class literal for deserialized object, or string of class name
     :param data: data to be parsed
@@ -230,8 +265,8 @@ def deserialize_datetime_ms(data_type, data, model_finder):
 
        Expected input value in format /Date(timestamp_in_milliseconds)/
 
-       Raise ValueError if the input is well formatted but not a valid datetime.
-       Return None if the input isn't well formatted.
+       Raise ValueError if the input is not a valid datetime, including a
+       null value.
 
     :param data_type: class literal for deserialized object, or string of class name
     :param data: data to be parsed
@@ -269,7 +304,8 @@ def deserialize_model(model, data, model_finder):
 
     """
     if data is None:
-        return model("")
+        # json null is preserved rather than becoming an empty model instance
+        return None
 
     if issubclass(model, Enum):
         return model(data)

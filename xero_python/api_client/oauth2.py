@@ -19,16 +19,31 @@ class TokenApi:
         self.client_id = client_id
         self.client_secret = client_secret
 
+    @staticmethod
+    def format_scope(scope):
+        """
+        Format auth2 scopes as the space separated list required by
+        https://www.rfc-editor.org/rfc/rfc6749.html#section-3.3
+        :param scope: str of space separated scopes, or iterable of scope names
+        :return: str space separated scope names
+        """
+        if scope is None:
+            return ""
+        if isinstance(scope, str):
+            # already space separated, normalise any extra whitespace
+            return " ".join(scope.split())
+        return " ".join(scope)
+
     def refresh_token(self, refresh_token, scope):
         """
         Call xero identity API to refresh auth2 access token using refresh token
         :param refresh_token: str auth2 refresh token
-        :param scope: list of auth2 scopes
+        :param scope: list of auth2 scopes, or str of space separated scopes
         :return: dictionary with new auth2 token
         """
         post_data = {
             "grant_type": "refresh_token",
-            "scope": " ".join(scope),
+            "scope": self.format_scope(scope),
             "refresh_token": refresh_token,
             "client_id": self.client_id,
             "client_secret": self.client_secret,
@@ -233,14 +248,19 @@ class OAuth2Token:
         api_client.set_oauth2_token(new_token)
         return True
 
-    def get_client_credentials_access_token(self, api_client, app_store_billing):
+    def get_client_credentials_access_token(
+        self, api_client, app_store_billing, token_valid_from=None
+    ):
         """
         Perform OAuth2 Client Credentials grant token request.
         :param api_client:  ApiClient instance used to perform refresh token API call.
+        :param token_valid_from: float timestamp token expires_in counts from
         :return: bool - True if success
         """
         token_api = TokenApi(api_client, self.client_id, self.client_secret)
         new_token = token_api.get_client_credentials_token(app_store_billing)
+        # derive expires_at so the returned token expires, as the refresh path does
+        new_token = self.parse_new_token(new_token, token_valid_from)
         self.update_token(**new_token)
         api_client.set_oauth2_token(new_token)
         return True
@@ -305,6 +325,17 @@ class OAuth2Token:
         :return: dictionary new auth2 token
         """
         token = self.call_refresh_token_api(token_api)
+        return self.parse_new_token(token, token_valid_from)
+
+    @staticmethod
+    def parse_new_token(token, token_valid_from=None):
+        """
+        Convert a token API response into the auth2 token structure:
+        split the returned scope and derive the absolute expiry.
+        :param token: dictionary as received from the token API
+        :param token_valid_from: float timestamp token expires_in counts from
+        :return: dictionary auth2 token
+        """
         token_valid_from = token_valid_from or time.time()
         # parse new scope
         new_scope = token.get("scope")

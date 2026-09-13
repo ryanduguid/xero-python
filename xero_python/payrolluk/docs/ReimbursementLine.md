@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **description** | **str** | Reimbursement line description | [optional] 
 **amount** | **float** | Reimbursement amount | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

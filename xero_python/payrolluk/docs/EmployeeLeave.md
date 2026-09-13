@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **periods** | [**list[LeavePeriod]**](LeavePeriod.md) | The leave period information. The StartDate, EndDate and NumberOfUnits needs to be specified when you do not want to calculate NumberOfUnits automatically. Using incorrect period StartDate and EndDate will result in automatic computation of the NumberOfUnits. | [optional] 
 **updated_date_utc** | **datetime** | UTC timestamp of last update to the leave type note | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

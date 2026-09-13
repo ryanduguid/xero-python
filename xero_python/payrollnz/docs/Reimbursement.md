@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **standard_type_of_units** | **str** | Optional Type Of Units. Applicable when calculation type is Rate Per Unit | [optional] 
 **standard_rate_per_unit** | **float** | Optional Rate Per Unit. Applicable when calculation type is Rate Per Unit | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

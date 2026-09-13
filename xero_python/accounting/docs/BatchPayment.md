@@ -21,6 +21,6 @@ Name | Type | Description | Notes
 **is_reconciled** | **bool** | Booelan that tells you if the batch payment has been reconciled (read-only) | [optional] 
 **validation_errors** | [**list[ValidationError]**](ValidationError.md) | Displays array of validation error messages from the API | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **type** | **str** | The type of error | [optional] 
 **message** | **str** | The message describing the error | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

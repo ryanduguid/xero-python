@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **duration** | **int** | Number of minutes to be logged. Duration is between 1 and 59940 inclusively. | 
 **description** | **str** | An optional description of the time entry, will be set to null if not provided during update. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

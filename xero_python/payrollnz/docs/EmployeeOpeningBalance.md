@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **unpaid_weeks** | **int** | The number of unpaid weeks. | [optional] 
 **gross_earnings** | **float** | The gross earnings during the period. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

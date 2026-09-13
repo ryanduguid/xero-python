@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **number_of_units** | **float** | Earnings rate number of units. | [optional] 
 **pay_out_type** | [**PayOutType**](PayOutType.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

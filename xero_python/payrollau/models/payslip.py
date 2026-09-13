@@ -34,6 +34,8 @@ class Payslip(BaseModel):
         "payslip_id": "str",
         "first_name": "str",
         "last_name": "str",
+        "employee_group": "str",
+        "last_edited": "datetime[ms-format]",
         "wages": "float",
         "deductions": "float",
         "tax": "float",
@@ -56,6 +58,8 @@ class Payslip(BaseModel):
         "payslip_id": "PayslipID",
         "first_name": "FirstName",
         "last_name": "LastName",
+        "employee_group": "EmployeeGroup",
+        "last_edited": "LastEdited",
         "wages": "Wages",
         "deductions": "Deductions",
         "tax": "Tax",
@@ -79,6 +83,8 @@ class Payslip(BaseModel):
         payslip_id=None,
         first_name=None,
         last_name=None,
+        employee_group=None,
+        last_edited=None,
         wages=None,
         deductions=None,
         tax=None,
@@ -101,6 +107,8 @@ class Payslip(BaseModel):
         self._payslip_id = None
         self._first_name = None
         self._last_name = None
+        self._employee_group = None
+        self._last_edited = None
         self._wages = None
         self._deductions = None
         self._tax = None
@@ -126,6 +134,10 @@ class Payslip(BaseModel):
             self.first_name = first_name
         if last_name is not None:
             self.last_name = last_name
+        if employee_group is not None:
+            self.employee_group = employee_group
+        if last_edited is not None:
+            self.last_edited = last_edited
         if wages is not None:
             self.wages = wages
         if deductions is not None:
@@ -248,6 +260,52 @@ class Payslip(BaseModel):
         """
 
         self._last_name = last_name
+
+    @property
+    def employee_group(self):
+        """Gets the employee_group of this Payslip.  # noqa: E501
+
+        Employee group name  # noqa: E501
+
+        :return: The employee_group of this Payslip.  # noqa: E501
+        :rtype: str
+        """
+        return self._employee_group
+
+    @employee_group.setter
+    def employee_group(self, employee_group):
+        """Sets the employee_group of this Payslip.
+
+        Employee group name  # noqa: E501
+
+        :param employee_group: The employee_group of this Payslip.  # noqa: E501
+        :type: str
+        """
+
+        self._employee_group = employee_group
+
+    @property
+    def last_edited(self):
+        """Gets the last_edited of this Payslip.  # noqa: E501
+
+        Last edited timestamp  # noqa: E501
+
+        :return: The last_edited of this Payslip.  # noqa: E501
+        :rtype: datetime[ms-format]
+        """
+        return self._last_edited
+
+    @last_edited.setter
+    def last_edited(self, last_edited):
+        """Sets the last_edited of this Payslip.
+
+        Last edited timestamp  # noqa: E501
+
+        :param last_edited: The last_edited of this Payslip.  # noqa: E501
+        :type: datetime[ms-format]
+        """
+
+        self._last_edited = last_edited
 
     @property
     def wages(self):

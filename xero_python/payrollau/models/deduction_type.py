@@ -281,7 +281,7 @@ class DeductionType(BaseModel):
         :param deduction_category: The deduction_category of this DeductionType.  # noqa: E501
         :type: str
         """
-        allowed_values = ["NONE", "UNIONFEES", "WORKPLACEGIVING", "None"]  # noqa: E501
+        allowed_values = ["NONE", "UNIONFEES", "WORKPLACEGIVING"]  # noqa: E501
 
         if deduction_category:
             if deduction_category not in allowed_values:

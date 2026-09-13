@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **fixed_amount** | **float** | Benefit fixed amount | [optional] 
 **percentage** | **float** | Benefit rate percentage | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

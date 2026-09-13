@@ -7,6 +7,6 @@ Name | Type | Description | Notes
 **number_of_units** | **float** | Leave Accrual number of units | [optional] 
 **auto_calculate** | **bool** | If you want to auto calculate leave. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

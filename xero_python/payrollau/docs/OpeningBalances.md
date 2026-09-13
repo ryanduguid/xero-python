@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **leave_lines** | [**list[OpeningBalanceLeaveLine]**](OpeningBalanceLeaveLine.md) |  | [optional] 
 **paid_leave_earnings_lines** | [**list[PaidLeaveEarningsLine]**](PaidLeaveEarningsLine.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

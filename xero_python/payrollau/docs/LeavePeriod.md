@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **pay_period_start_date** | **date** | The Pay Period Start Date (YYYY-MM-DD) | [optional] 
 **leave_period_status** | [**LeavePeriodStatus**](LeavePeriodStatus.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to README]](../../../README.md)
 
 

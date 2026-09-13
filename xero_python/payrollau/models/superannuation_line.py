@@ -166,7 +166,7 @@ class SuperannuationLine(BaseModel):
     def minimum_monthly_earnings(self):
         """Gets the minimum_monthly_earnings of this SuperannuationLine.  # noqa: E501
 
-        Superannuation minimum monthly earnings.  # noqa: E501
+        Superannuation minimum monthly earnings. Deprecated: it only applies to pay runs with a payment date before 1 July 2022.  # noqa: E501
 
         :return: The minimum_monthly_earnings of this SuperannuationLine.  # noqa: E501
         :rtype: float
@@ -177,7 +177,7 @@ class SuperannuationLine(BaseModel):
     def minimum_monthly_earnings(self, minimum_monthly_earnings):
         """Sets the minimum_monthly_earnings of this SuperannuationLine.
 
-        Superannuation minimum monthly earnings.  # noqa: E501
+        Superannuation minimum monthly earnings. Deprecated: it only applies to pay runs with a payment date before 1 July 2022.  # noqa: E501
 
         :param minimum_monthly_earnings: The minimum_monthly_earnings of this SuperannuationLine.  # noqa: E501
         :type: float
