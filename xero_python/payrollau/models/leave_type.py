@@ -118,7 +118,7 @@ class LeaveType(BaseModel):
     def name(self):
         """Gets the name of this LeaveType.  # noqa: E501
 
-        Name of the earnings rate (max length = 100)  # noqa: E501
+        Name of the leave type (max length = 50)  # noqa: E501
 
         :return: The name of this LeaveType.  # noqa: E501
         :rtype: str
@@ -129,15 +129,14 @@ class LeaveType(BaseModel):
     def name(self, name):
         """Sets the name of this LeaveType.
 
-        Name of the earnings rate (max length = 100)  # noqa: E501
+        Name of the leave type (max length = 50)  # noqa: E501
 
         :param name: The name of this LeaveType.  # noqa: E501
         :type: str
         """
-        if name is not None and len(name) > 100:
+        if name is not None and len(name) > 50:
             raise ValueError(
-                "Invalid value for `name`, "
-                "length must be less than or equal to `100`"
+                "Invalid value for `name`, " "length must be less than or equal to `50`"
             )  # noqa: E501
 
         self._name = name
@@ -374,7 +373,7 @@ class LeaveType(BaseModel):
     def is_qualifying_earnings(self):
         """Gets the is_qualifying_earnings of this LeaveType.  # noqa: E501
 
-        Boolean to determine if the leave type is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
+        Read-only response flag, derived by Xero from the leave category on POST  # noqa: E501
 
         :return: The is_qualifying_earnings of this LeaveType.  # noqa: E501
         :rtype: bool
@@ -385,14 +384,9 @@ class LeaveType(BaseModel):
     def is_qualifying_earnings(self, is_qualifying_earnings):
         """Sets the is_qualifying_earnings of this LeaveType.
 
-        Boolean to determine if the leave type is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
+        Read-only response flag, derived by Xero from the leave category on POST  # noqa: E501
 
         :param is_qualifying_earnings: The is_qualifying_earnings of this LeaveType.  # noqa: E501
         :type: bool
         """
-        if is_qualifying_earnings is None:
-            raise ValueError(
-                "Invalid value for `is_qualifying_earnings`, must not be `None`"
-            )  # noqa: E501
-
         self._is_qualifying_earnings = is_qualifying_earnings

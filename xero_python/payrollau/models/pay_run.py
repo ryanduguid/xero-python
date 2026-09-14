@@ -142,7 +142,7 @@ class PayRun(BaseModel):
     def payroll_calendar_id(self):
         """Gets the payroll_calendar_id of this PayRun.  # noqa: E501
 
-        Xero identifier for pay run  # noqa: E501
+        Xero identifier for the payroll calendar  # noqa: E501
 
         :return: The payroll_calendar_id of this PayRun.  # noqa: E501
         :rtype: str
@@ -153,16 +153,11 @@ class PayRun(BaseModel):
     def payroll_calendar_id(self, payroll_calendar_id):
         """Sets the payroll_calendar_id of this PayRun.
 
-        Xero identifier for pay run  # noqa: E501
+        Xero identifier for the payroll calendar  # noqa: E501
 
         :param payroll_calendar_id: The payroll_calendar_id of this PayRun.  # noqa: E501
         :type: str
         """
-        if payroll_calendar_id is None:
-            raise ValueError(
-                "Invalid value for `payroll_calendar_id`, must not be `None`"
-            )  # noqa: E501
-
         self._payroll_calendar_id = payroll_calendar_id
 
     @property

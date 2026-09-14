@@ -46,7 +46,7 @@ api_client = ApiClient(
 api_instance = AssetApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-asset = {"assetName":"Computer74863","assetNumber":"123477544","purchaseDate":"2020-01-01","purchasePrice":100.0,"disposalPrice":23.23,"assetStatus":"Draft","bookDepreciationSetting":{"depreciationMethod":"StraightLine","averagingMethod":"ActualDays","depreciationRate":0.5,"depreciationCalculationMethod":"None"},"bookDepreciationDetail":{"currentCapitalGain":5.32,"currentGainLoss":3.88,"depreciationStartDate":"2020-01-02","costLimit":100.0,"currentAccumDepreciationAmount":2.25},"AccountingBookValue":99.5} # Asset | Fixed asset you are creating
+asset = {"assetName":"Computer74863","assetNumber":"123477544","purchaseDate":"2020-01-01","purchasePrice":100.0,"disposalPrice":23.23,"assetStatus":"Draft","bookDepreciationSetting":{"depreciationMethod":"StraightLine","averagingMethod":"ActualDays","depreciationRate":0.5,"depreciationCalculationMethod":"None"},"bookDepreciationDetail":{"currentCapitalGain":5.32,"currentGainLoss":3.88,"depreciationStartDate":"2020-01-02","costLimit":100.0,"currentAccumDepreciationAmount":2.25},"accountingBookValue":99.5} # Asset | Fixed asset you are creating
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # adds a fixed asset
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 searches fixed asset settings
 
-By passing in the appropriate options, you can search for available fixed asset types in the system
+Retrieves the organisation's fixed asset settings
 
 ### Example
 
@@ -375,7 +375,7 @@ status = AssetStatusQueryParam.REGISTERED # AssetStatusQueryParam | Required whe
 page = 1 # int | Results are paged. This specifies which page of the results to return. The default page is 1. (optional)
 page_size = 5 # int | The number of records returned per page. By default the number of records returned is 10. (optional)
 order_by = 'AssetName' # str | Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice. (optional)
-sort_direction = 'ASC' # str | ASC or DESC (optional)
+sort_direction = 'asc' # str | asc or desc (optional)
 filter_by = 'Company Car' # str | A string that can be used to filter the list to only return assets containing the text. Checks it against the AssetName, AssetNumber, Description and AssetTypeName fields. (optional)
 try:
     # searches fixed asset
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
  **page** | **int**| Results are paged. This specifies which page of the results to return. The default page is 1. | [optional] 
  **page_size** | **int**| The number of records returned per page. By default the number of records returned is 10. | [optional] 
  **order_by** | **str**| Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice. | [optional] 
- **sort_direction** | **str**| ASC or DESC | [optional] 
+ **sort_direction** | **str**| asc or desc | [optional]
  **filter_by** | **str**| A string that can be used to filter the list to only return assets containing the text. Checks it against the AssetName, AssetNumber, Description and AssetTypeName fields. | [optional] 
 
 ### Return type

@@ -320,7 +320,7 @@ api_client = ApiClient(
 api_instance = FinanceApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-contact_ids = ['[\"00000000-0000-0000-0000-000000000000\",\"00000000-0000-0000-0000-000000000000\"]'] # list[str] | Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included (optional)
+contact_ids = ['00000000-0000-0000-0000-000000000000', '00000000-0000-0000-0000-000000000000'] # list[str] | Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included (optional)
 include_manual_journals = True # bool | Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. (optional)
 start_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the start date for the report.                If no parameter is provided, the date of 12 months before the end date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
 end_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the end date for the report.    If no parameter is provided, the current date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
@@ -391,7 +391,7 @@ api_client = ApiClient(
 api_instance = FinanceApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-contact_ids = ['[\"00000000-0000-0000-0000-000000000000\",\"00000000-0000-0000-0000-000000000000\"]'] # list[str] | Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included (optional)
+contact_ids = ['00000000-0000-0000-0000-000000000000', '00000000-0000-0000-0000-000000000000'] # list[str] | Specifies the customer contacts to be included in the report.    If no parameter is provided, all customer contacts will be included (optional)
 include_manual_journals = True # bool | Specifies whether to include the manual journals in the report.                If no parameter is provided, manual journals will not be included. (optional)
 start_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the start date for the report.                If no parameter is provided, the date of 12 months before the end date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)
 end_date = '2020-09-15' # str | Date yyyy-MM-dd    Specifies the end date for the report.    If no parameter is provided, the current date will be used.                It is recommended to always specify both a start date and end date; While the initial range may be set to 12 months, this may need to be reduced for high volume organisations in order to improve latency. (optional)

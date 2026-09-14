@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | Name of the earnings rate (max length &#x3D; 100) | [optional] 
+**name** | **str** | Name of the leave type (max length &#x3D; 50) | [optional]
 **type_of_units** | **str** | The type of units by which leave entitlements are normally tracked. These are typically the same as the type of units used for the employee’s ordinary earnings rate | [optional] 
 **leave_type_id** | **str** | Xero identifier | [optional] 
 **normal_entitlement** | **float** | The number of units the employee is entitled to each year | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **current_record** | **bool** | Is the current record | [optional] 
 **leave_category_code** | [**LeaveCategoryCode**](LeaveCategoryCode.md) |  | [optional] 
 **sgc_exempt** | **bool** | Set this to indicate that the leave type is exempt from superannuation guarantee contribution | [optional] 
-**is_qualifying_earnings** | **bool** | Boolean to determine if the leave type is considered as qualifying earnings for superannuation guarantee calculations | 
+**is_qualifying_earnings** | **bool** | Read-only response flag, derived by Xero from the leave category on POST | [optional]
 
 [[Back to README]](../../../README.md)
 

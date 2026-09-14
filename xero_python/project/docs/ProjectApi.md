@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**get_tasks**](ProjectApi.md#get_tasks) | **GET** /Projects/{projectId}/Tasks | Retrieves all project tasks
 [**get_time_entries**](ProjectApi.md#get_time_entries) | **GET** /Projects/{projectId}/Time | Retrieves all time entries associated with a specific project
 [**get_time_entry**](ProjectApi.md#get_time_entry) | **GET** /Projects/{projectId}/Time/{timeEntryId} | Retrieves a single time entry for a specific project
-[**patch_project**](ProjectApi.md#patch_project) | **PATCH** /Projects/{projectId} | creates a project for the specified contact
+[**patch_project**](ProjectApi.md#patch_project) | **PATCH** /Projects/{projectId} | Updates the status of the specified project
 [**update_project**](ProjectApi.md#update_project) | **PUT** /Projects/{projectId} | Updates a specific project
 [**update_task**](ProjectApi.md#update_task) | **PUT** /Projects/{projectId}/Tasks/{taskId} | Allows you to update a task
 [**update_time_entry**](ProjectApi.md#update_time_entry) | **PUT** /Projects/{projectId}/Time/{timeEntryId} | Updates a time entry for a specific project
@@ -54,7 +54,7 @@ api_client = ApiClient(
 api_instance = ProjectApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-project_create_or_update = { "contactId": "00000000-0000-0000-000-000000000000", "name": "New Kitchen", "deadlineUtc": "2019-12-10T12:59:59Z", "estimateAmount": "99.99" } # ProjectCreateOrUpdate | Create a new project with ProjectCreateOrUpdate object
+project_create_or_update = { "contactId": "00000000-0000-0000-0000-000000000000", "name": "New Kitchen", "deadlineUtc": "2019-12-10T12:59:59Z", "estimateAmount": 99.99 } # ProjectCreateOrUpdate | Create a new project with ProjectCreateOrUpdate object
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Create one or more new projects
@@ -122,7 +122,7 @@ api_instance = ProjectApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 project_id = 'project_id_example' # str | You can create a task on a specified projectId
-task_create_or_update = { "status": "INPROGRESS" } # TaskCreateOrUpdate | The task object you are creating
+task_create_or_update = {"name": "Design", "rate": {"currency": "AUD", "value": 100.0}, "chargeType": "TIME"} # TaskCreateOrUpdate | The task object you are creating
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Allows you to create a task
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 Creates a time entry for a specific project
 
-Allows you to create a specific task
+Creates a time entry for the project
 
 ### Example
 
@@ -326,7 +326,7 @@ api_instance = ProjectApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 project_id = 'project_id_example' # str | You can specify an individual project by appending the projectId to the endpoint
-time_entry_id = 'time_entry_id_example' # str | You can specify an individual task by appending the id to the endpoint
+time_entry_id = 'time_entry_id_example' # str | Identifies the time entry to delete
 try:
     # Deletes a time entry for a specific project
     api_instance.delete_time_entry(xero_tenant_id, project_id, time_entry_id)
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
  **project_id** | **str**| You can specify an individual project by appending the projectId to the endpoint | 
- **time_entry_id** | **str**| You can specify an individual task by appending the id to the endpoint | 
+ **time_entry_id** | **str**| Identifies the time entry to delete |
 
 ### Return type
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 Retrieves all projects
 
-Allows you to retrieve, create and update projects.
+Retrieves projects.
 
 ### Example
 
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
 
 Retrieves a single project task
 
-Allows you to retrieve a specific project
+Retrieves the specified task
 
 ### Example
 
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 
 Retrieves all project tasks
 
-Allows you to retrieve a specific project
+Retrieves tasks for the specified project
 
 ### Example
 
@@ -857,9 +857,9 @@ Name | Type | Description  | Notes
 # **patch_project**
 > patch_project(xero_tenant_id, project_id, project_patch, idempotency_key=idempotency_key)
 
-creates a project for the specified contact
+Updates the status of the specified project
 
-Allows you to update a specific projects.
+Updates the specified project.
 
 ### Example
 
@@ -892,7 +892,7 @@ project_id = 'project_id_example' # str | You can specify an individual project 
 project_patch = { "status": "INPROGRESS" } # ProjectPatch | Update the status of an existing Project
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
-    # creates a project for the specified contact
+    # Updates the status of the specified project
     api_instance.patch_project(xero_tenant_id, project_id, project_patch, idempotency_key=idempotency_key)
 except ApiException as e:
     print("Exception when calling ProjectApi->patch_project: %s\n" % e)
@@ -1026,7 +1026,7 @@ api_instance = ProjectApi(api_client)
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 project_id = 'project_id_example' # str | You can specify an individual project by appending the projectId to the endpoint
 task_id = 'task_id_example' # str | You can specify an individual task by appending the id to the endpoint
-task_create_or_update = TaskCreateOrUpdate() # TaskCreateOrUpdate | The task object you are updating
+task_create_or_update = {"name": "Design", "rate": {"currency": "AUD", "value": 100.0}, "chargeType": "TIME"} # TaskCreateOrUpdate | The task object you are updating
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Allows you to update a task

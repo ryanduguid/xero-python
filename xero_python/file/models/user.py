@@ -165,7 +165,7 @@ class User(BaseModel):
     def full_name(self):
         """Gets the full_name of this User.  # noqa: E501
 
-        Last name of user  # noqa: E501
+        Full name of user  # noqa: E501
 
         :return: The full_name of this User.  # noqa: E501
         :rtype: str
@@ -176,7 +176,7 @@ class User(BaseModel):
     def full_name(self, full_name):
         """Sets the full_name of this User.
 
-        Last name of user  # noqa: E501
+        Full name of user  # noqa: E501
 
         :param full_name: The full_name of this User.  # noqa: E501
         :type: str

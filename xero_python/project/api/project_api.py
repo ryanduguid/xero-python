@@ -247,7 +247,7 @@ class ProjectApi(object):
     ):
         """Creates a time entry for a specific project  # noqa: E501
         OAuth2 scope: projects
-        Allows you to create a specific task  # noqa: E501
+        Creates a time entry for the project  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str project_id: You can specify an individual project by appending the projectId to the endpoint (required)
         :param TimeEntryCreateOrUpdate time_entry_create_or_update: The time entry object you are creating (required)
@@ -429,7 +429,7 @@ class ProjectApi(object):
         Allows you to delete a specific time entry  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str project_id: You can specify an individual project by appending the projectId to the endpoint (required)
-        :param str time_entry_id: You can specify an individual task by appending the id to the endpoint (required)
+        :param str time_entry_id: Identifies the time entry to delete (required)
         :param bool _return_http_data_only: return received data only
         :param bool _preload_content: load received data in models
         :param bool _request_timeout: maximum wait time for response
@@ -683,7 +683,7 @@ class ProjectApi(object):
     ):
         """Retrieves all projects  # noqa: E501
         OAuth2 scope: projects, projects.read
-        Allows you to retrieve, create and update projects.  # noqa: E501
+        Retrieves projects.  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param list[str] project_ids: Search for all projects that match a comma separated list of projectIds
         :param str contact_id: Filter for projects for a specific contact
@@ -788,7 +788,7 @@ class ProjectApi(object):
     ):
         """Retrieves a single project task  # noqa: E501
         OAuth2 scope: projects, projects.read
-        Allows you to retrieve a specific project  # noqa: E501
+        Retrieves the specified task  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str project_id: You can specify an individual project by appending the projectId to the endpoint (required)
         :param str task_id: You can specify an individual task by appending the taskId to the endpoint, i.e. GET https://.../tasks/{taskID} (required)
@@ -875,7 +875,7 @@ class ProjectApi(object):
     ):
         """Retrieves all project tasks  # noqa: E501
         OAuth2 scope: projects, projects.read
-        Allows you to retrieve a specific project  # noqa: E501
+        Retrieves tasks for the specified project  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str project_id: You can specify an individual project by appending the projectId to the endpoint (required)
         :param int page: Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.
@@ -1183,9 +1183,9 @@ class ProjectApi(object):
         _preload_content=True,
         _request_timeout=None,
     ):
-        """creates a project for the specified contact  # noqa: E501
+        """Updates the status of the specified project  # noqa: E501
         OAuth2 scope: projects
-        Allows you to update a specific projects.  # noqa: E501
+        Updates the specified project.  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str project_id: You can specify an individual project by appending the projectId to the endpoint (required)
         :param ProjectPatch project_patch: Update the status of an existing Project (required)

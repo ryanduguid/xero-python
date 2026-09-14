@@ -193,7 +193,7 @@ class TaxDeclaration(BaseModel):
     def employee_id(self):
         """Gets the employee_id of this TaxDeclaration.  # noqa: E501
 
-        Address line 1 for employee home address  # noqa: E501
+        The Xero identifier for the employee  # noqa: E501
 
         :return: The employee_id of this TaxDeclaration.  # noqa: E501
         :rtype: str
@@ -204,7 +204,7 @@ class TaxDeclaration(BaseModel):
     def employee_id(self, employee_id):
         """Sets the employee_id of this TaxDeclaration.
 
-        Address line 1 for employee home address  # noqa: E501
+        The Xero identifier for the employee  # noqa: E501
 
         :param employee_id: The employee_id of this TaxDeclaration.  # noqa: E501
         :type: str
@@ -607,7 +607,7 @@ class TaxDeclaration(BaseModel):
     def has_student_startup_loan(self):
         """Gets the has_student_startup_loan of this TaxDeclaration.  # noqa: E501
 
-        If the employee is eligible for student startup loan rules  # noqa: E501
+        Whether the employee has a student startup loan  # noqa: E501
 
         :return: The has_student_startup_loan of this TaxDeclaration.  # noqa: E501
         :rtype: bool
@@ -618,7 +618,7 @@ class TaxDeclaration(BaseModel):
     def has_student_startup_loan(self, has_student_startup_loan):
         """Sets the has_student_startup_loan of this TaxDeclaration.
 
-        If the employee is eligible for student startup loan rules  # noqa: E501
+        Whether the employee has a student startup loan  # noqa: E501
 
         :param has_student_startup_loan: The has_student_startup_loan of this TaxDeclaration.  # noqa: E501
         :type: bool

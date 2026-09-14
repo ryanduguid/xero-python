@@ -29,7 +29,7 @@ Method | HTTP request | Description
 
 Creates a new file association
 
-By passing in the appropriate options, you can create a new folder
+Creates an association between the file and another object
 
 ### Example
 
@@ -229,7 +229,7 @@ void (empty response body)
 
 Deletes an existing file association
 
-By passing in the appropriate options, you can create a new folder
+Deletes the specified file association
 
 ### Example
 
@@ -390,7 +390,7 @@ api_instance = FilesApi(api_client)
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 object_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Object id for single object
 pagesize = 50 # int | pass an optional page size value (optional)
-page = 2 # int | number of records to skip for pagination (optional)
+page = 2 # int | Page number; page 2 retrieves the second page (optional)
 sort = 'CreatedDateUtc' # str | values to sort by (optional) (default to 'CreatedDateUtc')
 direction = 'DESC' # str | direction to sort by, ASC or DESC (optional)
 try:
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
  **object_id** | **str**| Object id for single object | 
  **pagesize** | **int**| pass an optional page size value | [optional] 
- **page** | **int**| number of records to skip for pagination | [optional] 
+ **page** | **int**| Page number; page 2 retrieves the second page | [optional]
  **sort** | **str**| values to sort by | [optional] [default to &#39;CreatedDateUtc&#39;]
  **direction** | **str**| direction to sort by | [optional] 
 
@@ -718,7 +718,7 @@ api_instance = FilesApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
 pagesize = 50 # int | pass an optional page size value (optional)
-page = 2 # int | number of records to skip for pagination (optional)
+page = 2 # int | Page number; page 2 retrieves the second page (optional)
 sort = 'CreatedDateUTC' # str | values to sort by (optional)
 direction = 'ASC' # str | sort direction (optional)
 try:
@@ -735,7 +735,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xero_tenant_id** | **str**| Xero identifier for Tenant | 
  **pagesize** | **int**| pass an optional page size value | [optional] 
- **page** | **int**| number of records to skip for pagination | [optional] 
+ **page** | **int**| Page number; page 2 retrieves the second page | [optional]
  **sort** | **str**| values to sort by | [optional] 
  **direction** | **str**| sort direction | [optional] 
 
@@ -853,7 +853,7 @@ api_client = ApiClient(
 api_instance = FilesApi(api_client)
 
 xero_tenant_id = 'YOUR_XERO_TENANT_ID' # str | Xero identifier for Tenant
-sort = 'CreatedDateUTC DESC' # str | values to sort by (optional)
+sort = 'CreatedDateUTC' # str | values to sort by (optional)
 try:
     # Retrieves folders
     api_response = api_instance.get_folders(xero_tenant_id, sort=sort)

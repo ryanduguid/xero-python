@@ -272,11 +272,6 @@ class Employee(BaseModel):
         :param first_name: The first_name of this Employee.  # noqa: E501
         :type: str
         """
-        if first_name is None:
-            raise ValueError(
-                "Invalid value for `first_name`, must not be `None`"
-            )  # noqa: E501
-
         self._first_name = first_name
 
     @property
@@ -299,11 +294,6 @@ class Employee(BaseModel):
         :param last_name: The last_name of this Employee.  # noqa: E501
         :type: str
         """
-        if last_name is None:
-            raise ValueError(
-                "Invalid value for `last_name`, must not be `None`"
-            )  # noqa: E501
-
         self._last_name = last_name
 
     @property
@@ -326,11 +316,6 @@ class Employee(BaseModel):
         :param date_of_birth: The date_of_birth of this Employee.  # noqa: E501
         :type: date
         """
-        if date_of_birth is None:
-            raise ValueError(
-                "Invalid value for `date_of_birth`, must not be `None`"
-            )  # noqa: E501
-
         self._date_of_birth = date_of_birth
 
     @property

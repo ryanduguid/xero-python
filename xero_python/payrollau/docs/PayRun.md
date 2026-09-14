@@ -1,9 +1,11 @@
 # PayRun
 
+Creation requires payroll_calendar_id. A status-only update may omit it. From November 2025, create_pay_run accepts at most one pay run in its array payload.
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payroll_calendar_id** | **str** | Xero identifier for pay run | 
+**payroll_calendar_id** | **str** | Xero identifier for the payroll calendar | Required on creation; optional on update.
 **pay_run_id** | **str** | Xero identifier for pay run | [optional] 
 **pay_run_period_start_date** | **date** | Period Start Date for the PayRun (YYYY-MM-DD) | [optional] 
 **pay_run_period_end_date** | **date** | Period End Date for the PayRun (YYYY-MM-DD) | [optional] 

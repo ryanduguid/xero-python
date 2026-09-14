@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**leave_application_id** | **str** | The Xero identifier for Payroll Employee | [optional] 
+**leave_application_id** | **str** | The Xero identifier for the leave application | [optional]
 **employee_id** | **str** | The Xero identifier for Payroll Employee | [optional] 
 **leave_type_id** | **str** | The Xero identifier for Leave Type | [optional] 
 **title** | **str** | The title of the leave | [optional] 

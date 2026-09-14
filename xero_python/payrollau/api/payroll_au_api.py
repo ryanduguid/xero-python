@@ -5,6 +5,7 @@ import re  # noqa: F401
 
 from xero_python import exceptions
 from xero_python.api_client import ApiClient, ModelFinder
+from xero_python.api_client.serializer import serialize
 
 try:
     from .exception_handler import translate_status_exception
@@ -169,6 +170,23 @@ class PayrollAuApi(object):
                 "Missing the required parameter `employee` "
                 "when calling `create_employee`"
             )
+
+        for record in employee:
+            for field, attribute in (
+                ("FirstName", "first_name"),
+                ("LastName", "last_name"),
+                ("DateOfBirth", "date_of_birth"),
+                ("HomeAddress", "home_address"),
+            ):
+                value = (
+                    record.get(field)
+                    if isinstance(record, dict)
+                    else getattr(record, attribute, None)
+                )
+                if value is None:
+                    raise ValueError(
+                        "{} is required when creating an employee".format(field)
+                    )
 
         collection_formats = {}
         path_params = {}
@@ -353,7 +371,21 @@ class PayrollAuApi(object):
         local_var_files = {}
         form_params = []
 
-        body_params = pay_item
+        body_params = (
+            dict(pay_item) if isinstance(pay_item, dict) else serialize(pay_item)
+        )
+        # Keep the response flag on the caller's object; Xero derives it on POST.
+        if body_params.get("LeaveTypes") is not None:
+            body_params["LeaveTypes"] = [
+                (
+                    dict(leave_type)
+                    if isinstance(leave_type, dict)
+                    else serialize(leave_type)
+                )
+                for leave_type in body_params["LeaveTypes"]
+            ]
+            for leave_type in body_params["LeaveTypes"]:
+                leave_type.pop("IsQualifyingEarnings", None)
         # HTTP header `Accept`
         header_params["Accept"] = self.api_client.select_header_accept(
             ["application/json"]
@@ -421,6 +453,19 @@ class PayrollAuApi(object):
                 "Missing the required parameter `pay_run` "
                 "when calling `create_pay_run`"
             )
+
+        if len(pay_run) > 1:
+            raise ValueError("A request can create only one pay run from November 2025")
+        for record in pay_run:
+            calendar_id = (
+                record.get("PayrollCalendarID")
+                if isinstance(record, dict)
+                else getattr(record, "payroll_calendar_id", None)
+            )
+            if calendar_id is None:
+                raise ValueError(
+                    "PayrollCalendarID is required when creating a pay run"
+                )
 
         collection_formats = {}
         path_params = {}

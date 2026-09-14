@@ -104,6 +104,8 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_employee**
+
+Creation requires FirstName, LastName, DateOfBirth and HomeAddress. Partial updates may omit unchanged fields.
 > Employees create_employee(xero_tenant_id, employee, idempotency_key=idempotency_key)
 
 Creates a payroll employee
@@ -272,7 +274,7 @@ api_client = ApiClient(
 api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-pay_item = {"EarningsRates":[{"Name":"MyRate","AccountCode":"400","TypeOfUnits":"4.00","IsExemptFromTax":False,"IsExemptFromSuper":True,"IsReportableAsW1":False,"IsQualifyingEarnings":True,"AllowanceContributesToAnnualLeaveRate":False,"AllowanceContributesToOvertimeRate":False,"EarningsType":"ORDINARYTIMEEARNINGS","EarningsRateID":"1fa4e226-b711-46ba-a8a7-4344c9c5fb87","RateType":"MULTIPLE","RatePerUnit":"10.0","Multiplier":1.5,"Amount":5,"EmploymentTerminationPaymentType":"O"}]} # PayItem | 
+pay_item = {"EarningsRates":[{"Name":"MyRate","AccountCode":"400","TypeOfUnits":"4.00","IsExemptFromTax":False,"IsExemptFromSuper":True,"IsReportableAsW1":False,"IsQualifyingEarnings":False,"AllowanceContributesToAnnualLeaveRate":False,"AllowanceContributesToOvertimeRate":False,"EarningsType":"ORDINARYTIMEEARNINGS","EarningsRateID":"1fa4e226-b711-46ba-a8a7-4344c9c5fb87","RateType":"MULTIPLE","RatePerUnit":"10.0","Multiplier":1.5,"Amount":5,"EmploymentTerminationPaymentType":"O"}]} # PayItem |
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a pay item
@@ -306,6 +308,8 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create_pay_run**
+
+From November 2025, the array can contain at most one pay run per request.
 > PayRuns create_pay_run(xero_tenant_id, pay_run, idempotency_key=idempotency_key)
 
 Creates a pay run
@@ -402,7 +406,7 @@ api_client = ApiClient(
 api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-payroll_calendar = [ { "PayrollCalendarID":"78bb86b9-e1ea-47ac-b75d-f087a81931de", "PayRunPeriodStartDate":"/Date(1572566400000+0000)/", "PayRunPeriodEndDate":"/Date(1573084800000+0000)/", "PayRunStatus":"DRAFT", "PaymentDate":"/Date(1573171200000+0000)/" } ] # list[PayrollCalendar] | 
+payroll_calendar = [{'Name': 'Weekly', 'CalendarType': 'WEEKLY', 'StartDate': '/Date(1572566400000)/', 'PaymentDate': '/Date(1573171200000)/'}] # list[PayrollCalendar] |
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a Payroll Calendar
@@ -467,7 +471,7 @@ api_client = ApiClient(
 api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
-super_fund = [ { "usi":"PTC0133AU", "Type":"REGULATED", "Name":"Bar99359", "AccountNumber":"FB36350", "AccountName":"Foo38428", "USI":"PTC0133AU" } ] # list[SuperFund] | 
+super_fund = [ { "Type":"REGULATED", "Name":"Bar99359", "AccountNumber":"FB36350", "AccountName":"Foo38428", "USI":"PTC0133AU" } ] # list[SuperFund] |
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Creates a superfund
@@ -1994,7 +1998,7 @@ api_instance = PayrollAuApi(api_client)
 
 xero_tenant_id = 'xero_tenant_id_example' # str | Xero identifier for Tenant
 payslip_id = '4ff1e5cc-9835-40d5-bb18-09fdb118db9c' # str | Payslip id for single object
-payslip_lines = {"Payslip":{"EmployeeID":"cdfb8371-0b21-4b8a-8903-1024df6c391e","DeductionLines":[{"DeductionTypeID":"727af5e8-b347-4ae7-85fc-9b82266d0aec","CalculationType":"FIXEDAMOUNT","NumberOfUnits":10}]}} # list[PayslipLines] | 
+payslip_lines = [{'DeductionLines': [{'DeductionTypeID': '727af5e8-b347-4ae7-85fc-9b82266d0aec', 'CalculationType': 'FIXEDAMOUNT', 'NumberOfUnits': 10}]}] # list[PayslipLines] |
 idempotency_key = 'KEY_VALUE' # str | This allows you to safely retry requests without the risk of duplicate processing. 128 character max. (optional)
 try:
     # Updates a payslip

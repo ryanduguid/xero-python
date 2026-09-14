@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**employee_id** | **str** | Address line 1 for employee home address | [optional] 
+**employee_id** | **str** | The Xero identifier for the employee | [optional]
 **employment_basis** | [**EmploymentBasis**](EmploymentBasis.md) |  | [optional] 
 **tfn_exemption_type** | [**TFNExemptionType**](TFNExemptionType.md) |  | [optional] 
 **tax_file_number** | **str** | The tax file number e.g 123123123. | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **upward_variation_tax_withholding_amount** | **float** | If the employee has requested that additional tax be withheld each pay run. e.g 50 | [optional] 
 **eligible_to_receive_leave_loading** | **bool** | If the employee is eligible to receive an additional percentage on top of ordinary earnings when they take leave (typically 17.5%). e.g true or false | [optional] 
 **approved_withholding_variation_percentage** | **float** | If the employee has approved withholding variation. e.g (0 - 100) | [optional] 
-**has_student_startup_loan** | **bool** | If the employee is eligible for student startup loan rules | [optional] 
+**has_student_startup_loan** | **bool** | Whether the employee has a student startup loan | [optional]
 **has_loan_or_student_debt** | **bool** | If the employee has any of the following loans or debts: Higher Education Loan Program (HELP/HECS), VET Student Loan (VSL), Financial Supplement (FS), Student Start-up Loan (SSL), or Trade Support Loan (TSL) | [optional] 
 **updated_date_utc** | **datetime** | Last modified timestamp | [optional] 
 **include_leave_loading_in_qualifying_earnings** | **bool** | If leave loading should be included when calculating qualifying earnings for superannuation purposes. Only applicable if EligibleToReceiveLeaveLoading is true. Optional: derived from IncludeLeaveLoadingInSGC when it is not provided | [optional] 

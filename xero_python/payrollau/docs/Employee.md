@@ -1,12 +1,14 @@
 # Employee
 
+Creation requires first_name, last_name, date_of_birth and home_address. Update models may omit unchanged fields; create_employee checks the creation requirements.
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**first_name** | **str** | First name of employee | 
-**last_name** | **str** | Last name of employee | 
-**date_of_birth** | **date** | Date of birth of the employee (YYYY-MM-DD) | 
-**home_address** | [**HomeAddress**](HomeAddress.md) |  | [optional] 
+**first_name** | **str** | First name of employee | Required on creation; optional on update.
+**last_name** | **str** | Last name of employee | Required on creation; optional on update.
+**date_of_birth** | **date** | Date of birth of the employee (YYYY-MM-DD) | Required on creation; optional on update.
+**home_address** | [**HomeAddress**](HomeAddress.md) |  | Required on creation; optional on update.
 **start_date** | **date** | Start date for an employee (YYYY-MM-DD) | [optional] 
 **title** | **str** | Title of the employee | [optional] 
 **middle_names** | **str** | Middle name(s) of the employee | [optional] 
