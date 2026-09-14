@@ -195,7 +195,7 @@ class SuperFund(BaseModel):
     def abn(self):
         """Gets the abn of this SuperFund.  # noqa: E501
 
-        ABN of the self managed super fund  # noqa: E501
+        ABN of the regulated or self-managed super fund  # noqa: E501
 
         :return: The abn of this SuperFund.  # noqa: E501
         :rtype: str
@@ -206,7 +206,7 @@ class SuperFund(BaseModel):
     def abn(self, abn):
         """Sets the abn of this SuperFund.
 
-        ABN of the self managed super fund  # noqa: E501
+        ABN of the regulated or self-managed super fund  # noqa: E501
 
         :param abn: The abn of this SuperFund.  # noqa: E501
         :type: str

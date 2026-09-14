@@ -310,7 +310,7 @@ class AssetApi(object):
     ):
         """searches fixed asset settings  # noqa: E501
         OAuth2 scope: assets, assets.read
-        By passing in the appropriate options, you can search for available fixed asset types in the system  # noqa: E501
+        Retrieves the organisation's fixed asset settings  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param bool _return_http_data_only: return received data only
         :param bool _preload_content: load received data in models
@@ -456,7 +456,7 @@ class AssetApi(object):
         :param int page: Results are paged. This specifies which page of the results to return. The default page is 1.
         :param int page_size: The number of records returned per page. By default the number of records returned is 10.
         :param str order_by: Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice.
-        :param str sort_direction: ASC or DESC
+        :param str sort_direction: asc or desc
         :param str filter_by: A string that can be used to filter the list to only return assets containing the text. Checks it against the AssetName, AssetNumber, Description and AssetTypeName fields.
         :param bool _return_http_data_only: return received data only
         :param bool _preload_content: load received data in models

@@ -49,7 +49,7 @@ class StatementBalanceResponse(BaseModel):
     def value(self):
         """Gets the value of this StatementBalanceResponse.  # noqa: E501
 
-        Total closing balance of the account. This includes both reconciled and unreconciled bank statement lines. The closing balance will always be represented as a positive number, with it’s debit/credit status defined in the statementBalanceDebitCredit field.  # noqa: E501
+        Total closing balance of the account. This includes both reconciled and unreconciled bank statement lines. The closing balance will always be represented as a positive number, with its debit/credit status defined in the type field.  # noqa: E501
 
         :return: The value of this StatementBalanceResponse.  # noqa: E501
         :rtype: float
@@ -60,7 +60,7 @@ class StatementBalanceResponse(BaseModel):
     def value(self, value):
         """Sets the value of this StatementBalanceResponse.
 
-        Total closing balance of the account. This includes both reconciled and unreconciled bank statement lines. The closing balance will always be represented as a positive number, with it’s debit/credit status defined in the statementBalanceDebitCredit field.  # noqa: E501
+        Total closing balance of the account. This includes both reconciled and unreconciled bank statement lines. The closing balance will always be represented as a positive number, with its debit/credit status defined in the type field.  # noqa: E501
 
         :param value: The value of this StatementBalanceResponse.  # noqa: E501
         :type: float

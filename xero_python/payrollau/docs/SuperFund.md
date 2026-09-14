@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **super_fund_id** | **str** | Xero identifier for a super fund | [optional] 
 **type** | [**SuperFundType**](SuperFundType.md) |  | 
 **name** | **str** | Name of the super fund (max length &#x3D; 76) | [optional] 
-**abn** | **str** | ABN of the self managed super fund (max length &#x3D; 11) | [optional] 
+**abn** | **str** | ABN of the regulated or self-managed super fund (max length &#x3D; 11) | [optional]
 **bsb** | **str** | BSB of the self managed super fund (max length &#x3D; 6) | [optional] 
 **account_number** | **str** | The account number for the self managed super fund. | [optional] 
 **account_name** | **str** | The account name for the self managed super fund (max length &#x3D; 32). | [optional] 

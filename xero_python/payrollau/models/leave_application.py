@@ -113,7 +113,7 @@ class LeaveApplication(BaseModel):
     def leave_application_id(self):
         """Gets the leave_application_id of this LeaveApplication.  # noqa: E501
 
-        The Xero identifier for Payroll Employee  # noqa: E501
+        The Xero identifier for the leave application  # noqa: E501
 
         :return: The leave_application_id of this LeaveApplication.  # noqa: E501
         :rtype: str
@@ -124,7 +124,7 @@ class LeaveApplication(BaseModel):
     def leave_application_id(self, leave_application_id):
         """Sets the leave_application_id of this LeaveApplication.
 
-        The Xero identifier for Payroll Employee  # noqa: E501
+        The Xero identifier for the leave application  # noqa: E501
 
         :param leave_application_id: The leave_application_id of this LeaveApplication.  # noqa: E501
         :type: str

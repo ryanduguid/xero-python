@@ -77,7 +77,7 @@ class ReimbursementType(BaseModel):
     def name(self):
         """Gets the name of this ReimbursementType.  # noqa: E501
 
-        Name of the earnings rate (max length = 100)  # noqa: E501
+        Name of the reimbursement type (max length = 50)  # noqa: E501
 
         :return: The name of this ReimbursementType.  # noqa: E501
         :rtype: str
@@ -88,15 +88,14 @@ class ReimbursementType(BaseModel):
     def name(self, name):
         """Sets the name of this ReimbursementType.
 
-        Name of the earnings rate (max length = 100)  # noqa: E501
+        Name of the reimbursement type (max length = 50)  # noqa: E501
 
         :param name: The name of this ReimbursementType.  # noqa: E501
         :type: str
         """
-        if name is not None and len(name) > 100:
+        if name is not None and len(name) > 50:
             raise ValueError(
-                "Invalid value for `name`, "
-                "length must be less than or equal to `100`"
+                "Invalid value for `name`, " "length must be less than or equal to `50`"
             )  # noqa: E501
 
         self._name = name

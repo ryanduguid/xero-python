@@ -192,7 +192,7 @@ class LeaveLine(BaseModel):
     def include_superannuation_guarantee_contribution(self):
         """Gets the include_superannuation_guarantee_contribution of this LeaveLine.  # noqa: E501
 
-        amount of leave line  # noqa: E501
+        Whether the termination leave earnings are subject to SGC  # noqa: E501
 
         :return: The include_superannuation_guarantee_contribution of this LeaveLine.  # noqa: E501
         :rtype: bool
@@ -205,7 +205,7 @@ class LeaveLine(BaseModel):
     ):
         """Sets the include_superannuation_guarantee_contribution of this LeaveLine.
 
-        amount of leave line  # noqa: E501
+        Whether the termination leave earnings are subject to SGC  # noqa: E501
 
         :param include_superannuation_guarantee_contribution: The include_superannuation_guarantee_contribution of this LeaveLine.  # noqa: E501
         :type: bool
@@ -219,7 +219,7 @@ class LeaveLine(BaseModel):
     def is_qualifying_earnings(self):
         """Gets the is_qualifying_earnings of this LeaveLine.  # noqa: E501
 
-        Boolean to determine if the leave line is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
+        Whether the leave earnings are qualifying earnings. Optional; defaults to false on POST when omitted  # noqa: E501
 
         :return: The is_qualifying_earnings of this LeaveLine.  # noqa: E501
         :rtype: bool
@@ -230,16 +230,11 @@ class LeaveLine(BaseModel):
     def is_qualifying_earnings(self, is_qualifying_earnings):
         """Sets the is_qualifying_earnings of this LeaveLine.
 
-        Boolean to determine if the leave line is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
+        Whether the leave earnings are qualifying earnings. Optional; defaults to false on POST when omitted  # noqa: E501
 
         :param is_qualifying_earnings: The is_qualifying_earnings of this LeaveLine.  # noqa: E501
         :type: bool
         """
-        if is_qualifying_earnings is None:
-            raise ValueError(
-                "Invalid value for `is_qualifying_earnings`, must not be `None`"
-            )  # noqa: E501
-
         self._is_qualifying_earnings = is_qualifying_earnings
 
     @property

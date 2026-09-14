@@ -68,7 +68,7 @@ class FilesApi(object):
     ):
         """Creates a new file association  # noqa: E501
         OAuth2 scope: files
-        By passing in the appropriate options, you can create a new folder  # noqa: E501
+        Creates an association between the file and another object  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str file_id: File id for single object (required)
         :param Association association: (required)
@@ -318,7 +318,7 @@ class FilesApi(object):
     ):
         """Deletes an existing file association  # noqa: E501
         OAuth2 scope: files
-        By passing in the appropriate options, you can create a new folder  # noqa: E501
+        Deletes the specified file association  # noqa: E501
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str file_id: File id for single object (required)
         :param str object_id: Object id for single object (required)
@@ -478,7 +478,7 @@ class FilesApi(object):
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param str object_id: Object id for single object (required)
         :param int pagesize: pass an optional page size value
-        :param int page: number of records to skip for pagination
+        :param int page: Page number; page 2 retrieves the second page
         :param str sort: values to sort by
         :param str direction: direction to sort by
         :param bool _return_http_data_only: return received data only
@@ -894,7 +894,7 @@ class FilesApi(object):
         OAuth2 scope: files, files.read
         :param str xero_tenant_id: Xero identifier for Tenant (required)
         :param int pagesize: pass an optional page size value
-        :param int page: number of records to skip for pagination
+        :param int page: Page number; page 2 retrieves the second page
         :param str sort: values to sort by
         :param str direction: sort direction
         :param bool _return_http_data_only: return received data only

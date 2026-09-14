@@ -111,7 +111,7 @@ class OverpaymentResponse(BaseModel):
     def total(self):
         """Gets the total of this OverpaymentResponse.  # noqa: E501
 
-        Total of Invoice tax inclusive (i.e. SubTotal + TotalTax); Not included in summary mode  # noqa: E501
+        Tax-inclusive total of the overpayment (SubTotal + TotalTax). Omitted in summary mode  # noqa: E501
 
         :return: The total of this OverpaymentResponse.  # noqa: E501
         :rtype: float
@@ -122,7 +122,7 @@ class OverpaymentResponse(BaseModel):
     def total(self, total):
         """Sets the total of this OverpaymentResponse.
 
-        Total of Invoice tax inclusive (i.e. SubTotal + TotalTax); Not included in summary mode  # noqa: E501
+        Tax-inclusive total of the overpayment (SubTotal + TotalTax). Omitted in summary mode  # noqa: E501
 
         :param total: The total of this OverpaymentResponse.  # noqa: E501
         :type: float
