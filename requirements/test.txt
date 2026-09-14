@@ -1,3 +1,8 @@
 pytest
 pytest-vcr
+# vcrpy patches urllib3.connectionpool.VerifiedHTTPSConnection, which urllib3 2.x
+# removed. The vcrpy releases that support urllib3 2.x need Python 3.10 or newer,
+# so on the declared Python 3.8 tox target the test environment must stay on
+# urllib3 1.x. The runtime requirement in requirements.txt stays unbounded.
+urllib3<2 ; python_version < "3.10"
 pyyaml
