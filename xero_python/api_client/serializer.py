@@ -150,6 +150,19 @@ def serialize_datetime(value, explicit_type=None):
     return value.isoformat()
 
 
+def _datetime_timestamp(value):
+    try:
+        return value.timestamp()
+    except OSError:
+        if value.tzinfo is not None:
+            raise
+        # Windows may reject naive datetimes at or before the Unix epoch.
+        local_zone = tz.gettz()
+        if isinstance(local_zone, tz.tzlocal) and tz.tzwinlocal is not None:
+            local_zone = tz.tzwinlocal()
+        return value.replace(tzinfo=local_zone).timestamp()
+
+
 @serialize.register("datetime[ms-format]")
 def serialize_datetime_ms(value, explicit_type=None):
     """Serializes datetime value as MS json date string
@@ -159,7 +172,7 @@ def serialize_datetime_ms(value, explicit_type=None):
     :return: serialized object
     """
     tz_str = value.strftime("%z")
-    timestamp_s = value.timestamp()
+    timestamp_s = _datetime_timestamp(value)
     timestamp_ms = int(timestamp_s * 1000)
     return "/Date({}{})/".format(timestamp_ms, tz_str)
 
@@ -180,7 +193,7 @@ def serialize_date_ms(value, explicit_type=None):
     else:
         raise ValueError("Can't serialize {!r} into Microsoft date json format")
 
-    timestamp_s = datetime_value.timestamp()
+    timestamp_s = _datetime_timestamp(datetime_value)
     timestamp_ms = int(timestamp_s * 1000)
     return "/Date({})/".format(timestamp_ms)
 
