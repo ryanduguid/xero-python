@@ -306,6 +306,7 @@ def test_serialize_datetime(value, expected):
     "value,expected",
     [
         (datetime.fromtimestamp(0.0), "/Date(0)/"),
+        (datetime.fromtimestamp(0.0) - timedelta(days=1), "/Date(-86400000)/"),
         (datetime.fromtimestamp(1439424000.0), "/Date(1439424000000)/"),
         (datetime.fromtimestamp(1439434356.790), "/Date(1439434356790)/"),
         (datetime(2015, 8, 13, tzinfo=tz.UTC), "/Date(1439424000000+0000)/"),
@@ -342,6 +343,8 @@ def test_serialize_datetime_ms(value, expected):
     "value,expected",
     [
         (date(1970, 1, 1), "/Date(0)/"),
+        (datetime.fromtimestamp(0.0), "/Date(0)/"),
+        (datetime.fromtimestamp(0.0) - timedelta(days=1), "/Date(-86400000)/"),
         (date(1980, 1, 2), "/Date(315619200000)/"),
         (date(2017, 11, 28), "/Date(1511827200000)/"),
         (date(2019, 2, 23), "/Date(1550880000000)/"),
