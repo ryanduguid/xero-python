@@ -5,7 +5,7 @@ import re
 
 from setuptools import setup, find_packages
 
-COMMENT_RE = re.compile(r"(^|\s+)#.*$")
+COMMENT_RE = re.compile(r"(?<!\S)#.*$")
 
 
 def load_requirements(file_name):

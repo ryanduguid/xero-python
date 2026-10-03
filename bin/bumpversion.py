@@ -3,7 +3,7 @@ import argparse
 import fileinput
 import re
 
-SETUP_VERSION = re.compile(r'^(\s*version\s*=\s*")[^"]*("\s*,?\s*)$')
+SETUP_VERSION = re.compile(r'^(\s*version\s*=\s*")[^"]*("\s*(?:,\s*)?)$')
 INIT_VERSION = re.compile(r'^(\s*__version__\s*=\s*")[^"]*("\s*)$')
 
 
