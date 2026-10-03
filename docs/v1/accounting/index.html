@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Xero Accounting API</title>
@@ -6437,7 +6437,7 @@ ul.nav-tabs {
         </a>
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="language-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="language-set-selection" aria-label="Programming language" onchange="routeDocs(this);">
           <option data-url="#">-SDK-</option>
           <option data-url="https://xeroapi.github.io/Xero-Java/v4/accounting/index.html" value="java">Java</option>
           <option data-url="https://xeroapi.github.io/xero-node/accounting/index.html" value="node">Node</option>
@@ -6452,7 +6452,7 @@ ul.nav-tabs {
         <!-- *****REPLACE***** with a small png of your language -->
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="api-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="api-set-selection" aria-label="API" onchange="routeDocs(this);">
           <!-- *****REPLACE***** `xero-node` with the correct repo naming pattern + also add/delete api sets (ex. Ruby does not have Bankfeeds) -->
           <option data-url="#">-API-</option>
           <option data-url="https://xeroapi.github.io/xero-python/v1/accounting/index.html" value="Accounting">Accounting</option>
@@ -7287,6 +7287,10 @@ def accounting_create_account():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -7446,6 +7450,10 @@ def accounting_create_account_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -7656,6 +7664,10 @@ def accounting_create_bank_transaction_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -7867,6 +7879,10 @@ def accounting_create_bank_transaction_history_record():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -8077,6 +8093,10 @@ def accounting_create_bank_transactions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -8302,6 +8322,10 @@ def accounting_create_bank_transfer():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -8507,6 +8531,10 @@ def accounting_create_bank_transfer_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -8718,6 +8746,10 @@ def accounting_create_bank_transfer_history_record():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -8932,6 +8964,10 @@ def accounting_create_batch_payment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -9135,6 +9171,10 @@ def accounting_create_batch_payment_history_record():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -9330,6 +9370,10 @@ def accounting_create_branding_theme_payment_services():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>paymentservices</td>
@@ -9525,6 +9569,10 @@ def accounting_create_contact_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -9735,6 +9783,10 @@ def accounting_create_contact_group():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -9894,6 +9946,10 @@ def accounting_create_contact_group_contacts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -10088,6 +10144,10 @@ def accounting_create_contact_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -10289,6 +10349,10 @@ def accounting_create_contacts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -10537,6 +10601,10 @@ def accounting_create_credit_note_allocation():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -10761,6 +10829,10 @@ def accounting_create_credit_note_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -10999,6 +11071,10 @@ def accounting_create_credit_note_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -11207,6 +11283,10 @@ def accounting_create_credit_notes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -11420,6 +11500,10 @@ def accounting_create_currency():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -11578,6 +11662,10 @@ def accounting_create_expense_claim_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -11782,6 +11870,10 @@ def accounting_create_expense_claims():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -11948,6 +12040,10 @@ def accounting_create_invoice_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -12186,6 +12282,10 @@ def accounting_create_invoice_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -12407,6 +12507,10 @@ def accounting_create_invoices():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -12648,6 +12752,10 @@ def accounting_create_item_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -12847,6 +12955,10 @@ def accounting_create_items():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -13056,6 +13168,10 @@ def accounting_create_linked_transaction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -13215,6 +13331,10 @@ def accounting_create_manual_journal_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -13426,6 +13546,10 @@ def accounting_create_manual_journal_history_record():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -13635,6 +13759,10 @@ def accounting_create_manual_journals():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -13842,6 +13970,10 @@ def accounting_create_overpayment_allocations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -14068,6 +14200,10 @@ def accounting_create_overpayment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -14269,6 +14405,10 @@ def accounting_create_payment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -14436,6 +14576,10 @@ def accounting_create_payment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -14629,6 +14773,10 @@ def accounting_create_payment_service():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>paymentservices</td>
@@ -14800,6 +14948,10 @@ def accounting_create_payments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -15001,6 +15153,10 @@ def accounting_create_prepayment_allocations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -15225,6 +15381,10 @@ def accounting_create_prepayment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -15416,6 +15576,10 @@ def accounting_create_purchase_order_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -15627,6 +15791,10 @@ def accounting_create_purchase_order_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -15834,6 +16002,10 @@ def accounting_create_purchase_orders():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -16028,6 +16200,10 @@ def accounting_create_quote_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -16239,6 +16415,10 @@ def accounting_create_quote_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -16446,6 +16626,10 @@ def accounting_create_quotes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -16659,6 +16843,10 @@ def accounting_create_receipt():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -16859,6 +17047,10 @@ def accounting_create_receipt_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -17070,6 +17262,10 @@ def accounting_create_receipt_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -17261,6 +17457,10 @@ def accounting_create_repeating_invoice_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -17472,6 +17672,10 @@ def accounting_create_repeating_invoice_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -17658,6 +17862,10 @@ def accounting_create_repeating_invoices():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -17882,6 +18090,10 @@ def accounting_create_tax_rates():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -18041,6 +18253,10 @@ def accounting_create_tracking_category():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -18195,6 +18411,10 @@ def accounting_create_tracking_options():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -18378,6 +18598,10 @@ def accounting_delete_account():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -18506,6 +18730,10 @@ def accounting_delete_bank_transfer():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -18696,6 +18924,10 @@ def accounting_delete_bank_transfers():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -18883,6 +19115,10 @@ def accounting_delete_batch_payment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -19034,6 +19270,10 @@ def accounting_delete_batch_payment_by_url_param():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -19216,6 +19456,10 @@ def accounting_delete_contact_group_contact():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -19365,6 +19609,10 @@ def accounting_delete_contact_group_contacts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -19490,6 +19738,10 @@ def accounting_delete_credit_note_allocations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -19639,6 +19891,10 @@ def accounting_delete_item():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -19762,6 +20018,10 @@ def accounting_delete_linked_transaction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -19887,6 +20147,10 @@ def accounting_delete_overpayment_allocations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -20041,6 +20305,10 @@ def accounting_delete_payment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -20226,6 +20494,10 @@ def accounting_delete_prepayment_allocations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -20376,6 +20648,10 @@ def accounting_delete_tracking_category():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -20501,6 +20777,10 @@ def accounting_delete_tracking_options():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -20653,6 +20933,10 @@ def accounting_email_invoice():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -20833,6 +21117,10 @@ def accounting_get_account():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -20964,6 +21252,10 @@ def accounting_get_account_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -21141,6 +21433,10 @@ def accounting_get_account_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -21319,6 +21615,10 @@ def accounting_get_account_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -21450,6 +21750,10 @@ def accounting_get_accounts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -21616,6 +21920,10 @@ def accounting_get_bank_transaction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -21774,6 +22082,10 @@ def accounting_get_bank_transaction_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -21951,6 +22263,10 @@ def accounting_get_bank_transaction_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -22129,6 +22445,10 @@ def accounting_get_bank_transaction_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -22261,6 +22581,10 @@ def accounting_get_bank_transactions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -22507,6 +22831,10 @@ def accounting_get_bank_transactions_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -22636,6 +22964,10 @@ def accounting_get_bank_transfer():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -22767,6 +23099,10 @@ def accounting_get_bank_transfer_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -22944,6 +23280,10 @@ def accounting_get_bank_transfer_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -23122,6 +23462,10 @@ def accounting_get_bank_transfer_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -23251,6 +23595,10 @@ def accounting_get_bank_transfer_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -23383,6 +23731,10 @@ def accounting_get_bank_transfers():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -23569,6 +23921,10 @@ def accounting_get_batch_payment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -23698,6 +24054,10 @@ def accounting_get_batch_payment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -23829,6 +24189,10 @@ def accounting_get_batch_payments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -23995,6 +24359,10 @@ def accounting_get_branding_theme():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -24124,6 +24492,10 @@ def accounting_get_branding_theme_payment_services():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>paymentservices</td>
@@ -24247,6 +24619,10 @@ def accounting_get_branding_themes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -24345,6 +24721,10 @@ def accounting_get_budget():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.budgets.read</td>
@@ -24524,6 +24904,10 @@ def accounting_get_budgets():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.budgets.read</td>
@@ -24691,6 +25075,10 @@ def accounting_get_contact():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -24822,6 +25210,10 @@ def accounting_get_contact_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -24999,6 +25391,10 @@ def accounting_get_contact_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -25177,6 +25573,10 @@ def accounting_get_contact_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -25306,6 +25706,10 @@ def accounting_get_contact_by_contact_number():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -25432,6 +25836,10 @@ def accounting_get_contact_cis_settings():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -25561,6 +25969,10 @@ def accounting_get_contact_group():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -25691,6 +26103,10 @@ def accounting_get_contact_groups():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -25834,6 +26250,10 @@ def accounting_get_contact_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -25969,6 +26389,10 @@ def accounting_get_contacts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -26258,6 +26682,10 @@ def accounting_get_credit_note():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -26414,6 +26842,10 @@ def accounting_get_credit_note_as_pdf():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -26545,6 +26977,10 @@ def accounting_get_credit_note_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -26722,6 +27158,10 @@ def accounting_get_credit_note_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -26900,6 +27340,10 @@ def accounting_get_credit_note_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -27029,6 +27473,10 @@ def accounting_get_credit_note_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -27160,6 +27608,10 @@ def accounting_get_credit_notes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -27387,6 +27839,10 @@ def accounting_get_currencies():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -27530,6 +27986,10 @@ def accounting_get_expense_claim():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -27659,6 +28119,10 @@ def accounting_get_expense_claim_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -27790,6 +28254,10 @@ def accounting_get_expense_claims():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -27956,6 +28424,10 @@ def accounting_get_invoice():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -28112,6 +28584,10 @@ def accounting_get_invoice_as_pdf():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -28243,6 +28719,10 @@ def accounting_get_invoice_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -28420,6 +28900,10 @@ def accounting_get_invoice_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -28598,6 +29082,10 @@ def accounting_get_invoice_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -28727,6 +29215,10 @@ def accounting_get_invoice_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -28855,6 +29347,10 @@ def accounting_get_invoice_reminders():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -28961,6 +29457,10 @@ def accounting_get_invoices():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -29353,6 +29853,10 @@ def accounting_get_item():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -29509,6 +30013,10 @@ def accounting_get_item_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -29640,6 +30148,10 @@ def accounting_get_items():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -29826,6 +30338,10 @@ def accounting_get_journal():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.journals.read</td>
@@ -29949,6 +30465,10 @@ def accounting_get_journal_by_number():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.journals.read</td>
@@ -30071,6 +30591,10 @@ def accounting_get_journals():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.journals.read</td>
@@ -30232,6 +30756,10 @@ def accounting_get_linked_transaction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -30365,6 +30893,10 @@ def accounting_get_linked_transactions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -30600,6 +31132,10 @@ def accounting_get_manual_journal():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -30731,6 +31267,10 @@ def accounting_get_manual_journal_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -30908,6 +31448,10 @@ def accounting_get_manual_journal_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -31086,6 +31630,10 @@ def accounting_get_manual_journal_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -31217,6 +31765,10 @@ def accounting_get_manual_journals():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -31423,6 +31975,10 @@ def accounting_get_manual_journals_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -31552,6 +32108,10 @@ def accounting_get_online_invoice():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -31680,6 +32240,10 @@ def accounting_get_organisation_actions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -31776,6 +32340,10 @@ def accounting_get_organisation_cis_settings():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -31904,6 +32472,10 @@ def accounting_get_organisations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -32000,6 +32572,10 @@ def accounting_get_overpayment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -32129,6 +32705,10 @@ def accounting_get_overpayment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -32261,6 +32841,10 @@ def accounting_get_overpayments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -32507,6 +33091,10 @@ def accounting_get_payment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -32636,6 +33224,10 @@ def accounting_get_payment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -32764,6 +33356,10 @@ def accounting_get_payment_services():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>paymentservices</td>
@@ -32857,6 +33453,10 @@ def accounting_get_payments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -33063,6 +33663,10 @@ def accounting_get_prepayment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -33192,6 +33796,10 @@ def accounting_get_prepayment_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -33325,6 +33933,10 @@ def accounting_get_prepayments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -33591,6 +34203,10 @@ def accounting_get_purchase_order():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -33720,6 +34336,10 @@ def accounting_get_purchase_order_as_pdf():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -33851,6 +34471,10 @@ def accounting_get_purchase_order_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -34028,6 +34652,10 @@ def accounting_get_purchase_order_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -34206,6 +34834,10 @@ def accounting_get_purchase_order_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -34335,6 +34967,10 @@ def accounting_get_purchase_order_by_number():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -34461,6 +35097,10 @@ def accounting_get_purchase_order_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -34594,6 +35234,10 @@ def accounting_get_purchase_orders():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -34840,6 +35484,10 @@ def accounting_get_quote():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -34969,6 +35617,10 @@ def accounting_get_quote_as_pdf():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -35100,6 +35752,10 @@ def accounting_get_quote_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -35277,6 +35933,10 @@ def accounting_get_quote_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -35455,6 +36115,10 @@ def accounting_get_quote_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -35584,6 +36248,10 @@ def accounting_get_quote_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -35721,6 +36389,10 @@ def accounting_get_quotes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -36042,6 +36714,10 @@ def accounting_get_receipt():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -36200,6 +36876,10 @@ def accounting_get_receipt_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -36377,6 +37057,10 @@ def accounting_get_receipt_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -36555,6 +37239,10 @@ def accounting_get_receipt_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -36684,6 +37372,10 @@ def accounting_get_receipt_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -36815,6 +37507,10 @@ def accounting_get_receipts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -37001,6 +37697,10 @@ def accounting_get_repeating_invoice():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -37132,6 +37832,10 @@ def accounting_get_repeating_invoice_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -37309,6 +38013,10 @@ def accounting_get_repeating_invoice_attachment_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -37487,6 +38195,10 @@ def accounting_get_repeating_invoice_attachments():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -37616,6 +38328,10 @@ def accounting_get_repeating_invoice_history():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -37746,6 +38462,10 @@ def accounting_get_repeating_invoices():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -37892,6 +38612,10 @@ def accounting_get_report_aged_payables_by_contact():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -38088,6 +38812,10 @@ def accounting_get_report_aged_receivables_by_contact():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -38286,6 +39014,10 @@ def accounting_get_report_balance_sheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -38528,6 +39260,10 @@ def accounting_get_report_bank_summary():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -38672,6 +39408,10 @@ def accounting_get_report_budget_summary():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -38833,6 +39573,10 @@ def accounting_get_report_executive_summary():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -38954,6 +39698,10 @@ def accounting_get_report_from_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -39083,6 +39831,10 @@ def accounting_get_report_profit_and_loss():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -39387,6 +40139,10 @@ def accounting_get_report_ten_ninety_nine():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -39511,6 +40267,10 @@ def accounting_get_report_trial_balance():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -39651,6 +40411,10 @@ def accounting_get_reports_list():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.reports.read</td>
@@ -39742,6 +40506,10 @@ def accounting_get_tax_rate_by_tax_type():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -39869,6 +40637,10 @@ def accounting_get_tax_rates():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -40014,6 +40786,10 @@ def accounting_get_tracking_categories():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -40177,6 +40953,10 @@ def accounting_get_tracking_category():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -40306,6 +41086,10 @@ def accounting_get_user():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -40437,6 +41221,10 @@ def accounting_get_users():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -40622,6 +41410,10 @@ def accounting_post_setup():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -40807,6 +41599,10 @@ def accounting_update_account():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -41009,6 +41805,10 @@ def accounting_update_account_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -41239,6 +42039,10 @@ def accounting_update_bank_transaction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -41522,6 +42326,10 @@ def accounting_update_bank_transaction_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -41732,6 +42540,10 @@ def accounting_update_bank_transfer_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -41944,6 +42756,10 @@ def accounting_update_contact():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -42136,6 +42952,10 @@ def accounting_update_contact_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -42347,6 +43167,10 @@ def accounting_update_contact_group():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -42557,6 +43381,10 @@ def accounting_update_credit_note():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -42788,6 +43616,10 @@ def accounting_update_credit_note_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -43012,6 +43844,10 @@ def accounting_update_expense_claim():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -43211,6 +44047,10 @@ def accounting_update_invoice():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -43452,6 +44292,10 @@ def accounting_update_invoice_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -43664,6 +44508,10 @@ def accounting_update_item():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -43884,6 +44732,10 @@ def accounting_update_linked_transaction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -44093,6 +44945,10 @@ def accounting_update_manual_journal():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -44285,6 +45141,10 @@ def accounting_update_manual_journal_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -44514,6 +45374,10 @@ def accounting_update_or_create_bank_transactions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -44740,6 +45604,10 @@ def accounting_update_or_create_contacts():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.contacts</td>
@@ -44957,6 +45825,10 @@ def accounting_update_or_create_credit_notes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -45196,6 +46068,10 @@ def accounting_update_or_create_invoices():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -45438,6 +46314,10 @@ def accounting_update_or_create_items():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -45662,6 +46542,10 @@ def accounting_update_or_create_manual_journals():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -45877,6 +46761,10 @@ def accounting_update_or_create_purchase_orders():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -46086,6 +46974,10 @@ def accounting_update_or_create_quotes():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -46274,6 +47166,10 @@ def accounting_update_or_create_repeating_invoices():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -46491,6 +47387,10 @@ def accounting_update_purchase_order():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -46683,6 +47583,10 @@ def accounting_update_purchase_order_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -46900,6 +47804,10 @@ def accounting_update_quote():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -47094,6 +48002,10 @@ def accounting_update_quote_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -47311,6 +48223,10 @@ def accounting_update_receipt():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -47532,6 +48448,10 @@ def accounting_update_receipt_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -47737,6 +48657,10 @@ def accounting_update_repeating_invoice():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.transactions</td>
@@ -47969,6 +48893,10 @@ def accounting_update_repeating_invoice_attachment_by_file_name():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.attachments</td>
@@ -48187,6 +49115,10 @@ def accounting_update_tax_rate():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -48348,6 +49280,10 @@ def accounting_update_tracking_category():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>
@@ -48535,6 +49471,10 @@ def accounting_update_tracking_options():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>accounting.settings</td>

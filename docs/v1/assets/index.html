@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Xero Assets API</title>
@@ -1351,7 +1351,7 @@ ul.nav-tabs {
         </a>
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="language-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="language-set-selection" aria-label="Programming language" onchange="routeDocs(this);">
           <option data-url="#">-SDK-</option>
           <option data-url="https://xeroapi.github.io/Xero-Java/v4/accounting/index.html" value="java">Java</option>
           <option data-url="https://xeroapi.github.io/xero-node/accounting/index.html" value="node">Node</option>
@@ -1366,7 +1366,7 @@ ul.nav-tabs {
         <!-- *****REPLACE***** with a small png of your language -->
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="api-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="api-set-selection" aria-label="API" onchange="routeDocs(this);">
           <!-- *****REPLACE***** `xero-node` with the correct repo naming pattern + also add/delete api sets (ex. Ruby does not have Bankfeeds) -->
           <option data-url="#">-API-</option>
           <option data-url="https://xeroapi.github.io/xero-python/v1/accounting/index.html" value="Accounting">Accounting</option>
@@ -1513,6 +1513,10 @@ def accounting_create_asset():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>assets</td>
@@ -1695,6 +1699,10 @@ def accounting_create_asset_type():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>assets</td>
@@ -1855,6 +1863,10 @@ def accounting_get_asset_by_id():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>assets</td>
@@ -1983,6 +1995,10 @@ def accounting_get_asset_settings():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>assets</td>
@@ -2078,6 +2094,10 @@ def accounting_get_asset_types():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>assets</td>
@@ -2176,6 +2196,10 @@ def accounting_get_assets():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>assets</td>

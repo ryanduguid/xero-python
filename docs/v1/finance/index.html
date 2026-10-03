@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Xero Finance API</title>
@@ -2307,7 +2307,7 @@ ul.nav-tabs {
         </a>
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="language-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="language-set-selection" aria-label="Programming language" onchange="routeDocs(this);">
           <option data-url="#">-SDK-</option>
           <option data-url="https://xeroapi.github.io/Xero-Java/v4/accounting/index.html" value="java">Java</option>
           <option data-url="https://xeroapi.github.io/xero-node/accounting/index.html" value="node">Node</option>
@@ -2322,7 +2322,7 @@ ul.nav-tabs {
         <!-- *****REPLACE***** with a small png of your language -->
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="api-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="api-set-selection" aria-label="API" onchange="routeDocs(this);">
           <!-- *****REPLACE***** `xero-node` with the correct repo naming pattern + also add/delete api sets (ex. Ruby does not have Bankfeeds) -->
           <option data-url="#">-API-</option>
           <option data-url="https://xeroapi.github.io/xero-python/v1/accounting/index.html" value="Accounting">Accounting</option>
@@ -2473,6 +2473,10 @@ def accounting_get_bank_statement_accounting():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.bankstatementsplus.read</td>
@@ -2676,6 +2680,10 @@ def accounting_get_cash_validation():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.cashvalidation.read</td>
@@ -2849,6 +2857,10 @@ def accounting_get_financial_statement_balance_sheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.statements.read</td>
@@ -2970,6 +2982,10 @@ def accounting_get_financial_statement_cashflow():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.statements.read</td>
@@ -3117,6 +3133,10 @@ def accounting_get_financial_statement_contacts_expense():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.statements.read</td>
@@ -3313,6 +3333,10 @@ def accounting_get_financial_statement_contacts_revenue():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.statements.read</td>
@@ -3507,6 +3531,10 @@ def accounting_get_financial_statement_profit_and_loss():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.statements.read</td>
@@ -3651,6 +3679,10 @@ def accounting_get_financial_statement_trial_balance():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>finance.statements.read</td>
