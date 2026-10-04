@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Xero Projects API</title>
@@ -1394,7 +1394,7 @@ ul.nav-tabs {
         </a>
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="language-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="language-set-selection" aria-label="Programming language" onchange="routeDocs(this);">
           <option data-url="#">-SDK-</option>
           <option data-url="https://xeroapi.github.io/Xero-Java/v4/accounting/index.html" value="java">Java</option>
           <option data-url="https://xeroapi.github.io/xero-node/accounting/index.html" value="node">Node</option>
@@ -1409,7 +1409,7 @@ ul.nav-tabs {
         <!-- *****REPLACE***** with a small png of your language -->
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="api-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="api-set-selection" aria-label="API" onchange="routeDocs(this);">
           <!-- *****REPLACE***** `xero-node` with the correct repo naming pattern + also add/delete api sets (ex. Ruby does not have Bankfeeds) -->
           <option data-url="#">-API-</option>
           <option data-url="https://xeroapi.github.io/xero-python/v1/accounting/index.html" value="Accounting">Accounting</option>
@@ -1581,6 +1581,10 @@ def accounting_create_project():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -1730,6 +1734,10 @@ def accounting_create_task():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -1912,6 +1920,10 @@ def accounting_create_time_entry():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -2099,6 +2111,10 @@ def accounting_delete_task():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -2249,6 +2265,10 @@ def accounting_delete_time_entry():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -2399,6 +2419,10 @@ def accounting_get_project():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -2527,6 +2551,10 @@ def accounting_get_project_users():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -2672,6 +2700,10 @@ def accounting_get_projects():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -2882,6 +2914,10 @@ def accounting_get_task():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -3038,6 +3074,10 @@ def accounting_get_tasks():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -3262,6 +3302,10 @@ def accounting_get_time_entries():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -3617,6 +3661,10 @@ def accounting_get_time_entry():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -3772,6 +3820,10 @@ def accounting_patch_project():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -3953,6 +4005,10 @@ def accounting_update_project():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -4135,6 +4191,10 @@ def accounting_update_task():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>
@@ -4342,6 +4402,10 @@ def accounting_update_time_entry():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>projects</td>

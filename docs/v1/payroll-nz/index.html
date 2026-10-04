@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Xero Payroll NZ</title>
@@ -3999,7 +3999,7 @@ ul.nav-tabs {
         </a>
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="language-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="language-set-selection" aria-label="Programming language" onchange="routeDocs(this);">
           <option data-url="#">-SDK-</option>
           <option data-url="https://xeroapi.github.io/Xero-Java/v4/accounting/index.html" value="java">Java</option>
           <option data-url="https://xeroapi.github.io/xero-node/accounting/index.html" value="node">Node</option>
@@ -4014,7 +4014,7 @@ ul.nav-tabs {
         <!-- *****REPLACE***** with a small png of your language -->
       </div>
       <fieldset class='api-set'>
-        <select name="form" id="api-set-selection" onchange="routeDocs(this);">
+        <select name="form" id="api-set-selection" aria-label="API" onchange="routeDocs(this);">
           <!-- *****REPLACE***** `xero-node` with the correct repo naming pattern + also add/delete api sets (ex. Ruby does not have Bankfeeds) -->
           <option data-url="#">-API-</option>
           <option data-url="https://xeroapi.github.io/xero-python/v1/accounting/index.html" value="Accounting">Accounting</option>
@@ -4352,6 +4352,10 @@ def accounting_approve_timesheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -4501,6 +4505,10 @@ def accounting_create_deduction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -4657,6 +4665,10 @@ def accounting_create_earnings_rate():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -4823,6 +4835,10 @@ def accounting_create_employee():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -4995,6 +5011,10 @@ def accounting_create_employee_earnings_template():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -5190,6 +5210,10 @@ def accounting_create_employee_leave():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -5387,6 +5411,10 @@ def accounting_create_employee_leave_setup():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -5582,6 +5610,10 @@ def accounting_create_employee_leave_type():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -5782,6 +5814,10 @@ def accounting_create_employee_opening_balances():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -5974,6 +6010,10 @@ def accounting_create_employee_payment_method():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -6172,6 +6212,10 @@ def accounting_create_employee_salary_and_wage():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -6373,6 +6417,10 @@ def accounting_create_employee_working_pattern():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -6572,6 +6620,10 @@ def accounting_create_employment():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -6762,6 +6814,10 @@ def accounting_create_leave_type():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -6925,6 +6981,10 @@ def accounting_create_multiple_employee_earnings_template():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -7109,6 +7169,10 @@ def accounting_create_pay_run():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.payruns</td>
@@ -7271,6 +7335,10 @@ def accounting_create_pay_run_calendar():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -7429,6 +7497,10 @@ def accounting_create_reimbursement():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -7589,6 +7661,10 @@ def accounting_create_superannuation():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -7751,6 +7827,10 @@ def accounting_create_timesheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -7921,6 +8001,10 @@ def accounting_create_timesheet_line():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -8106,6 +8190,10 @@ def accounting_delete_employee_earnings_template():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -8257,6 +8345,10 @@ def accounting_delete_employee_leave():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -8408,6 +8500,10 @@ def accounting_delete_employee_salary_and_wage():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -8559,6 +8655,10 @@ def accounting_delete_employee_working_pattern():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -8709,6 +8809,10 @@ def accounting_delete_timesheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -8834,6 +8938,10 @@ def accounting_delete_timesheet_line():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -8984,6 +9092,10 @@ def accounting_get_deduction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -9112,6 +9224,10 @@ def accounting_get_deductions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -9235,6 +9351,10 @@ def accounting_get_earnings_rate():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -9363,6 +9483,10 @@ def accounting_get_earnings_rates():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -9486,6 +9610,10 @@ def accounting_get_employee():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -9615,6 +9743,10 @@ def accounting_get_employee_leave_balances():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -9746,6 +9878,10 @@ def accounting_get_employee_leave_periods():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -9928,6 +10064,10 @@ def accounting_get_employee_leave_types():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10057,6 +10197,10 @@ def accounting_get_employee_leaves():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10186,6 +10330,10 @@ def accounting_get_employee_opening_balances():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10315,6 +10463,10 @@ def accounting_get_employee_pay_templates():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10444,6 +10596,10 @@ def accounting_get_employee_payment_method():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10574,6 +10730,10 @@ def accounting_get_employee_salary_and_wage():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10729,6 +10889,10 @@ def accounting_get_employee_salary_and_wages():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -10885,6 +11049,10 @@ def accounting_get_employee_tax():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -11015,6 +11183,10 @@ def accounting_get_employee_working_pattern():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -11170,6 +11342,10 @@ def accounting_get_employee_working_patterns():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -11299,6 +11475,10 @@ def accounting_get_employees():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -11442,6 +11622,10 @@ def accounting_get_leave_type():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -11571,6 +11755,10 @@ def accounting_get_leave_types():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -11714,6 +11902,10 @@ def accounting_get_pay_run():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.payruns</td>
@@ -11843,6 +12035,10 @@ def accounting_get_pay_run_calendar():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -11971,6 +12167,10 @@ def accounting_get_pay_run_calendars():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -12094,6 +12294,10 @@ def accounting_get_pay_runs():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.payruns</td>
@@ -12237,6 +12441,10 @@ def accounting_get_pay_slip():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.payslip</td>
@@ -12366,6 +12574,10 @@ def accounting_get_pay_slips():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.payslip</td>
@@ -12515,6 +12727,10 @@ def accounting_get_reimbursement():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -12643,6 +12859,10 @@ def accounting_get_reimbursements():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -12765,6 +12985,10 @@ def accounting_get_settings():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -12861,6 +13085,10 @@ def accounting_get_statutory_deduction():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -12989,6 +13217,10 @@ def accounting_get_statutory_deductions():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -13112,6 +13344,10 @@ def accounting_get_superannuation():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -13240,6 +13476,10 @@ def accounting_get_superannuations():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -13363,6 +13603,10 @@ def accounting_get_timesheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -13496,6 +13740,10 @@ def accounting_get_timesheets():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -13718,6 +13966,10 @@ def accounting_get_tracking_categories():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.settings</td>
@@ -13815,6 +14067,10 @@ def accounting_revert_timesheet():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
@@ -13973,6 +14229,10 @@ def accounting_update_employee():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -14179,6 +14439,10 @@ def accounting_update_employee_earnings_template():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -14398,6 +14662,10 @@ def accounting_update_employee_leave():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -14623,6 +14891,10 @@ def accounting_update_employee_salary_and_wage():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -14855,6 +15127,10 @@ def accounting_update_employee_tax():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.employees</td>
@@ -15067,6 +15343,10 @@ def accounting_update_pay_slip_line_items():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.payslip</td>
@@ -15331,6 +15611,10 @@ def accounting_update_timesheet_line():
                   </div>
                   <h2>Scopes</h2>
                   <table>
+                    <tr>
+                      <th scope="col">Scope</th>
+                      <th scope="col">Description</th>
+                    </tr>
                     
                     <tr>
                       <td>payroll.timesheets</td>
