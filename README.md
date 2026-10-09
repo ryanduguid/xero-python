@@ -4,6 +4,11 @@
 [![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python.svg)](https://github.com/XeroAPI/xero-python/stargazers)
 [![Downloads](https://pepy.tech/badge/xero-python)](https://pepy.tech/project/xero-python)
 
+**Fork status**
+
+[![Fork code quality](https://app.codacy.com/project/badge/Grade/359f4f0ca3e74f4986e848a206a9a216?branch=master)](https://app.codacy.com/gh/ryanduguid/xero-python/dashboard)
+[![Fork Python Build, Lint](https://github.com/ryanduguid/xero-python/actions/workflows/build-test-lint.yml/badge.svg?branch=master)](https://github.com/ryanduguid/xero-python/actions/workflows/build-test-lint.yml)
+
 The xero-python SDK provides Python clients for Xero's accounting, payroll, assets, files and projects APIs.
 # Table of Contents
 - [API Client documentation](#api-client-documentation)
