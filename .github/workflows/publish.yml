@@ -32,8 +32,8 @@ jobs:
               run: |
                 python -m venv venv
                 source venv/bin/activate
-                pip install --only-binary :all: --upgrade pip
-                pip install --only-binary :all: twine
+                pip install --only-binary :all: --upgrade pip==25.0.1
+                pip install --only-binary :all: twine==6.1.0
                 echo "$PWD/venv/bin" >> "$GITHUB_PATH"
               working-directory: xero-python
 
