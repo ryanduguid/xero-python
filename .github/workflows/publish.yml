@@ -121,7 +121,7 @@ jobs:
          path: xero-python
 
       - name: Install octokit dependencies
-        run: npm i
+        run: npm i --ignore-scripts
         working-directory: xero-python/.github/octokit
 
       - name: Get github app access token
