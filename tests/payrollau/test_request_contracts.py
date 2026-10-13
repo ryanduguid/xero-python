@@ -91,20 +91,20 @@ def test_leave_line_flag_is_optional_and_preserves_explicit_values(value):
 
 
 @pytest.mark.parametrize("as_model", [False, True])
-@pytest.mark.parametrize("value", [None, False, True])
-def test_leave_type_response_flag_is_omitted_from_pay_item_requests(
-    api, as_model, value
-):
+@pytest.mark.parametrize("value", [False, True])
+def test_leave_type_flag_reaches_pay_item_requests(api, as_model, value):
     leave = models.LeaveType(name="Annual leave", is_qualifying_earnings=value)
     item = models.PayItem(leave_types=[leave])
-    original = serialize(item)
-    payload = item if as_model else original
+    payload = item if as_model else serialize(item)
     api.create_pay_item("tenant", payload)
     assert serialize(api.api_client.call_api.call_args.kwargs["body"]) == {
-        "LeaveTypes": [{"Name": "Annual leave"}]
+        "LeaveTypes": [{"Name": "Annual leave", "IsQualifyingEarnings": value}]
     }
-    assert leave.is_qualifying_earnings is value
-    assert serialize(item) == original
+
+
+def test_leave_type_flag_is_required():
+    with pytest.raises(ValueError, match="is_qualifying_earnings"):
+        models.LeaveType(name="Annual leave")
 
 
 @pytest.mark.parametrize(
@@ -112,11 +112,12 @@ def test_leave_type_response_flag_is_omitted_from_pay_item_requests(
 )
 @pytest.mark.parametrize("length", [49, 50, 51, 100])
 def test_pay_item_names_use_their_own_limits(model, length):
+    extra = {"is_qualifying_earnings": False} if model is models.LeaveType else {}
     if length > 50:
         with pytest.raises(ValueError):
-            model(name="a" * length)
+            model(name="a" * length, **extra)
     else:
-        assert model(name="a" * length).name == "a" * length
+        assert model(name="a" * length, **extra).name == "a" * length
 
 
 def test_earnings_rate_requirement_and_longer_name_limit_remain():

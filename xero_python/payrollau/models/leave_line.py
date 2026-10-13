@@ -219,7 +219,7 @@ class LeaveLine(BaseModel):
     def is_qualifying_earnings(self):
         """Gets the is_qualifying_earnings of this LeaveLine.  # noqa: E501
 
-        Whether the leave earnings are qualifying earnings. Optional; defaults to false on POST when omitted  # noqa: E501
+        Boolean to determine if the leave line is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
 
         :return: The is_qualifying_earnings of this LeaveLine.  # noqa: E501
         :rtype: bool
@@ -230,7 +230,7 @@ class LeaveLine(BaseModel):
     def is_qualifying_earnings(self, is_qualifying_earnings):
         """Sets the is_qualifying_earnings of this LeaveLine.
 
-        Whether the leave earnings are qualifying earnings. Optional; defaults to false on POST when omitted  # noqa: E501
+        Boolean to determine if the leave line is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
 
         :param is_qualifying_earnings: The is_qualifying_earnings of this LeaveLine.  # noqa: E501
         :type: bool

@@ -5,7 +5,6 @@ import re  # noqa: F401
 
 from xero_python import exceptions
 from xero_python.api_client import ApiClient, ModelFinder
-from xero_python.api_client.serializer import serialize
 
 try:
     from .exception_handler import translate_status_exception
@@ -371,21 +370,7 @@ class PayrollAuApi(object):
         local_var_files = {}
         form_params = []
 
-        body_params = (
-            dict(pay_item) if isinstance(pay_item, dict) else serialize(pay_item)
-        )
-        # Keep the response flag on the caller's object; Xero derives it on POST.
-        if body_params.get("LeaveTypes") is not None:
-            body_params["LeaveTypes"] = [
-                (
-                    dict(leave_type)
-                    if isinstance(leave_type, dict)
-                    else serialize(leave_type)
-                )
-                for leave_type in body_params["LeaveTypes"]
-            ]
-            for leave_type in body_params["LeaveTypes"]:
-                leave_type.pop("IsQualifyingEarnings", None)
+        body_params = pay_item
         # HTTP header `Accept`
         header_params["Accept"] = self.api_client.select_header_accept(
             ["application/json"]

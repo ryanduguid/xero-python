@@ -373,7 +373,7 @@ class LeaveType(BaseModel):
     def is_qualifying_earnings(self):
         """Gets the is_qualifying_earnings of this LeaveType.  # noqa: E501
 
-        Read-only response flag, derived by Xero from the leave category on POST  # noqa: E501
+        Boolean to determine if the leave type is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
 
         :return: The is_qualifying_earnings of this LeaveType.  # noqa: E501
         :rtype: bool
@@ -384,9 +384,14 @@ class LeaveType(BaseModel):
     def is_qualifying_earnings(self, is_qualifying_earnings):
         """Sets the is_qualifying_earnings of this LeaveType.
 
-        Read-only response flag, derived by Xero from the leave category on POST  # noqa: E501
+        Boolean to determine if the leave type is considered as qualifying earnings for superannuation guarantee calculations  # noqa: E501
 
         :param is_qualifying_earnings: The is_qualifying_earnings of this LeaveType.  # noqa: E501
         :type: bool
         """
+        if is_qualifying_earnings is None:
+            raise ValueError(
+                "Invalid value for `is_qualifying_earnings`, must not be `None`"
+            )  # noqa: E501
+
         self._is_qualifying_earnings = is_qualifying_earnings
