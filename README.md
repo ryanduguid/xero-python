@@ -1,7 +1,7 @@
 # xero-python
 [![PyPI version](https://badge.fury.io/py/xero-python.svg)](https://badge.fury.io/py/xero-python)
 [![Github forks](https://img.shields.io/github/forks/XeroAPI/xero-python.svg)](https://github.com/XeroAPI/xero-python/network)
-[![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python.svg)](https://github.com/XeroAPI/xero-python/stargazers)
+[![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python)](https://github.com/XeroAPI/xero-python/stargazers)
 [![Downloads](https://pepy.tech/badge/xero-python)](https://pepy.tech/project/xero-python)
 
 **Fork status**
