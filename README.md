@@ -1,13 +1,18 @@
 # xero-python
-[![PyPI version](https://img.shields.io/pypi/v/xero-python?style=flat&labelColor=000000&color=66023C)](https://badge.fury.io/py/xero-python)
-[![Github forks](https://img.shields.io/github/forks/XeroAPI/xero-python.svg?style=flat&labelColor=000000&color=66023C)](https://github.com/XeroAPI/xero-python/network)
-[![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python?style=flat&labelColor=000000&color=66023C)](https://github.com/XeroAPI/xero-python/stargazers)
-[![Downloads](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fpepy.tech%2Fbadge%2Fxero-python&query=normalize-space%28%28%2F%2F%2A%5Blocal-name%28%29%3D%27text%27%5D%29%5Blast%28%29%5D%29&label=downloads&style=flat&labelColor=000000&color=66023C)](https://pepy.tech/project/xero-python)
+
+<div align="center">
+
+[![PyPI version](https://img.shields.io/pypi/v/xero-python?style=flat&labelColor=000000&color=66023C)](https://badge.fury.io/py/xero-python) [![Github forks](https://img.shields.io/github/forks/XeroAPI/xero-python.svg?style=flat&labelColor=000000&color=66023C)](https://github.com/XeroAPI/xero-python/network) [![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-python?style=flat&labelColor=000000&color=66023C)](https://github.com/XeroAPI/xero-python/stargazers) [![Downloads](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fpepy.tech%2Fbadge%2Fxero-python&query=normalize-space%28%28%2F%2F%2A%5Blocal-name%28%29%3D%27text%27%5D%29%5Blast%28%29%5D%29&label=downloads&style=flat&labelColor=000000&color=66023C)](https://pepy.tech/project/xero-python)
+
+</div>
+
+<div align="center">
 
 **Fork status**
 
-[![Fork code quality](https://img.shields.io/codacy/grade/359f4f0ca3e74f4986e848a206a9a216/master?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/xero-python/dashboard)
-[![Fork Python Build, Lint](https://img.shields.io/github/actions/workflow/status/ryanduguid/xero-python/build-test-lint.yml?branch=master&label=Python%20Build%2C%20Lint&style=flat&labelColor=000000)](https://github.com/ryanduguid/xero-python/actions/workflows/build-test-lint.yml)
+[![Fork code quality](https://img.shields.io/codacy/grade/359f4f0ca3e74f4986e848a206a9a216/master?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/xero-python/dashboard) [![Fork Python Build, Lint](https://img.shields.io/github/actions/workflow/status/ryanduguid/xero-python/build-test-lint.yml?branch=master&label=Python%20Build%2C%20Lint&style=flat&labelColor=000000)](https://github.com/ryanduguid/xero-python/actions/workflows/build-test-lint.yml)
+
+</div>
 
 The xero-python SDK provides Python clients for Xero's accounting, payroll, assets, files and projects APIs.
 # Table of Contents
